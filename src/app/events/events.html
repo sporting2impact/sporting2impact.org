@@ -1,15 +1,10 @@
 <h1>All Events</h1>
-<p>Here you can list all upcoming and past events in more detail.</p>
+<p>Here you can find all upcoming and past events.</p>
 
 <ul class="events-list">
-  <li>
-    <h3>Community Meetup</h3>
-    <p>Date: Mar 10, 2026</p>
-    <p>Details about the meetup...</p>
-  </li>
-  <li>
-    <h3>Charity Run</h3>
-    <p>Date: Apr 02, 2026</p>
-    <p>Details about the charity run...</p>
+  <li *ngFor="let event of events">
+    <h3>{{ event.title }}</h3>
+    <p>Date: {{ event.date | date:'MMM dd, yyyy hh:mm a' }}</p>
+    <p>{{ event.description }}</p>
   </li>
 </ul>

@@ -1,28 +1,21 @@
-import { Component, NO_ERRORS_SCHEMA } from '@angular/core';
-import { Router } from '@angular/router';
-
-interface UpcomingEvent {
-  title: string;
-  date: string;
-  description: string;
-}
+import { Component } from '@angular/core';
+import { NgFor, NgIf, DatePipe } from '@angular/common';
+import { EventService, EventItem } from '../services/event.service';
 
 @Component({
+  standalone: true,
   selector: 'app-home',
+  imports: [NgFor, NgIf, DatePipe],
   templateUrl: './home.html',
-  styleUrls: ['./home.css'],
-  schemas: [NO_ERRORS_SCHEMA]
+  styleUrl: './home.css'
 })
 export class Home {
-  upcomingEvents: UpcomingEvent[] = [
-    { title: 'Community Meetup', date: 'Mar 10, 2026', description: 'Local community gathering and networking.' },
-    { title: 'Charity Run', date: 'Apr 02, 2026', description: '5K run to support our cause.' },
-    { title: 'Tech Workshop', date: 'May 15, 2026', description: 'Hands-on workshop on web development.' }
-  ];
+  upcomingEvents: EventItem[] = [];
 
-  constructor(private router: Router) {}
+  constructor(private eventService: EventService) {}
 
-  goToEvents() {
-    this.router.navigate(['/events']);
+  ngOnInit() {
+    this.upcomingEvents = this.eventService.getUpcomingEvents();
+    console.log('Upcoming events:', this.upcomingEvents);
   }
 }
