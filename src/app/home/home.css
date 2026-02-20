@@ -1,0 +1,61 @@
+.home-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 2fr;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.events-panel h2 {
+  margin-bottom: 0.75rem;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+.event-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 0.75rem;
+  cursor: pointer;
+  background-color: #f9fafb;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.event-card:hover {
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.15);
+  transform: translateY(-1px);
+}
+
+.event-date {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin: 0.25rem 0;
+}
+
+.event-description {
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.view-details {
+  margin-top: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #3b82f6;
+  color: #fff;
+}
+
+.home-content h1 {
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .home-layout {
+    grid-template-columns: 1fr;
+  }
+}

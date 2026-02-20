@@ -1,0 +1,33 @@
+<div class="home-layout">
+
+  <!-- Left column: home content -->
+  <section class="home-content">
+    <h1>Welcome to Our Organization</h1>
+    <p>
+      This is the home page. Here you can highlight your mission, vision, and
+      key information you want visitors to see first.
+    </p>
+    <p>
+      Use the navigation bar above to learn more about our team, see all events,
+      or make a donation.
+    </p>
+  </section>
+
+  <!-- Right column: upcoming events grid -->
+  <section class="events-panel">
+    <h2>Upcoming Events</h2>
+    <div class="events-grid">
+      <div
+        class="event-card"
+        *ngFor="let event of upcomingEvents"
+        (click)="goToEvents()"
+    >
+        <h3>{{ event.title }}</h3>
+        <p class="event-date">{{ event.date }}</p>
+        <p class="event-description">{{ event.description }}</p>
+        <button class="view-details">View details</button>
+      </div>
+    </div>
+  </section>
+
+</div>
