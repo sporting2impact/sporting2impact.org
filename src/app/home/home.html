@@ -1,0 +1,32 @@
+<div class="home-layout">
+
+  <!-- Left column: home content -->
+  <section class="home-content">
+    <h1>Welcome to Sporting2Impact</h1>
+    <h2>WHO WE ARE</h2>
+
+    <p>
+      Sporting2Impact is a Maryland-based <b>501(c)(3) Nonprofit</b> on a mission to make sports accessible, inclusive, and transformative for everyone in our community. Founded on the belief that athletics have the power to inspire, unite, and uplift, we organize fun, engaging sporting events that not only promote health and teamwork but also raise awareness for those in need.
+      At Sporting2Impact, we believe that sports are more than just games—they’re a catalyst for positive change. Join us as we play with purpose, strengthen our community, and make every match, race, and goal count!
+    </p>
+    <h2>WHAT WE DO</h2>
+    <p>
+      At Sporting2Impact, we bring people together through the power of movement by organizing inclusive, community-driven exercise events. From weekend hikes to Pilates, Yoga sessions, we design activities that welcome participants of all ages, abilities, and backgrounds. Our programs aim to attract people that want to become more active and energetic while being an active member of their community.
+    </p>
+    <p>
+      Sporting2Impact is dedicated to promoting wellness, fitness, sports, and community engagement.
+      Beyond physical health, we use these events as a platform to raise awareness for local causes—turning workouts into opportunities for social connection and collective impact. We believe that when movement is accessible to all, communities grow stronger together.
+    </p>
+    
+  </section>
+  
+<!-- Upcoming Events Sidebar --> 
+ <div class="events-sidebar">
+    <h2>Upcoming Events</h2>
+    <div *ngFor="let event of upcomingEvents" class="event-card" (click)="navigateToEvents()"> 
+        <h3>{{ event.title }}</h3> 
+        <p>Date: {{ event.date | date:'MMM dd, yyyy hh:mm a' }}</p> 
+        <p>{{ event.location }}</p> 
+    </div> <!-- If no events --> 
+    <p *ngIf="upcomingEvents.length === 0">No upcoming events.</p> </div>
+</div>

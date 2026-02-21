@@ -1,0 +1,57 @@
+.site-footer {
+  background-color: #1f2933;
+  color: #ffffff;
+  padding: 1rem 1.5rem; /* compact but comfortable */
+  margin-top: 1.5rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.5rem; /* reduced gap */
+}
+
+/* Section titles */
+.footer-section h4 {
+  margin-bottom: 0.25rem; /* tighter */
+  font-size: 1rem;        /* slightly larger */
+  font-weight: 600;
+  color: #f3f4f6;
+}
+
+/* Section text */
+.footer-section p {
+  margin: 0.1rem 0;       /* very tight spacing */
+  color: #d1d5db;
+  font-size: 0.9rem;      /* slightly larger */
+}
+
+/* Social icons row */
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* tighter horizontal spacing */
+}
+
+.social-links a img {
+  width: 30px;  /* slightly smaller for balance */
+  height: 30px;
+  object-fit: contain;
+  transition: opacity 0.2s ease;
+}
+
+.social-links a img:hover {
+  opacity: 0.7;
+}
+
+/* Bottom line */
+.footer-bottom {
+  text-align: center;
+  margin-top: 0.5rem;  /* reduced */
+  padding-top: 0.4rem; /* reduced */
+  border-top: 1px solid #374151;
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
