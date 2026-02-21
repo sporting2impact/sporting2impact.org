@@ -1,10 +1,27 @@
-<h1>All Events</h1>
-<p>Here you can find all upcoming and past events.</p>
-
 <ul class="events-list">
-  <li *ngFor="let event of events">
-    <h3>{{ event.title }}</h3>
-    <p>Date: {{ event.date | date:'MMM dd, yyyy hh:mm a' }}</p>
-    <p>{{ event.description }}</p>
+  <li *ngFor="let event of events"
+    class="event-card"
+    [style.background-image]="'url(/events/' + event.type + '.png)'">
+
+    
+    <!-- Date badge -->
+    <div class="date-badge">
+      <span class="month">{{ event.date | date:'MMM' }}</span>
+      <span class="day">{{ event.date | date:'dd' }}</span>
+    </div>
+
+    <!-- Category tag -->
+    <div class="category-tag">{{ event.type | titlecase }}</div>
+
+    <div class="event-content">
+      <h3>{{ event.title }}</h3>
+      <p>Date: {{ event.date | date:'MMM dd, yyyy hh:mm a' }}</p>
+      <p>Location: {{ event.location }}</p>
+      <p>{{ event.description }}</p>
+
+      <div class="event-footer">
+        <button class="registeration">Register</button>
+      </div>
+    </div>
   </li>
 </ul>

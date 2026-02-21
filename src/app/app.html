@@ -1,18 +1,21 @@
-<nav class="top-nav">
-  
-  <div class="logo" routerLink="/home">
-    <img src="Sporting2Impact.png" alt="Sporting2Impact" class="logo-img" routerLink="/home">
-    Sporting2Impact
-  </div>
-  <ul class="nav-links">
-    <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
-    <li><a routerLink="/team" routerLinkActive="active">Team</a></li>
-    <li><a routerLink="/events" routerLinkActive="active">Events</a></li>
-    <li><a routerLink="/donate" routerLinkActive="active">Donate</a></li>
-  </ul>
-</nav>
+<div class="app-container">
+  <nav class="top-nav">
+    <div class="logo" routerLink="/home">
+      <img src="Sporting2Impact.png" alt="Sporting2Impact" class="logo-img">
+      Sporting2Impact
+    </div>
 
-<main class="main-content">
-  <router-outlet></router-outlet>
-</main>
+    <ul class="nav-links">
+      <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+      <li><a routerLink="/team" routerLinkActive="active">Team</a></li>
+      <li><a routerLink="/events" routerLinkActive="active">Events</a></li>
+      <li><a routerLink="/donate" routerLinkActive="active">Donate</a></li>
+    </ul>
+  </nav>
 
+  <main class="main-content">
+    <router-outlet></router-outlet>
+  </main>
+
+  <app-footer></app-footer>
+</div>

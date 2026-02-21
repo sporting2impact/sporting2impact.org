@@ -1,12 +1,27 @@
+/* --- Layout --- */
 .home-layout {
   display: grid;
   grid-template-columns: 75% 1fr;
   gap: 1.5rem;
   align-items: flex-start;
+  background: linear-gradient(135deg, #eef6ff, #ffffff);
+  padding: 1.5rem;
+  border-radius: 12px;
 }
 
+/* --- Make the events sidebar float (sticky) --- */
+.events-sidebar {
+  position: sticky;
+  top: 80px; 
+  height: fit-content;
+  z-index: 10;
+}
+
+/* --- Events Panel --- */
 .events-panel h2 {
   margin-bottom: 0.75rem;
+  color: #1e3a8a;
+  font-weight: 600;
 }
 
 .events-grid {
@@ -15,18 +30,60 @@
   gap: 0.75rem;
 }
 
+/* --- Event Cards (Base Style) --- */
 .event-card {
-  border: 1px solid #e5e7eb;
-  border-radius: 6px;
-  padding: 0.75rem;
+  border-radius: 10px;
+  padding: 1rem;
   cursor: pointer;
-  background-color: #f9fafb;
-  transition: box-shadow 0.15s ease, transform 0.15s ease;
+  background-color: #ffffff;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  border-left: 6px solid;
 }
 
+/* --- Color Variants (rotating) --- */
+.event-card:nth-child(1) {
+  border-color: #3b82f6;
+  background: #eff6ff;
+}
+
+.event-card:nth-child(2) {
+  border-color: #10b981;
+  background: #ecfdf5;
+}
+
+.event-card:nth-child(3) {
+  border-color: #f59e0b;
+  background: #fffbeb;
+}
+
+.event-card:nth-child(4) {
+  border-color: #ef4444;
+  background: #fef2f2;
+}
+
+.event-card:nth-child(5) {
+  border-color: #8b5cf6;
+  background: #f5f3ff;
+}
+
+/* --- Hover Effects --- */
 .event-card:hover {
-  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.15);
-  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transform: translateY(-3px);
+}
+
+/* Make cursor a hand everywhere inside the card */
+.event-card,
+.event-card * {
+  cursor: pointer;
+}
+
+/* --- Typography --- */
+.event-card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #1f2937;
+  font-weight: 600;
 }
 
 .event-date {
@@ -40,6 +97,7 @@
   color: #374151;
 }
 
+/* --- Button (optional) --- */
 .view-details {
   margin-top: 0.5rem;
   padding: 0.25rem 0.5rem;
@@ -50,12 +108,21 @@
   color: #fff;
 }
 
+/* --- Home Content --- */
 .home-content h1 {
   margin-top: 0;
+  color: #1e3a8a;
+  font-weight: 700;
 }
 
+/* --- Mobile Layout --- */
 @media (max-width: 768px) {
   .home-layout {
     grid-template-columns: 1fr;
+  }
+
+  /* Disable sticky on mobile for better UX */
+  .events-sidebar {
+    position: static;
   }
 }

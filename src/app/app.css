@@ -5,6 +5,9 @@
   padding: 0.75rem 1.5rem;
   background-color: #1f2933;
   color: #fff;
+  position: sticky;
+  top:0;
+  z-index: 1000;
 }
 
 .logo {
@@ -49,4 +52,17 @@
 .logo-img {
   height: 50px; /* adjust as needed */
   width: auto;
+}
+
+/* Make the entire app fill the screen vertically */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main content expands to push footer down */
+.main-content {
+  flex: 1;
+  padding: 1rem;
 }

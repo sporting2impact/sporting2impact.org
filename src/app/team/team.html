@@ -1,2 +1,34 @@
 <h1>Our Team</h1>
-<p>Add the team members here</p>
+
+<!-- Founders Section -->
+<section class="team-section">
+  <h2>Founders</h2>
+
+  <div class="team-grid">
+    <div class="team-card" *ngFor="let founder of founders">
+      <div class="badge badge-founder">Founder</div>
+
+      <img class="team-photo" [src]="founder.image" alt="{{ founder.name }}">
+      <h3>{{ founder.name }}</h3>
+    </div>
+  </div>
+</section>
+
+<!-- Board of Directors Section -->
+<section class="team-section">
+  <h2>Board of Directors</h2>
+
+  <div class="team-grid">
+    <div class="team-card horizontal" *ngFor="let member of boardOfDirectors">
+        <img class="team-photo" [src]="member.image" alt="{{ member.name }}">
+
+        <div class="details">
+            <h3>{{ member.name }}</h3>
+            <p><strong>School:</strong> {{ member.school }}</p>
+            <p><strong>Grade:</strong> {{ member.grade }}</p>
+            <p><strong>Duration:</strong> {{ member.duration }}</p>
+        </div>
+    </div>
+
+  </div>
+</section>

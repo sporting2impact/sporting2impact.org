@@ -1,3 +1,131 @@
+/* Page Title */
 h1 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2933;
+  text-align: center;
+}
+
+/* Section Title */
+.team-section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #111827;
+  border-left: 4px solid #2563eb;
+  padding-left: 0.5rem;
+}
+
+/* Grid Layout */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* Card Styling */
+.team-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.2rem;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+/* Profile Image */
+.team-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.7rem;
+  border: 3px solid #e5e7eb;
+}
+
+/* Name */
+.team-card h3 {
+  margin: 0.4rem 0 0.6rem 0;
+  font-size: 1.15rem;
+  color: #111827;
+}
+
+/* Info Text */
+.info {
+  margin: 0.2rem 0;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+/* Role Badges */
+.badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 6px;
+  color: white;
+}
+
+.badge-founder {
+  background-color: #2563eb;
+}
+
+.badge-director {
+  background-color: #059669;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* Horizontal card layout for BoD */
+.team-card.horizontal {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+/* Smaller photo for horizontal layout */
+.team-card.horizontal .team-photo {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Details section */
+.team-card.horizontal .details {
+  flex: 1;
+}
+
+.team-card.horizontal .details h3 {
+  margin: 0 0 0.4rem 0;
+  font-size: 1.1rem;
+  color: #111827;
+}
+
+.team-card.horizontal .details p {
+  margin: 0.2rem 0;
+  font-size: 0.9rem;
+  color: #374151;
 }

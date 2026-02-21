@@ -1,10 +1,140 @@
+/* 3 events per row */
 .events-list {
   list-style: none;
   padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
 }
 
-.events-list li {
-  margin-bottom: 1rem;
-  padding-bottom: 0.75rem;
-  border-bottom: 1px solid #e5e7eb;
+/* Event card */
+.event-card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 260px;
+  display: flex;
+  align-items: flex-end;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-size 0.3s ease;
+}
+
+/* Hover zoom effect */
+.event-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+  background-size: 110%;
+}
+
+/* Gradient overlay */
+.event-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.1),
+    rgba(0,0,0,0.6)
+  );
+}
+
+/* Content */
+.event-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  padding: 1rem;
+}
+
+/* Title */
+.event-content h3 {
+  margin: 0 0 0.4rem 0;
+  font-size: 1.2rem;
+}
+
+/* Event text */
+.event-content p {
+  margin: 0.2rem 0;
+  font-size: 0.95rem;
+}
+
+/* Footer */
+.event-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.6rem;
+}
+
+/* Register button */
+.registeration {
+  padding: 0.5rem 1rem;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.registeration:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+/* Date badge */
+.date-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: white;
+  color: #111827;
+  border-radius: 8px;
+  padding: 0.3rem 0.5rem;
+  text-align: center;
+  z-index: 3;
+  font-weight: 700;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.date-badge .month {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.date-badge .day {
+  display: block;
+  font-size: 1.1rem;
+}
+
+/* Category tag */
+.category-tag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  z-index: 3;
+  text-transform: capitalize;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .events-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .events-list {
+    grid-template-columns: 1fr;
+  }
 }
