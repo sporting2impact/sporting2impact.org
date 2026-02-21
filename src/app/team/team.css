@@ -1,90 +1,75 @@
-/* Page Title */
-h1 {
-  margin-bottom: 1.5rem;
+/* -------------------------------------------------------
+   HERO BANNER
+------------------------------------------------------- */
+.team-hero {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: white;
+  padding: 4rem 2rem;
+  border-radius: 20px;
+  text-align: center;
+  margin-bottom: 3rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.team-hero h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.team-hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+
+/* -------------------------------------------------------
+   SECTION WRAPPERS (distinct backgrounds)
+------------------------------------------------------- */
+.founders-section {
+  background: #f0f7ff;
+  padding: 2.5rem;
+  border-radius: 18px;
+  border: 1px solid #d6e4ff;
+  margin-bottom: 3rem;
+}
+
+.board-section {
+  background: #f9f9f9;
+  padding: 2.5rem;
+  border-radius: 18px;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 3rem;
+}
+
+
+/* -------------------------------------------------------
+   SECTION TITLES
+------------------------------------------------------- */
+.section-title {
   font-size: 2rem;
   font-weight: 700;
-  color: #1f2933;
+  color: #f3f3f8;
+  margin-bottom: .5rem;
+  margin-top: 3rem;
   text-align: center;
+  position: relative;
+  padding-bottom: 0.5rem;
+  background-color: #19191a;
 }
 
-/* Section Title */
-.team-section h2 {
-  font-size: 1.6rem;
-  margin-bottom: 1rem;
-  color: #111827;
-  border-left: 4px solid #2563eb;
-  padding-left: 0.5rem;
-}
 
-/* Grid Layout */
+/* -------------------------------------------------------
+   GRID LAYOUT
+------------------------------------------------------- */
 .team-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
-/* Card Styling */
-.team-card {
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 12px;
-  padding: 1.2rem;
-  text-align: center;
-  position: relative;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.team-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
-}
-
-/* Profile Image */
-.team-photo {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 0.7rem;
-  border: 3px solid #e5e7eb;
-}
-
-/* Name */
-.team-card h3 {
-  margin: 0.4rem 0 0.6rem 0;
-  font-size: 1.15rem;
-  color: #111827;
-}
-
-/* Info Text */
-.info {
-  margin: 0.2rem 0;
-  font-size: 0.9rem;
-  color: #374151;
-}
-
-/* Role Badges */
-.badge {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  padding: 0.25rem 0.6rem;
-  font-size: 0.75rem;
-  font-weight: 600;
-  border-radius: 6px;
-  color: white;
-}
-
-.badge-founder {
-  background-color: #2563eb;
-}
-
-.badge-director {
-  background-color: #059669;
-}
-
-/* Responsive */
 @media (max-width: 900px) {
   .team-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -96,36 +81,96 @@ h1 {
     grid-template-columns: 1fr;
   }
 }
-/* Horizontal card layout for BoD */
-.team-card.horizontal {
+
+
+/* -------------------------------------------------------
+   TEAM CARD
+------------------------------------------------------- */
+.team-card {
+  background: #636060;
+  padding: 1.8rem;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+
+/* Founder Badge */
+.badge-founder {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #2563eb;
+  color: white;
+  padding: 0.3rem 0.7rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+
+/* Photos */
+.team-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid #e5e7eb;
+}
+
+.board-photo {
+  width: 140px;
+  height: 140px;
+  margin-right: 1.5rem;
+}
+
+
+/* Names + Bio */
+.team-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1be881;
+  margin-bottom: 0.5rem;
+}
+
+.team-bio {
+  font-size: 0.95rem;
+  color: #4b5563;
+  margin-top: 0.8rem;
+  line-height: 1.5;
+}
+
+
+/* Horizontal layout for Board */
+.horizontal {
   display: flex;
   align-items: center;
   text-align: left;
-  padding: 1rem;
-  gap: 1rem;
+  padding: 1.5rem;
 }
 
-/* Smaller photo for horizontal layout */
-.team-card.horizontal .team-photo {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-/* Details section */
-.team-card.horizontal .details {
+.horizontal .details {
   flex: 1;
 }
 
-.team-card.horizontal .details h3 {
-  margin: 0 0 0.4rem 0;
-  font-size: 1.1rem;
-  color: #111827;
-}
 
-.team-card.horizontal .details p {
-  margin: 0.2rem 0;
-  font-size: 0.9rem;
-  color: #374151;
+.section-title::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #2563eb;
+  border-radius: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }

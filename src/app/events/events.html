@@ -1,27 +1,78 @@
-<ul class="events-list">
-  <li *ngFor="let event of events"
-    class="event-card"
-    [style.background-image]="'url(/events/' + event.type + '.png)'">
+<section class="events-hero">
+  <h1>Upcoming Events</h1>
+  <p>
+    Join us in building a healthier, more active community through fitness, wellness,
+    and sports events designed for all ages.
+  </p>
+</section>
 
-    
-    <!-- Date badge -->
-    <div class="date-badge">
-      <span class="month">{{ event.date | date:'MMM' }}</span>
-      <span class="day">{{ event.date | date:'dd' }}</span>
-    </div>
 
-    <!-- Category tag -->
-    <div class="category-tag">{{ event.type | titlecase }}</div>
+<!-- Upcoming Events Section -->
+<section class="upcoming-section">
+  <h2 class="section-title upcoming-title">Upcoming Events</h2>
 
-    <div class="event-content">
-      <h3>{{ event.title }}</h3>
-      <p>Date: {{ event.date | date:'MMM dd, yyyy hh:mm a' }}</p>
-      <p>Location: {{ event.location }}</p>
-      <p>{{ event.description }}</p>
+  <ul class="events-list">
+    <li *ngFor="let event of upcomingEvents"
+        class="event-card"
+        [style.background-image]="'url(/events/' + event.type + '.png)'">
 
-      <div class="event-footer">
-        <button class="registeration">Register</button>
+      <div class="date-badge">
+        <span class="month">{{ event.date | date:'MMM' }}</span>
+        <span class="day">{{ event.date | date:'dd' }}</span>
       </div>
-    </div>
-  </li>
-</ul>
+
+      <div class="category-tag">{{ event.type | titlecase }}</div>
+
+      <div class="event-content">
+        <h3>{{ event.title }}</h3>
+        <p>Date: {{ event.date | date:'MMM dd, yyyy hh:mm a' }}</p>
+        <p>Location: {{ event.location }}</p>
+
+        <div class="event-footer">
+          <button class="registeration">Register</button>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+  <p *ngIf="upcomingEvents.length === 0" class="no-events">
+    No upcoming events.
+  </p>
+</section>
+
+
+<!-- Past Events Section -->
+<section class="past-section">
+  <h2 class="section-title past-title">Past Events</h2>
+
+  <div class="year-tabs" *ngIf="pastYears.length > 0">
+    <button *ngFor="let year of pastYears"
+            [class.active]="year === selectedYear"
+            (click)="selectedYear = year">
+      {{ year }} ({{ getPastEventsCount(year) }})
+    </button>
+  </div>
+
+  <table class="past-events-table" *ngIf="getPastEventsByYear().length > 0">
+    <thead>
+      <tr>
+        <th>Event</th>
+        <th>Date</th>
+        <th>Location</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let event of getPastEventsByYear(); let i = index"
+          [class.alt]="i % 2 === 1">
+        <td>{{ event.title }}</td>
+        <td>{{ event.date | date:'MMM dd, yyyy' }}</td>
+        <td>{{ event.location }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p *ngIf="getPastEventsByYear().length === 0" class="no-events">
+    No events for {{ selectedYear }}.
+  </p>
+</section>

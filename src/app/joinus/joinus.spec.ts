@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Donate } from './donate';
+import { Joinus } from './joinus';
 
-describe('Donate', () => {
-  let component: Donate;
-  let fixture: ComponentFixture<Donate>;
+describe('Joinus', () => {
+  let component: Joinus;
+  let fixture: ComponentFixture<Joinus>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Donate]
+      imports: [Joinus]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Donate);
+    fixture = TestBed.createComponent(Joinus);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

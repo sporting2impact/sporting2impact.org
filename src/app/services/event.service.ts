@@ -22,19 +22,20 @@ export class EventService {
         type: 'yoga'
     },
     { 
+        title: 'Charity Run',
+        date: '2026-02-07',
+        location: 'City, State',
+        description: 'Details...',
+        type: 'chess'
+     },
+    { 
         title: 'Community Meetup 2',
         date: '2026-02-27',
         location: 'City, State',
         description: 'Details...' ,
         type: 'pilates'
     },
-    { 
-        title: 'Charity Run',
-        date: '2026-03-07',
-        location: 'City, State',
-        description: 'Details...',
-        type: 'chess'
-     },
+    
      { 
         title: 'Charity Run',
         date: '2026-03-14',

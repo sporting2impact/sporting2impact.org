@@ -1,34 +1,49 @@
-<h1>Our Team</h1>
+<!-- HERO BANNER -->
+<section class="team-hero">
+  <h1>Meet Our Team</h1>
+  <p>The passionate individuals leading our mission and shaping our community impact.</p>
+</section>
 
 <!-- Founders Section -->
 <section class="team-section">
-  <h2>Founders</h2>
+  <h2 class="section-title">Founders</h2>
 
   <div class="team-grid">
-    <div class="team-card" *ngFor="let founder of founders">
+    <div class="team-card founder-card" *ngFor="let founder of founders">
       <div class="badge badge-founder">Founder</div>
 
       <img class="team-photo" [src]="founder.image" alt="{{ founder.name }}">
-      <h3>{{ founder.name }}</h3>
+
+      <h3 class="team-name">{{ founder.name }}</h3>
+
+      <p class="team-bio" *ngIf="founder.bio">
+        {{ founder.bio }}
+      </p>
     </div>
   </div>
 </section>
 
 <!-- Board of Directors Section -->
 <section class="team-section">
-  <h2>Board of Directors</h2>
+  <h2 class="section-title">Board of Directors</h2>
 
-  <div class="team-grid">
+  <div class="team-grid board-grid">
     <div class="team-card horizontal" *ngFor="let member of boardOfDirectors">
-        <img class="team-photo" [src]="member.image" alt="{{ member.name }}">
 
-        <div class="details">
-            <h3>{{ member.name }}</h3>
-            <p><strong>School:</strong> {{ member.school }}</p>
-            <p><strong>Grade:</strong> {{ member.grade }}</p>
-            <p><strong>Duration:</strong> {{ member.duration }}</p>
-        </div>
+      <img class="team-photo board-photo" [src]="member.image" alt="{{ member.name }}">
+
+      <div class="details">
+        <h3 class="team-name">{{ member.name }}</h3>
+
+        <p><strong>School:</strong> {{ member.school }}</p>
+        <p><strong>Grade:</strong> {{ member.grade }}</p>
+        <p><strong>Duration:</strong> {{ member.duration }}</p>
+
+        <p class="team-bio" *ngIf="member.bio">
+          {{ member.bio }}
+        </p>
+      </div>
+
     </div>
-
   </div>
 </section>

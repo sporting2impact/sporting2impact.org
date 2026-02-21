@@ -1,4 +1,38 @@
-/* 3 events per row */
+/* -------------------------------------------------------
+   GLOBAL PAGE CONTAINER
+------------------------------------------------------- */
+.events-page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+
+/* -------------------------------------------------------
+   UPCOMING EVENTS SECTION
+------------------------------------------------------- */
+.upcoming-section {
+  background: linear-gradient(-5deg, #515352 0%, #f4f8ff 100%);
+  padding: 2.5rem;
+  border-radius: 18px;
+  border: 10px solid #e5e7eb;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  margin: 3rem 0;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.upcoming-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1e3a8a;
+  margin-bottom: 1.6rem;
+  letter-spacing: -0.5px;
+}
+
+
+/* -------------------------------------------------------
+   UPCOMING EVENT CARDS
+------------------------------------------------------- */
 .events-list {
   list-style: none;
   padding: 0;
@@ -8,7 +42,18 @@
   gap: 1.2rem;
 }
 
-/* Event card */
+@media (max-width: 900px) {
+  .events-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .events-list {
+    grid-template-columns: 1fr;
+  }
+}
+
 .event-card {
   position: relative;
   background-size: cover;
@@ -21,7 +66,6 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-size 0.3s ease;
 }
 
-/* Hover zoom effect */
 .event-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 6px 14px rgba(0,0,0,0.2);
@@ -33,14 +77,10 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,0.1),
-    rgba(0,0,0,0.6)
-  );
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.6));
 }
 
-/* Content */
+/* Card content */
 .event-content {
   position: relative;
   z-index: 2;
@@ -48,13 +88,11 @@
   padding: 1rem;
 }
 
-/* Title */
 .event-content h3 {
   margin: 0 0 0.4rem 0;
   font-size: 1.2rem;
 }
 
-/* Event text */
 .event-content p {
   margin: 0.2rem 0;
   font-size: 0.95rem;
@@ -86,7 +124,10 @@
   transform: translateY(-2px);
 }
 
-/* Date badge */
+
+/* -------------------------------------------------------
+   BADGES (DATE + CATEGORY)
+------------------------------------------------------- */
 .date-badge {
   position: absolute;
   top: 10px;
@@ -112,7 +153,6 @@
   font-size: 1.1rem;
 }
 
-/* Category tag */
 .category-tag {
   position: absolute;
   top: 10px;
@@ -126,15 +166,127 @@
   text-transform: capitalize;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .events-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
+
+/* -------------------------------------------------------
+   PAST EVENTS SECTION
+------------------------------------------------------- */
+.past-section {
+  background: #e4bc6c;
+  padding: 2.5rem;
+  border-radius: 18px;
+  border: 10px solid #e5e7eb;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.04);
+  margin: 3rem 0;
+  animation: fadeIn 0.6s ease-out;
 }
 
-@media (max-width: 600px) {
-  .events-list {
-    grid-template-columns: 1fr;
-  }
+.past-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #374151;
+  margin-bottom: 1.6rem;
+  letter-spacing: -0.3px;
 }
+
+
+/* -------------------------------------------------------
+   YEAR TABS
+------------------------------------------------------- */
+.year-tabs {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 1.2rem;
+}
+
+.year-tabs button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #d1d5db;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.year-tabs button:hover {
+  background: #e5e7eb;
+}
+
+.year-tabs button.active {
+  background: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+
+
+/* -------------------------------------------------------
+   PAST EVENTS TABLE
+------------------------------------------------------- */
+.past-events-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #d1d5db;
+}
+
+.past-events-table th {
+  background: #1f2937;
+  color: white;
+  padding: 0.9rem;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.past-events-table td {
+  padding: 0.9rem;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+.past-events-table tr.alt {
+  background: #f9fafb;
+}
+
+.past-events-table tr:hover {
+  background: #f3f4f6;
+}
+
+/* -------------------------------------------------------
+   EVENTS HERO BANNER
+------------------------------------------------------- */
+.events-hero {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: white;
+  padding: 4rem 2rem;
+  border-radius: 20px;
+  text-align: center;
+  margin-bottom: 3rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.events-hero h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.events-hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+
+/* -------------------------------------------------------
+   ANIMATIONS
+------------------------------------------------------- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
