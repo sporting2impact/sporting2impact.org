@@ -1,75 +1,128 @@
 /* --- Layout --- */
 .home-layout {
+  position: relative;
   display: grid;
-  grid-template-columns: 75% 1fr;
+  grid-template-columns: 1fr 320px;
   gap: 1.5rem;
   align-items: flex-start;
-  background: linear-gradient(135deg, #eef6ff, #ffffff);
-  padding: 1.5rem;
-  border-radius: 12px;
+  padding: 2.5rem;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.home-layout::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* background-image: url('/Sporting2Impact.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.25;
+  border-radius: 16px;
+  pointer-events: none;
+  z-index: 0; */
+}
+
+/* --- Home Content Section --- */
+.home-content {
+  position: relative;
+  z-index: 1;
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible; /* ensure descenders are not clipped */
 }
 
 /* --- Make the events sidebar float (sticky) --- */
 .events-sidebar {
   position: sticky;
-  top: 80px; 
+  top: 100px; 
   height: fit-content;
-  z-index: 10;
+  z-index: 11;
+  background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(59, 130, 246, 0.08);
+  border: 1px solid #e0f2fe;
 }
 
-/* --- Events Panel --- */
-.events-panel h2 {
-  margin-bottom: 0.75rem;
-  color: #1e3a8a;
-  font-weight: 600;
+/* --- Events Panel Title --- */
+.events-sidebar h2 {
+  margin: 0 0 1.5rem 0;
+  color: #0c4a6e;
+  font-weight: 800;
+  font-size: 1.4rem;
+  letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  padding-bottom: 1rem;
+  border-bottom: 3px solid #3b82f6;
 }
 
-.events-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0.75rem;
+.events-sidebar h2::before {
+  content: "📅";
+  font-size: 1.5rem;
+}
+
+.events-sidebar h2::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #3b82f6, #10b981);
+  border-radius: 2px;
 }
 
 /* --- Event Cards (Base Style) --- */
 .event-card {
-  border-radius: 10px;
-  padding: 1rem;
+  border-radius: 12px;
+  padding: 1.25rem;
   cursor: pointer;
   background-color: #ffffff;
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
-  border-left: 6px solid;
+  transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+  border-left: 5px solid;
+  margin-bottom: 0.75rem;
+  border: 1px solid #e5e7eb;
+  border-left-width: 5px;
 }
 
 /* --- Color Variants (rotating) --- */
 .event-card:nth-child(1) {
-  border-color: #3b82f6;
-  background: #eff6ff;
+  border-left-color: #3b82f6;
+  background: linear-gradient(135deg, #fff 0%, #eff6ff 100%);
 }
 
 .event-card:nth-child(2) {
-  border-color: #10b981;
-  background: #ecfdf5;
+  border-left-color: #10b981;
+  background: linear-gradient(135deg, #fff 0%, #ecfdf5 100%);
 }
 
 .event-card:nth-child(3) {
-  border-color: #f59e0b;
-  background: #fffbeb;
+  border-left-color: #f59e0b;
+  background: linear-gradient(135deg, #fff 0%, #fffbeb 100%);
 }
 
 .event-card:nth-child(4) {
-  border-color: #ef4444;
-  background: #fef2f2;
+  border-left-color: #ef4444;
+  background: linear-gradient(135deg, #fff 0%, #fef2f2 100%);
 }
 
 .event-card:nth-child(5) {
-  border-color: #8b5cf6;
-  background: #f5f3ff;
+  border-left-color: #8b5cf6;
+  background: linear-gradient(135deg, #fff 0%, #f5f3ff 100%);
 }
 
 /* --- Hover Effects --- */
 .event-card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.2);
+  transform: translateY(-4px);
 }
 
 /* Make cursor a hand everywhere inside the card */
@@ -80,16 +133,25 @@
 
 /* --- Typography --- */
 .event-card h3 {
-  margin: 0;
-  font-size: 1.1rem;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.05rem;
   color: #1f2937;
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.event-card p {
+  margin: 0.35rem 0;
+  font-size: 0.9rem;
+  color: #6b7280;
+  line-height: 1.5;
 }
 
 .event-date {
   font-size: 0.85rem;
   color: #6b7280;
   margin: 0.25rem 0;
+  font-weight: 500;
 }
 
 .event-description {
@@ -99,30 +161,95 @@
 
 /* --- Button (optional) --- */
 .view-details {
-  margin-top: 0.5rem;
-  padding: 0.25rem 0.5rem;
-  font-size: 0.8rem;
+  margin-top: 0.75rem;
+  padding: 0.6rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   background-color: #3b82f6;
   color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-/* --- Home Content --- */
+.view-details:hover {
+  background-color: #2563eb;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  transform: translateY(-2px);
+}
+
+/* --- Home Content Typography --- */
 .home-content h1 {
-  margin-top: 0;
-  color: #1e3a8a;
+  margin: 0 0 1.75rem 0;
+  color: #0c3a6e;
+  font-weight: 900;
+  font-size: 2.5rem;
+  letter-spacing: -0.8px;
+  line-height: 1.35; /* increased to avoid descender clipping */
+  display: block;
+  padding-bottom: 0.35rem; /* extra space for glyph descenders */
+  background: linear-gradient(135deg, #44d633 0%, #073216 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.home-content h2 {
+  margin: 2.5rem 0 1.25rem 0;
+  color: #1e40af;
   font-weight: 700;
+  font-size: 1.65rem;
+  letter-spacing: -0.4px;
+  padding-bottom: 1rem;
+  border-bottom: 3px solid #3b82f6;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.home-content h2::before {
+  content: "";
+  width: 5px;
+  height: 1.65rem;
+  background: linear-gradient(180deg, #3b82f6, #10b981);
+  border-radius: 3px;
+}
+
+.home-content h2:first-of-type {
+  margin-top: 0;
+}
+
+.home-content p {
+  margin: 0 0 1.25rem 0;
+  color: #374151;
+  font-size: 1rem;
+  line-height: 1.7;
+  letter-spacing: 0.3px;
 }
 
 /* --- Mobile Layout --- */
-@media (max-width: 768px) {
+@media (max-width: 968px) {
   .home-layout {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   /* Disable sticky on mobile for better UX */
   .events-sidebar {
     position: static;
+  }
+
+  .home-content h1 {
+    font-size: 1.75rem;
+  }
+
+  .home-content h2 {
+    font-size: 1.25rem;
+  }
+
+  .home-content p {
+    font-size: 0.95rem;
   }
 }

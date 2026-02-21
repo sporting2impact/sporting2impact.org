@@ -37,7 +37,35 @@
 }
 
 .main-content {
+  flex: 1;
   padding: 1.5rem;
+  position: relative;
+  background-color: #ffffff;
+}
+
+/* Background image with 25% transparency */
+.main-content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('/Sporting2Impact.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: 0.02;
+  pointer-events: none;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* Ensure content appears above background */
+.main-content > * {
+  position: relative;
+  z-index: 1;
 }
 
 .logo {
@@ -59,10 +87,4 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}
-
-/* Main content expands to push footer down */
-.main-content {
-  flex: 1;
-  padding: 1rem;
 }

@@ -138,13 +138,13 @@
 .team-name {
   font-size: 1.3rem;
   font-weight: 700;
-  color: #1be881;
+  color: #f2f6f4;
   margin-bottom: 0.5rem;
 }
 
 .team-bio {
   font-size: 0.95rem;
-  color: #4b5563;
+  color: #4b5563; 
   margin-top: 0.8rem;
   line-height: 1.5;
 }

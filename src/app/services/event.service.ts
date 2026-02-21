@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 export interface EventItem {
   title: string;
   date: string;   // or Date
-  description: string;
+  registrationLink: string;
   location: string;
   type: string;
 }
@@ -14,35 +14,65 @@ export interface EventItem {
 export class EventService {
 
   private events: EventItem[] = [
-     { 
-        title: 'Community Meetup',
-        date: '2026-02-20T17:47', // 2026-02-20T17:47 format
-        location: 'City, State',
-        description: 'Details...',
-        type: 'yoga'
-    },
     { 
-        title: 'Charity Run',
-        date: '2026-02-07',
-        location: 'City, State',
-        description: 'Details...',
-        type: 'chess'
-     },
-    { 
-        title: 'Community Meetup 2',
-        date: '2026-02-27',
-        location: 'City, State',
-        description: 'Details...' ,
+        title: 'Free Pilates Session',
+        date: '2026-03-07T10:00',
+        location: 'Urbana Library, Frederick, Maryland',
+        registrationLink: 'https://www.zeffy.com/en-US/ticketing/free-pilates-session--03072026',
         type: 'pilates'
+     }, 
+    { 
+        title: 'Free Yoga Session',
+        date: '2026-03-08T14:00', // 2026-02-20T17:47 format
+        location: 'Miller Branch Library, Ellicott City, Maryland',
+        registrationLink: 'https://www.zeffy.com/en-US/ticketing/free-yoga-session--03082026',
+        type: 'yoga'
     },
     
      { 
-        title: 'Charity Run',
-        date: '2026-03-14',
-        location: 'City, State',
-        description: 'Details...',
-        type: 'dance'
-     }
+        title: 'Chess Meetup',
+        date: '2026-03-14T14:00',
+        location: 'Miller Branch Library, Avalon Room, Ellicott City, Maryland',
+        registrationLink: '',
+        type: 'chess'
+     },
+    { 
+        title: 'Free Pilates Session',
+        date: '2026-03-22T14:15',
+        location: 'Miller Branch Library, Ellicott City, Maryland',
+        registrationLink: 'https://www.zeffy.com/en-US/ticketing/free-pilates-session--03222026' ,
+        type: 'pilates'
+    },
+    { 
+        title: 'Free Pilates Session',
+        date: '2026-02-15T14:15',
+        location: 'Miller Branch Library, Ellicott City, Maryland',
+        registrationLink: 'https://www.zeffy.com/en-US/ticketing/free-pilates-session' ,
+        type: 'pilates'
+    },
+    { 
+        title: 'Free Pilates Session',
+        date: '2026-01-17T14:15',
+        location: 'Miller Branch Library, Ellicott City, Maryland',
+        registrationLink: 'https://www.zeffy.com/en-US/ticketing/free-pilates-session' ,
+        type: 'pilates'
+    },
+    { 
+        title: 'Free Yoga Session',
+        date: '2026-01-10T14:00', // 2026-02-20T17:47 format
+        location: 'Miller Branch Library, Ellicott City, Maryland',
+        registrationLink: 'https://www.zeffy.com/en-US/ticketing/free-yoga-session',
+        type: 'yoga'
+    },
+    
+    //  { 
+    //     title: 'BollyX Fitness',
+    //     date: '2026-04-14T14:00',
+    //     location: 'Ellicott City, Maryland',
+    //     registrationLink: '',
+    //     type: 'dance'
+    //  },
+     
     ];
     
   getEvents() {
@@ -56,7 +86,7 @@ export class EventService {
 
   // 2 weeks from now in EST
   const twoWeeksEST = new Date(nowEST);
-  twoWeeksEST.setDate(nowEST.getDate() + 14);
+  twoWeeksEST.setDate(nowEST.getDate() + 21);
 
   return this.events
     .map(e => {

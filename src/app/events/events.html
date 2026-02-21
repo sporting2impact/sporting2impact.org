@@ -1,10 +1,10 @@
-<section class="events-hero">
-  <h1>Upcoming Events</h1>
-  <p>
-    Join us in building a healthier, more active community through fitness, wellness,
-    and sports events designed for all ages.
-  </p>
-</section>
+  <!-- <section class="events-hero">
+    <h1>Upcoming Events</h1>
+    <p>
+      Join us in building a healthier, more active community through fitness, wellness,
+      and sports events designed for all ages.
+    </p>
+  </section> -->
 
 
 <!-- Upcoming Events Section -->
@@ -29,7 +29,15 @@
         <p>Location: {{ event.location }}</p>
 
         <div class="event-footer">
-          <button class="registeration">Register</button>
+          <button *ngIf="!event.registrationLink" class="registeration">
+            Walk In
+          </button>
+          <a *ngIf="event.registrationLink" 
+             href="{{ event.registrationLink }}" 
+             target="_blank" 
+             class="registeration">
+            Register
+          </a>
         </div>
       </div>
     </li>

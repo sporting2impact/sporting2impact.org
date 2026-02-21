@@ -6,39 +6,36 @@ import { Injectable } from '@angular/core';
 export class TeamService {
 
   founders = [
-    { name: "Alex Johnson", image: "team/founder.png" },
-    { name: "Priya Patel", image: "team/founder.png" },
-    { name: "Vamsi", image: "team/founder.png" },
+    { name: "Siva C", image: "team/founder.png", role: "President & Treasurer" },
+    { name: "Sridhar", image: "team/founder.png", role: "Vice President" },
+    { name: "Vamsi", image: "team/founder.png", role: "Secretary" },
   ];
 
   boardOfDirectors = [
     {
-      name: "Emily Chen",
-      school: "River Hill High School",
-      grade: "11",
-      duration: "2023–2025",
-      image: "team/member.png"
-    },
-    {
-      name: "Michael Rodriguez",
-      school: "Wilde Lake High School",
-      grade: "10",
-      duration: "2024–2026",
-      image: "team/member.png"
-    },
-    {
-      name: "Sophia Nguyen",
-      school: "Howard High School",
+      name: "Akshath",
+      school: "Mt. Hebron High School",
       grade: "12",
-      duration: "2022–2024",
-      image: "team/member.png"
+      duration: "2025-Current",
+      image: "team/member.png",
+      role: "Outreach Coordinator"
+    },  
+    {
+      name: "Tanya",
+      school: "Mt. Hebron High School",
+      grade: "12",
+      duration: "2025-Current",
+      image: "team/tanya.png",
+      role: "Social Media Coordinator"
+
     },
     {
-      name: "Daniel Kim",
-      school: "Centennial High School",
+      name: "Suchay",
+      school: "Mt. Hebron High School",
       grade: "9",
-      duration: "2024–2027",
-      image: "team/member.png"
+      duration: "2025-Current",
+      image: "team/member.png",
+      role: "Event Coordinator"
     }
   ];
 
