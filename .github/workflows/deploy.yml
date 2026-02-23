@@ -15,15 +15,15 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+
       - name: Install Angular CLI
         run: npm install -g @angular/cli
 
       - name: Build application
-        run: ng build --configuration production
+        run: ng build --configuration production --base-href /sporting2impact.org/
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
           branch: gh-pages
           folder: dist/sporting2impact.org/browser
-          
