@@ -22,7 +22,7 @@ export class TeamService {
     },  
     {
       name: "Tanya",
-      school: "Mt. Hebron High School",
+      school: "Marriotts Ridge High School",
       grade: "12",
       duration: "2025-Current",
       image: "team/tanya.png",
