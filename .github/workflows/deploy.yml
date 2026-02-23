@@ -25,5 +25,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
           branch: gh-pages
-          folder: sporting2impact.org/browser
+          folder: dist/sporting2impact.org/browser
           
