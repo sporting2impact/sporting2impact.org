@@ -6,14 +6,14 @@ import { Injectable } from '@angular/core';
 export class TeamService {
 
   founders = [
-    { name: "Siva C", image: "team/founder.png", role: "President & Treasurer" },
+    { name: "Siva Ch", image: "team/founder.png", role: "President & Treasurer" },
     { name: "Sridhar", image: "team/founder.png", role: "Vice President" },
     { name: "Vamsi", image: "team/founder.png", role: "Secretary" },
   ];
 
   boardOfDirectors = [
     {
-      name: "Akshath",
+      name: "Akshat",
       school: "Mt. Hebron High School",
       grade: "12",
       duration: "2025-Current",
