@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { NgFor, NgIf, DatePipe, NgClass, TitleCasePipe } from '@angular/common';
+import { NgFor, NgIf, DatePipe, TitleCasePipe } from '@angular/common';
 import { EventService } from '../services/event.service';
 import { EventItem } from '../services/event.service';
 
 @Component({
   selector: 'app-events',
-  imports: [NgFor, NgIf, DatePipe, NgClass, TitleCasePipe],
+  imports: [NgFor, NgIf, DatePipe, TitleCasePipe],
   templateUrl: './events.html',
   styleUrl: './events.css',
   standalone: true,
