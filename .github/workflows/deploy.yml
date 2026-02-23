@@ -20,7 +20,7 @@ jobs:
         run: npm install -g @angular/cli
 
       - name: Build application
-        run: ng build --configuration production --base-href /sporting2impact.org/
+        run: ng build --configuration production
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.0
