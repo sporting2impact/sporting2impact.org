@@ -31,8 +31,8 @@ export class EventService {
     
      { 
         title: 'Chess Meetup',
-        date: '2026-03-14T14:00',
-        location: 'Miller Branch Library, Avalon Room, Ellicott City, Maryland',
+        date: '2026-03-15T14:00',
+        location: 'Miller Branch Library, Ellicott Room, Ellicott City, Maryland',
         registrationLink: '',
         type: 'chess'
      },
@@ -42,6 +42,12 @@ export class EventService {
         location: 'Miller Branch Library, Ellicott City, Maryland',
         registrationLink: 'https://www.zeffy.com/en-US/ticketing/free-pilates-session--03222026' ,
         type: 'pilates'
+    },{ 
+        title: 'Free Zumba Session',
+        date: '2026-03-29T14:00',
+        location: 'Miller Branch Library, Ellicott City, Maryland',
+        registrationLink: 'https://www.zeffy.com/en-US/ticketing/free-zumba-session-29th-mar-sunday' ,
+        type: 'zumba'
     },
     { 
         title: 'Free Pilates Session',
