@@ -71,6 +71,74 @@ export class EventService {
         type: 'yoga'
     },
     
+	//2025 Sessions
+	{ 
+        title: 'Free Pilates Session',
+        date: '2025-12-20T14:00', // 2026-02-20T17:47 format
+        location: 'Miller Branch Library, Ellicott City, Maryland',
+        registrationLink: '',
+        type: 'Pilates'
+    },
+	{ 
+        title: 'Free Pilates Session',
+        date: '2025-11-02T14:15', // 2026-02-20T17:47 format
+        location: 'Miller Branch Library, Ellicott City, Maryland',
+        registrationLink: '',
+        type: 'Pilates'
+    },
+	{ 
+        title: 'Free Pilates Session',
+        date: '2025-10-19T15:00', // 2026-02-20T17:47 format
+        location: 'Miller Branch Library, Ellicott City, Maryland',
+        registrationLink: '',
+        type: 'Pilates'
+    },
+	{ 
+        title: 'Free Pilates Session',
+        date: '2025-08-30T10:30', // 2026-02-20T17:47 format
+        location: 'Miller Branch Library, Ellicott City, Maryland',
+        registrationLink: '',
+        type: 'Pilates'
+    },
+	{ 
+        title: 'Physical Health Awareness Walk',
+        date: '2025-09-07T08:00', // 2026-02-20T17:47 format
+        location: 'Grist Mill Trail, Ellicott City, Maryland',
+        registrationLink: '',
+        type: 'Walk'
+    },
+	{ 
+        title: 'Physical Health Awareness Walk',
+        date: '2025-08-16T07:30', // 2026-02-20T17:47 format
+        location: 'Trail, Ellicott City, Maryland',
+        registrationLink: '',
+        type: 'Walk'
+    },
+	{ 
+        title: 'Physical Health Awareness Walk',
+        date: '2025-08-09T05:00', // 2026-02-20T17:47 format
+        location: 'Centennial Park West, Ellicott City, Maryland',
+        registrationLink: '',
+        type: 'Walk'
+    },
+	
+	{ 
+        title: 'Physical Health Awareness Walk',
+        date: '2025-08-02T08:00', // 2026-02-20T17:47 format
+        location: 'Patapsco Valley Quarry Trail, Ellicott City, Maryland',
+        registrationLink: '',
+        type: 'Walk'
+    },
+	{ 
+        title: 'Physical Health Awareness Walk',
+        date: '2025-07-26T07:00', // 2026-02-20T17:47 format
+        location: 'Patapsco State Park, Ellicott City, Maryland',
+        registrationLink: '',
+        type: 'Walk'
+    },
+	
+	
+	
     //  { 
     //     title: 'BollyX Fitness',
     //     date: '2026-04-14T14:00',
