@@ -27,13 +27,11 @@ export class Events {
     const now = new Date();
 
     // Split into upcoming and past
-    this.upcomingEvents = this.events.filter(
-      e => new Date(e.date) >= now
-    );
+    this.upcomingEvents = this.eventService.getUpcomingEvents();
 
     this.pastEvents = this.events.filter(
       e => new Date(e.date) < now
-    );
+    ).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
     // Extract unique years from past events
     this.pastYears = Array.from(
