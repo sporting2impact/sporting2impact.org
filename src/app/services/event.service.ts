@@ -18,7 +18,7 @@ export class EventService {
         {
             "id": 18,
             "title": "Learn Basics of Chess with Suchay",
-            "date": "2026-04-12T14:00",
+            "date": "2026-04-18T10:00",
             "location": "Miller Branch Library, Avalon Room, Ellicott City, Maryland",
             "registrationLink": "",
             "type": "chess"
@@ -26,7 +26,7 @@ export class EventService {
         {
             "id": 17,
             "title": "Free Yoga Session",
-            "date": "2026-04-18T10:00",
+            "date": "2026-04-12T14:00",
             "location": "Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-yoga-session-18th-apr-saturday",
             "type": "yoga"
