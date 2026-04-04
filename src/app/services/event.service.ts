@@ -28,7 +28,7 @@ export class EventService {
             "title": "Free Zumba Session",
             "date": "2026-04-25T14:00",
             "location": "Miller Branch Library, Ellicott City, Maryland",
-            "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-zumba-session-may",
+            "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-zumba-session-apr",
             "type": "zumba"
         },
         {
@@ -42,7 +42,7 @@ export class EventService {
         {
             "id": 19,
             "title": "Free Pilates Session",
-            "date": "2026-04-19T10:00",
+            "date": "2026-04-19T14:15",
             "location": "Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-pilates-session-april",
             "type": "pilates"
