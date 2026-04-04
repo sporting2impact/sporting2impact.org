@@ -16,6 +16,38 @@ export class EventService {
 
   private events: EventItem[] = [
         {
+            "id": 22,
+            "title": "Free Zumba Session",
+            "date": "2026-05-03T14:00",
+            "location": "Miller Branch Library, Ellicott City, Maryland",
+            "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-zumba-session-may",
+            "type": "zumba"
+        },
+        {
+            "id": 21,
+            "title": "Free Zumba Session",
+            "date": "2026-04-25T14:00",
+            "location": "Miller Branch Library, Ellicott City, Maryland",
+            "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-zumba-session-may",
+            "type": "zumba"
+        },
+        {
+            "id": 20,
+            "title": "Chess Meetup",
+            "date": "2026-04-25T10:00",
+            "location": "Miller Branch Library, Ellicott Room, Ellicott City, Maryland",
+            "registrationLink": "",
+            "type": "chess"
+        },
+        {
+            "id": 19,
+            "title": "Free Pilates Session",
+            "date": "2026-04-19T10:00",
+            "location": "Miller Branch Library, Ellicott City, Maryland",
+            "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-pilates-session-april",
+            "type": "pilates"
+        },
+        {
             "id": 18,
             "title": "Learn Basics of Chess with Suchay",
             "date": "2026-04-18T10:00",
