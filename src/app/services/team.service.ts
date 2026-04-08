@@ -11,6 +11,13 @@ export class TeamService {
     { name: "Vamsi", image: "team/founder.png", role: "Secretary" },
   ];
 
+  instructors = [
+    { name: "Carleen Bowie", image: "team/instructors/carleen.png", role: "Certified Pilates Instructor", social_media: { instagram: "" } },
+    { name: "Ramya", image: "team/instructors/ramya.png", role: "Certified Yoga Instructor", social_media: { instagram: "" } },
+    { name: "Githanjali Stalin", image: "team/instructors/githanjali.png", role: "Certified Zumba Instructor", social_media: { instagram: "https://www.instagram.com/groovithaa?igsh=YW84bHJvOXg5eXQw&utm_source=qr/" } },
+    { name: "Sruthi Thippireddy (Joining Soon)", image: "team/founder.png", role: "Certified BollyX Instructor", social_media: { instagram: "" } },
+  ];
+
   boardOfDirectors = [
     {
       name: "Akshat",
@@ -36,7 +43,15 @@ export class TeamService {
       duration: "2025-Current",
       image: "team/member.png",
       role: "Event Coordinator"
-    }
+    },
+    {
+      name: "Mouniksai Kodali",
+      school: "Marriotts Ridge High School",
+      grade: "11",
+      duration: "2025-Current",
+      image: "team/member.png",
+      role: "Youth Programs Coordinator"
+    },
   ];
 
   getFounders() {
@@ -45,5 +60,9 @@ export class TeamService {
 
   getBoardOfDirectors() {
     return this.boardOfDirectors;
+  }
+
+  getInstructors() {
+    return this.instructors;
   }
 }

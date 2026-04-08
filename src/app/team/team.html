@@ -48,3 +48,29 @@
     </div>
   </div>
 </section>
+
+<!-- Instructors Section -->
+<section class="team-section">
+  <h2 class="section-title">Instructors</h2>
+   <div class="team-grid board-grid">
+    <div class="team-card horizontal" *ngFor="let instructor of instructors">
+
+      <img class="team-photo board-photo" [src]="instructor.image" alt="{{ instructor.name }}">
+
+      <div class="details">
+        <h3 class="team-name">{{ instructor.name }}</h3>
+
+        <p><strong>Role:</strong> {{ instructor.role }}</p>
+        <p class="team-bio" *ngIf="instructor.bio">
+          {{ instructor.bio }}
+        </p>
+          <div class="social-media" *ngIf="instructor.social_media.instagram">
+            <a [href]="instructor.social_media.instagram" target="_blank">
+              <!-- <img src="instagram-icon.svg"  alt="Instagram" class="social-icon"> -->
+            </a>
+          </div>
+      </div>
+
+    </div>
+  </div>
+</section>
