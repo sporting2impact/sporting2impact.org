@@ -20,7 +20,7 @@ export class EventService {
             "title": "Free Zumba Session",
             "date": "2026-05-03T14:00",
             "location": "Miller Branch Library, Ellicott City, Maryland",
-            "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-zumba-session-may",
+            "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-zumba-session-may-2",
             "type": "zumba"
         },
         {
