@@ -16,7 +16,7 @@ export class EventService {
 
   private events: EventItem[] = [
         {
-            "id": 22,
+            "id": 24,
             "title": "Free Zumba Session",
             "date": "2026-05-03T14:00",
             "location": "Miller Branch Library, Ellicott City, Maryland",
@@ -24,7 +24,15 @@ export class EventService {
             "type": "zumba"
         },
         {
-            "id": 21,
+            "id": 23,
+            "title": "Food Drive",
+            "date": "2026-04-28T17:00",
+            "location": "Driveway, 4308 ROLLING BROOK WAY,Ellicott City, MD 21043",
+            "registrationLink": "",
+            "type": "Food Drive"
+        },
+        {
+            "id": 22,
             "title": "Free Zumba Session",
             "date": "2026-04-25T14:00",
             "location": "Miller Branch Library, Ellicott City, Maryland",
@@ -32,12 +40,20 @@ export class EventService {
             "type": "zumba"
         },
         {
-            "id": 20,
+            "id": 21,
             "title": "Chess Meetup",
             "date": "2026-04-25T10:00",
             "location": "Miller Branch Library, Ellicott Room, Ellicott City, Maryland",
             "registrationLink": "",
             "type": "chess"
+        },
+        {
+            "id": 20,
+            "title": "Food Drive",
+            "date": "2026-04-24T17:00",
+            "location": "Driveway, 4308 ROLLING BROOK WAY,Ellicott City, MD 21043",
+            "registrationLink": "",
+            "type": "Food Drive"
         },
         {
             "id": 19,
