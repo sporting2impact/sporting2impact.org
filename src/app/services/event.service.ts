@@ -15,6 +15,30 @@ export interface EventItem {
 export class EventService {
 
   private events: EventItem[] = [
+        // {
+        //     "id": 27,
+        //     "title": "Free Yoga Session",
+        //     "date": "2026-05-30T14:00",
+        //     "location": "Miller Branch Library, Ellicott City, Maryland",
+        //     "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-yoga-session-may",
+        //     "type": "yoga"
+        // },
+        // {
+        //     "id": 26,
+        //     "title": "Free BollyX Session",
+        //     "date": "2026-05-23T14:00",
+        //     "location": "Miller Branch Library, Ellicott City, Maryland",
+        //     "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-bollyx-session-may",
+        //     "type": "BollyX"
+        // },
+        {
+            "id": 25,
+            "title": "Free Pilates Session",
+            "date": "2026-05-09T14:00",
+            "location": "Miller Branch Library, Ellicott City, Maryland",
+            "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-pilates-session-may-2",
+            "type": "pilates"
+        },
         {
             "id": 24,
             "title": "Free Zumba Session",
