@@ -87,7 +87,7 @@
    TEAM CARD
 ------------------------------------------------------- */
 .team-card {
-  background: rgb(95, 131, 142);
+  background: #f3f3f8;
   padding: 1.8rem;
   border-radius: 16px;
   border: 1px solid #e5e7eb;
@@ -138,7 +138,7 @@
 .team-name {
   font-size: 1.3rem;
   font-weight: 700;
-  color: #f2f6f4;
+  color: #222322;
   margin-bottom: 0.5rem;
 }
 

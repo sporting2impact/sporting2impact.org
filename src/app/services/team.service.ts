@@ -12,10 +12,12 @@ export class TeamService {
   ];
 
   instructors = [
+    { name: "Elizabeth Higgins (Lizzy)", image: "team/instructors/lizzy.png", role: "Professor and Coordinator of Dance at Howard Community College", social_media: { instagram: "" } },
     { name: "Carleen Bowie", image: "team/instructors/carleen.png", role: "Certified Pilates Instructor", social_media: { instagram: "" } },
-    { name: "Ramya", image: "team/instructors/ramya.png", role: "Certified Yoga Instructor", social_media: { instagram: "" } },
+    { name: "Pon Thirunathan (Ramya)", image: "team/instructors/ramya.png", role: "Certified Yoga Instructor", social_media: { instagram: "" } },
     { name: "Githanjali Stalin", image: "team/instructors/githanjali.png", role: "Certified Zumba Instructor", social_media: { instagram: "https://www.instagram.com/groovithaa?igsh=YW84bHJvOXg5eXQw&utm_source=qr/" } },
-    { name: "Sruthi Thippireddy (Joining Soon)", image: "team/founder.png", role: "Certified BollyX Instructor", social_media: { instagram: "" } },
+    { name: "Sruthi Thippireddy", image: "team/founder.png", role: "Certified BollyX Instructor", social_media: { instagram: "" } },
+    
   ];
 
   boardOfDirectors = [
@@ -51,6 +53,22 @@ export class TeamService {
       duration: "2025-Current",
       image: "team/member.png",
       role: "Youth Programs Coordinator"
+    },
+    {
+      name: "Kaushik Malladi",
+      school: "Marriotts Ridge High School",
+      grade: "10",
+      duration: "2025-Current",
+      image: "team/member.png",
+      role: "Asst. Outreach Coordinator"
+    },
+    {
+      name: "Dhruvi Settipalle",
+      school: "Mt. Hebron High School",
+      grade: "9",
+      duration: "2026-Current",
+      image: "team/member.png",
+      role: "Asst. Social Media Coordinator"
     },
   ];
 

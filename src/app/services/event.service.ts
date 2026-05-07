@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 export interface EventItem {
   id: number;  
   title: string;
+  subtitle: string;
   date: string;   // or Date
   registrationLink: string;
   location: string;
@@ -16,24 +17,45 @@ export class EventService {
 
   private events: EventItem[] = [
         // {
-        //     "id": 27,
-        //     "title": "Free Yoga Session",
-        //     "date": "2026-05-30T14:00",
-        //     "location": "Miller Branch Library, Ellicott City, Maryland",
-        //     "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-yoga-session-may",
-        //     "type": "yoga"
+        //     "id": 29,
+        //     "title": "Obesity and its Impact on Physical Health",
+        //     "subtitle": "Dr. Asif Aziz",
+        //     "date": "2026-05-16T14:00",
+        //     "location": "Online Webinar - Coming Soon",
+        //     "registrationLink": "",
+        //     "type": "health"
         // },
-        // {
-        //     "id": 26,
-        //     "title": "Free BollyX Session",
-        //     "date": "2026-05-23T14:00",
-        //     "location": "Miller Branch Library, Ellicott City, Maryland",
-        //     "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-bollyx-session-may",
-        //     "type": "BollyX"
-        // },
+        {
+            "id": 28,
+            "title": "Free Yoga Session",
+            "subtitle": "",
+            "date": "2026-05-30T14:00",
+            "location": "Miller Branch Library, Ellicott City, Maryland",
+            "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-yoga-session-may",
+            "type": "yoga"
+        },
+        {
+            "id": 27,
+            "title": "Free BollyX Session",
+            "subtitle": "",
+            "date": "2026-05-23T14:00",
+            "location": "Miller Branch Library, Ellicott City, Maryland",
+            "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-bollyx-session-may",
+            "type": "bollyx"
+        },
+        {
+            "id": 26,
+            "title": "Wellness Walk",
+            "subtitle": "Trolley Line # 9 Trail",
+            "date": "2026-05-10T08:00",
+            "location": "Old Ellicott City (Parking Lot A), Maryland",
+            "registrationLink": "",
+            "type": "walking"
+        },
         {
             "id": 25,
             "title": "Free Pilates Session",
+            "subtitle": "",
             "date": "2026-05-09T14:00",
             "location": "Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-pilates-session-may-2",
@@ -42,6 +64,7 @@ export class EventService {
         {
             "id": 24,
             "title": "Free Zumba Session",
+            "subtitle": "",
             "date": "2026-05-03T14:00",
             "location": "Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-zumba-session-may-2",
@@ -50,6 +73,7 @@ export class EventService {
         {
             "id": 23,
             "title": "Food Drive",
+            "subtitle": "",
             "date": "2026-04-28T17:00",
             "location": "Driveway, 4308 ROLLING BROOK WAY,Ellicott City, MD 21043",
             "registrationLink": "",
@@ -58,6 +82,7 @@ export class EventService {
         {
             "id": 22,
             "title": "Free Zumba Session",
+            "subtitle": "",
             "date": "2026-04-25T14:00",
             "location": "Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-zumba-session-apr",
@@ -66,6 +91,7 @@ export class EventService {
         {
             "id": 21,
             "title": "Chess Meetup",
+            "subtitle": "",
             "date": "2026-04-25T10:00",
             "location": "Miller Branch Library, Ellicott Room, Ellicott City, Maryland",
             "registrationLink": "",
@@ -74,6 +100,7 @@ export class EventService {
         {
             "id": 20,
             "title": "Food Drive",
+            "subtitle": "",
             "date": "2026-04-24T17:00",
             "location": "Driveway, 4308 ROLLING BROOK WAY,Ellicott City, MD 21043",
             "registrationLink": "",
@@ -82,6 +109,7 @@ export class EventService {
         {
             "id": 19,
             "title": "Free Pilates Session",
+            "subtitle": "",
             "date": "2026-04-19T14:15",
             "location": "Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-pilates-session-april",
@@ -90,6 +118,7 @@ export class EventService {
         {
             "id": 18,
             "title": "Learn Basics of Chess with Suchay",
+            "subtitle": "",
             "date": "2026-04-18T10:00",
             "location": "Miller Branch Library, Avalon Room, Ellicott City, Maryland",
             "registrationLink": "",
@@ -98,6 +127,7 @@ export class EventService {
         {
             "id": 17,
             "title": "Free Yoga Session",
+            "subtitle": "",
             "date": "2026-04-12T14:00",
             "location": "Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-yoga-session-18th-apr-saturday",
@@ -106,6 +136,7 @@ export class EventService {
         {
             "id": 17,
             "title": "Free Pilates Session",
+            "subtitle": "",
             "date": "2026-03-07T10:00",
             "location": "Urbana Library, Frederick, Maryland",
             "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-pilates-session--03072026",
@@ -114,6 +145,7 @@ export class EventService {
         {
             "id": 16,
             "title": "Free Yoga Session",
+            "subtitle": "",
             "date": "2026-03-08T14:00",
             "location": "Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-yoga-session--03082026",
@@ -123,6 +155,7 @@ export class EventService {
         {
             "id": 15,
             "title": "Chess Meetup",
+            "subtitle": "",
             "date": "2026-03-15T14:00",
             "location": "Miller Branch Library, Ellicott Room, Ellicott City, Maryland",
             "registrationLink": "",
@@ -131,6 +164,7 @@ export class EventService {
         {
             "id": 14,
             "title": "Free Pilates Session",
+            "subtitle": "",
             "date": "2026-03-22T14:15",
             "location": "Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-pilates-session--03222026",
@@ -139,6 +173,7 @@ export class EventService {
         {
             "id": 13,
             "title": "Free Zumba Session",
+            "subtitle": "",
             "date": "2026-03-29T14:00",
             "location": "Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-zumba-session-29th-mar-sunday",
@@ -147,6 +182,7 @@ export class EventService {
         {
             "id": 12,
             "title": "Free Pilates Session",
+            "subtitle": "",
             "date": "2026-02-15T14:15",
             "location": "Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-pilates-session",
@@ -155,6 +191,7 @@ export class EventService {
         {
             "id": 11,
             "title": "Free Pilates Session",
+            "subtitle": "",
             "date": "2026-01-17T14:15",
             "location": "Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-pilates-session",
@@ -163,6 +200,7 @@ export class EventService {
         {
             "id": 10,
             "title": "Free Yoga Session",
+            "subtitle": "",
             "date": "2026-01-10T14:00",
             "location": "Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-yoga-session",
@@ -171,6 +209,7 @@ export class EventService {
         {
             "id": 9,
             "title": "Free Pilates Session",
+            "subtitle": "",
             "date": "2025-12-20T14:00",
             "location": "Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "",
@@ -179,6 +218,7 @@ export class EventService {
         {
             "id": 8,
             "title": "Free Pilates Session",
+            "subtitle": "",
             "date": "2025-11-02T14:15",
             "location": "Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "",
@@ -187,6 +227,7 @@ export class EventService {
         {
             "id": 7,
             "title": "Free Pilates Session",
+            "subtitle": "",
             "date": "2025-10-19T15:00",
             "location": "Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "",
@@ -195,6 +236,7 @@ export class EventService {
         {
             "id": 6,
             "title": "Free Pilates Session",
+            "subtitle": "",
             "date": "2025-08-30T10:30",
             "location": "Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "",
@@ -203,6 +245,7 @@ export class EventService {
         {
             "id": 5,
             "title": "Physical Health Awareness Walk",
+            "subtitle": "",
             "date": "2025-09-07T08:00",
             "location": "Grist Mill Trail, Ellicott City, Maryland",
             "registrationLink": "",
@@ -211,6 +254,7 @@ export class EventService {
         {
             "id": 4,
             "title": "Physical Health Awareness Walk",
+            "subtitle": "",
             "date": "2025-08-16T07:30",
             "location": "Trail, Ellicott City, Maryland",
             "registrationLink": "",
@@ -219,6 +263,7 @@ export class EventService {
         {
             "id": 3,
             "title": "Physical Health Awareness Walk",
+            "subtitle": "",
             "date": "2025-08-09T05:00",
             "location": "Centennial Park West, Ellicott City, Maryland",
             "registrationLink": "",
@@ -227,6 +272,7 @@ export class EventService {
         {
             "id": 2,
             "title": "Physical Health Awareness Walk",
+            "subtitle": "",
             "date": "2025-08-02T08:00",
             "location": "Patapsco Valley Quarry Trail, Ellicott City, Maryland",
             "registrationLink": "",
@@ -235,6 +281,7 @@ export class EventService {
         {
             "id": 1,
             "title": "Physical Health Awareness Walk",
+            "subtitle": "",
             "date": "2025-07-26T07:00",
             "location": "Patapsco State Park, Ellicott City, Maryland",
             "registrationLink": "",

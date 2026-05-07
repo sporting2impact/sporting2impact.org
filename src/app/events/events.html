@@ -25,6 +25,7 @@
 
       <div class="event-content">
         <h3>{{ event.title }}</h3>
+        <h3 *ngIf="event.subtitle">{{ event.subtitle }}</h3 >
         <p>Date: {{ event.date | date:'MMM dd, yyyy hh:mm a' }}</p>
         <p>Location: {{ event.location }}</p>
 
