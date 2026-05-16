@@ -17,7 +17,7 @@ export class EventService {
 
   private events: EventItem[] = [
         // {
-        //     "id": 29,
+        //     "id": 31,
         //     "title": "Obesity and its Impact on Physical Health",
         //     "subtitle": "Dr. Asif Aziz",
         //     "date": "2026-05-16T14:00",
@@ -26,7 +26,7 @@ export class EventService {
         //     "type": "health"
         // },
         {
-            "id": 28,
+            "id": 29,
             "title": "Free Yoga Session",
             "subtitle": "",
             "date": "2026-05-30T14:00",
@@ -35,13 +35,22 @@ export class EventService {
             "type": "yoga"
         },
         {
-            "id": 27,
+            "id": 28,
             "title": "Free BollyX Session",
             "subtitle": "",
             "date": "2026-05-23T14:00",
             "location": "Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-bollyx-session-may",
             "type": "bollyx"
+        },
+        {
+            "id": 27,
+            "title": "Wellness Walk",
+            "subtitle": "Grist Mill Trail",
+            "date": "2026-05-16T08:00",
+            "location": "https://maps.app.goo.gl/Lf44dpQgBkwMEkYaA",
+            "registrationLink": "https://forms.gle/v3rJV1PVdUoPEJnf6",
+            "type": "walking"
         },
         {
             "id": 26,
