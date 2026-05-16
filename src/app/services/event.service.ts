@@ -48,7 +48,7 @@ export class EventService {
             "title": "Wellness Walk",
             "subtitle": "Grist Mill Trail",
             "date": "2026-05-17T08:00",
-            "location": "https://maps.app.goo.gl/Lf44dpQgBkwMEkYaA",
+            "location": "Ellicott City, Maryland",
             "registrationLink": "https://forms.gle/v3rJV1PVdUoPEJnf6",
             "type": "walking"
         },
