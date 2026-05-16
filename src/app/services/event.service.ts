@@ -47,7 +47,7 @@ export class EventService {
             "id": 27,
             "title": "Wellness Walk",
             "subtitle": "Grist Mill Trail",
-            "date": "2026-05-16T08:00",
+            "date": "2026-05-17T08:00",
             "location": "https://maps.app.goo.gl/Lf44dpQgBkwMEkYaA",
             "registrationLink": "https://forms.gle/v3rJV1PVdUoPEJnf6",
             "type": "walking"
