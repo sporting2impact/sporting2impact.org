@@ -16,23 +16,41 @@ export interface EventItem {
 export class EventService {
 
   private events: EventItem[] = [
-        // {
-        //     "id": 31,
-        //     "title": "Obesity and its Impact on Physical Health",
-        //     "subtitle": "Dr. Asif Aziz",
-        //     "date": "2026-05-16T14:00",
-        //     "location": "Online Webinar - Coming Soon",
-        //     "registrationLink": "",
-        //     "type": "health"
-        // },
         {
-            "id": 29,
+            "id": 32,
+            "title": "Weight & Wellness Management",
+            "subtitle": "Dr. Muhammad Asif Aziz, MD, MPH, DABOM",
+            "date": "2026-05-21T14:00",
+            "location": "Ellicott Room, Miller Branch Library, Ellicott City, Maryland",
+            "registrationLink": "",
+            "type": "health"
+        },
+        {
+            "id": 31,
+            "title": "Learn Basics of Chess with Suchay",
+            "subtitle": "",
+            "date": "2026-06-07T2:00",
+            "location": "Ellicott Room, Miller Branch Library, Ellicott City, Maryland",
+            "registrationLink": "",
+            "type": "chess"
+        },
+        {
+            "id": 30,
             "title": "Free Yoga Session",
             "subtitle": "",
             "date": "2026-05-30T14:00",
             "location": "Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-yoga-session-may",
             "type": "yoga"
+        },
+        {
+            "id": 29,
+            "title": "Wellness Walk",
+            "subtitle": "Grist Mill Trail",
+            "date": "2026-05-17T08:00",
+            "location": "Centennial Park, Ellicott City, Maryland",
+            "registrationLink": "https://forms.gle/e8dHNvHb1T5QkHqv7",
+            "type": "walking"
         },
         {
             "id": 28,
