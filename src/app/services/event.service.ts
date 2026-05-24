@@ -20,7 +20,7 @@ export class EventService {
             "id": 32,
             "title": "Weight & Wellness Management",
             "subtitle": "Dr. Muhammad Asif Aziz, MD, MPH, DABOM",
-            "date": "2026-05-21T14:00",
+            "date": "2026-06-21T14:00",
             "location": "Ellicott Room, Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "",
             "type": "health"
@@ -47,7 +47,7 @@ export class EventService {
             "id": 29,
             "title": "Wellness Walk",
             "subtitle": "Grist Mill Trail",
-            "date": "2026-05-17T08:00",
+            "date": "2026-05-24T17:00",
             "location": "Centennial Park, Ellicott City, Maryland",
             "registrationLink": "https://forms.gle/e8dHNvHb1T5QkHqv7",
             "type": "walking"
