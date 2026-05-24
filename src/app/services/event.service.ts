@@ -20,7 +20,7 @@ export class EventService {
             "id": 32,
             "title": "Weight & Wellness Management",
             "subtitle": "Dr. Muhammad Asif Aziz, MD, MPH, DABOM",
-            "date": "2026-05-21T14:00",
+            "date": "2026-06-21T14:00",
             "location": "Ellicott Room, Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "",
             "type": "health"
