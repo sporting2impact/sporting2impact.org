@@ -16,8 +16,8 @@ export class TeamService {
     { name: "Carleen Bowie", image: "team/instructors/carleen.png", role: "Certified Pilates Instructor", social_media: { instagram: "" } },
     { name: "Pon Thirunathan (Ramya)", image: "team/instructors/ramya.png", role: "Certified Yoga Instructor", social_media: { instagram: "" } },
     { name: "Githanjali Stalin", image: "team/instructors/githanjali.png", role: "Certified Zumba Instructor", social_media: { instagram: "https://www.instagram.com/groovithaa?igsh=YW84bHJvOXg5eXQw&utm_source=qr/" } },
-    { name: "Sruthi Thippireddy", image: "team/founder.png", role: "Certified BollyX Instructor", social_media: { instagram: "" } },
-    { name: "Cindy Cheung", image: "team/founder.png", role: "Certified Zumbaeat Instructor", social_media: { instagram: "" } },
+    { name: "Sruthi Thippireddy", image: "team/instructors/sruthi.png", role: "Certified BollyX Instructor", social_media: { instagram: "" } },
+    { name: "Cindy Cheung", image: "team/instructors/cindy.png", role: "Certified Zumba Instructor", social_media: { instagram: "" } },
     
   ];
 
