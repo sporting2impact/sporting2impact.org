@@ -17,7 +17,16 @@ export class EventService {
 
   private events: EventItem[] = [
         {
-            "id": 32,
+            "id": 37,
+            "title": "Learn Basics of Chess with Suchay",
+            "subtitle": "",
+            "date": "2026-06-27T10:00",
+            "location": "Ellicott Room, Miller Branch Library, Ellicott City, Maryland",
+            "registrationLink": "",
+            "type": "chess"
+        },    
+        {
+            "id": 36,
             "title": "Weight & Wellness Management",
             "subtitle": "Dr. Muhammad Asif Aziz, MD, MPH, DABOM",
             "date": "2026-06-21T14:00",
@@ -26,13 +35,49 @@ export class EventService {
             "type": "health"
         },
         {
-            "id": 31,
+            "id": 35,
+            "title": "Free BollyX Session",
+            "subtitle": "",
+            "date": "2026-06-20T14:00",
+            "location": "Miller Branch Library, Ellicott City, Maryland",
+            "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-bollyx-session-june",
+            "type": "bollyx"
+        },
+        {
+            "id": 34,
+            "title": "Free Pilates Session",
+            "subtitle": "",
+            "date": "2026-06-14T14:00",
+            "location": "Avalon Room, Miller Branch Library, Ellicott City, Maryland",
+            "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-pilates-session-june",
+            "type": "pilates"
+        },
+        {
+            "id": 33,
             "title": "Learn Basics of Chess with Suchay",
             "subtitle": "",
             "date": "2026-06-07T2:00",
             "location": "Ellicott Room, Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "",
             "type": "chess"
+        },
+        {
+            "id": 32,
+            "title": "Free Zumba Session",
+            "subtitle": "",
+            "date": "2026-06-06T14:00",
+            "location": "Miller Branch Library, Ellicott City, Maryland",
+            "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-zumba-session-june",
+            "type": "zumba"
+        },
+        {
+            "id": 31,
+            "title": "Mental Health Awareness Walk",
+            "subtitle": "Centennial Park Lake Trail",
+            "date": "2026-05-31T17:00",
+            "location": "Centennial Park, Ellicott City, Maryland",
+            "registrationLink": "https://forms.gle/e8dHNvHb1T5QkHqv7",
+            "type": "walking"
         },
         {
             "id": 30,
@@ -46,7 +91,7 @@ export class EventService {
         {
             "id": 29,
             "title": "Wellness Walk",
-            "subtitle": "Grist Mill Trail",
+            "subtitle": "Centennial Park Lake Trail",
             "date": "2026-05-24T17:00",
             "location": "Centennial Park, Ellicott City, Maryland",
             "registrationLink": "https://forms.gle/e8dHNvHb1T5QkHqv7",
