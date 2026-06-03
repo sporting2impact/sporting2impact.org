@@ -56,7 +56,7 @@ export class EventService {
             "id": 33,
             "title": "Learn Basics of Chess with Suchay",
             "subtitle": "",
-            "date": "2026-06-07T2:00",
+            "date": "2026-06-07T14:00",
             "location": "Ellicott Room, Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "",
             "type": "chess"
