@@ -17,7 +17,7 @@ export class EventService {
 
   private events: EventItem[] = [
         {
-            "id": 37,
+            "id": 38,
             "title": "Learn Basics of Chess with Suchay",
             "subtitle": "",
             "date": "2026-06-27T10:00",
@@ -26,7 +26,7 @@ export class EventService {
             "type": "chess"
         },    
         {
-            "id": 36,
+            "id": 37,
             "title": "Weight & Wellness Management",
             "subtitle": "Dr. Muhammad Asif Aziz, MD, MPH, DABOM",
             "date": "2026-06-21T14:00",
@@ -35,7 +35,7 @@ export class EventService {
             "type": "health"
         },
         {
-            "id": 35,
+            "id": 36,
             "title": "Free BollyX Session",
             "subtitle": "",
             "date": "2026-06-20T14:00",
@@ -44,7 +44,7 @@ export class EventService {
             "type": "bollyx"
         },
         {
-            "id": 34,
+            "id": 35,
             "title": "Free Pilates Session",
             "subtitle": "",
             "date": "2026-06-14T14:00",
@@ -53,13 +53,22 @@ export class EventService {
             "type": "pilates"
         },
         {
-            "id": 33,
+            "id": 34,
             "title": "Learn Basics of Chess with Suchay",
             "subtitle": "",
             "date": "2026-06-07T14:00",
             "location": "Ellicott Room, Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "",
             "type": "chess"
+        },
+        {
+            "id": 23,
+            "title": "Wellness Walk",
+            "subtitle": "Grist Mill Trail",
+            "date": "2026-06-07AddedT08:00",
+            "location": "Ellicott City, Maryland",
+            "registrationLink": "https://forms.gle/v3rJV1PVdUoPEJnf6",
+            "type": "walking"
         },
         {
             "id": 32,
