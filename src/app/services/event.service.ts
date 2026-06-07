@@ -62,7 +62,7 @@ export class EventService {
             "type": "chess"
         },
         {
-            "id": 23,
+            "id": 33,
             "title": "Wellness Walk",
             "subtitle": "Grist Mill Trail",
             "date": "2026-06-07AddedT08:00",
