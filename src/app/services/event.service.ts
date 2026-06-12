@@ -17,7 +17,7 @@ export class EventService {
 
   private events: EventItem[] = [
         {
-            "id": 38,
+            "id": 39,
             "title": "Learn Basics of Chess with Suchay",
             "subtitle": "",
             "date": "2026-06-27T10:00",
@@ -26,7 +26,7 @@ export class EventService {
             "type": "chess"
         },    
         {
-            "id": 37,
+            "id": 38,
             "title": "Weight & Wellness Management",
             "subtitle": "Dr. Muhammad Asif Aziz, MD, MPH, DABOM",
             "date": "2026-06-21T14:00",
@@ -35,7 +35,7 @@ export class EventService {
             "type": "health"
         },
         {
-            "id": 36,
+            "id": 37,
             "title": "Free BollyX Session",
             "subtitle": "",
             "date": "2026-06-20T14:00",
@@ -44,13 +44,22 @@ export class EventService {
             "type": "bollyx"
         },
         {
-            "id": 35,
+            "id": 36,
             "title": "Free Pilates Session",
             "subtitle": "",
             "date": "2026-06-14T14:00",
             "location": "Avalon Room, Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-pilates-session-june",
             "type": "pilates"
+        },
+        {
+            "id": 35,
+            "title": "Wellness Walk",
+            "subtitle": "Trolley Line # 9 Trail",
+            "date": "2026-06-13T08:00",
+            "location": "Old Ellicott City (Parking Lot A), Maryland",
+            "registrationLink": "",
+            "type": "walking"
         },
         {
             "id": 34,
