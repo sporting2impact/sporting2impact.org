@@ -17,6 +17,15 @@ export class EventService {
 
   private events: EventItem[] = [
         {
+            "id": 40,
+            "title": "Free Zumba Session",
+            "subtitle": "",
+            "date": "2026-07-05T14:00",
+            "location": "Miller Branch Library, Ellicott City, Maryland",
+            "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-zumba-session-july",
+            "type": "zumba"
+        },
+        {
             "id": 39,
             "title": "Learn Basics of Chess with Suchay",
             "subtitle": "",
