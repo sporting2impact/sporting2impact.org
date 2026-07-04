@@ -17,6 +17,33 @@ export class EventService {
 
   private events: EventItem[] = [
         {
+            "id": 43,
+            "title": "Free Pilates Session",
+            "subtitle": "",
+            "date": "2026-07-16T14:00",
+            "location": "Avalon Room, Miller Branch Library, Ellicott City, Maryland",
+            "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-pilates-session-july",
+            "type": "pilates"
+        },
+        {
+            "id": 42,
+            "title": "Summer Chess Camp by Suchay",
+            "subtitle": "",
+            "date": "2026-07-13T15:00",
+            "location": "Online",
+            "registrationLink": "https://www.zeffy.com/en-US/ticketing/summer-chess-camp",
+            "type": "chess"
+        },
+        {
+            "id": 41,
+            "title": "Free Zumba Session",
+            "subtitle": "",
+            "date": "2026-07-11T14:00",
+            "location": "Miller Branch Library, Ellicott City, Maryland",
+            "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-zumba-session-july-11th",
+            "type": "zumba"
+        },
+        {
             "id": 40,
             "title": "Free Zumba Session",
             "subtitle": "",
