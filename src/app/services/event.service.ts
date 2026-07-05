@@ -17,10 +17,19 @@ export class EventService {
 
   private events: EventItem[] = [
         {
+            "id": 44,
+            "title": "Summer Chess Camp 2 by Suchay",
+            "subtitle": "",
+            "date": "2026-07-20T15:00",
+            "location": "Online",
+            "registrationLink": "https://www.zeffy.com/en-US/ticketing/summer-chess-camp-2-beginners",
+            "type": "chess"
+        },
+        {
             "id": 43,
             "title": "Free Pilates Session",
             "subtitle": "",
-            "date": "2026-07-16T14:00",
+            "date": "2026-07-19T14:00",
             "location": "Avalon Room, Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-pilates-session-july",
             "type": "pilates"
