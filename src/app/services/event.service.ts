@@ -27,7 +27,7 @@ export class EventService {
         },
         {
             "id": 43,
-            "title": "Free Pilates Session",
+            "title": "Free Pilates Session By Carlen",
             "subtitle": "",
             "date": "2026-07-19T14:00",
             "location": "Avalon Room, Miller Branch Library, Ellicott City, Maryland",
