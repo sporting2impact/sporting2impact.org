@@ -17,6 +17,15 @@ export class EventService {
 
   private events: EventItem[] = [
         {
+            "id": 45,
+            "title": "Free Yoga Session",
+            "subtitle": "",
+            "date": "2026-07-25T14:00",
+            "location": "Avalon Room, Miller Branch Library, Ellicott City, Maryland",
+            "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-yoga-session-july",
+            "type": "yoga"
+        },
+        {
             "id": 44,
             "title": "Summer Chess Camp 2 by Suchay",
             "subtitle": "",
