@@ -6,19 +6,19 @@ import { Injectable } from '@angular/core';
 export class TeamService {
 
   founders = [
-    { name: "Siva Ch", image: "team/founder.png", role: "President & Treasurer" },
-    { name: "Sridhar", image: "team/founder.png", role: "Vice President" },
-    { name: "Vamsi", image: "team/founder.png", role: "Secretary" },
+    { name: "Siva Ch", image: "assets/team/founder.png", role: "President & Treasurer" },
+    { name: "Sridhar", image: "assets/team/founder.png", role: "Vice President" },
+    { name: "Vamsi", image: "assets/team/founder.png", role: "Secretary" },
   ];
 
   instructors = [
-    { name: "Elizabeth Higgins (Lizzy)", image: "team/instructors/lizzy.png", role: "Professor and Coordinator of Dance at Howard Community College", social_media: { instagram: "" } },
-    { name: "Carleen Bowie", image: "team/instructors/carleen.png", role: "Certified Pilates Instructor", social_media: { instagram: "" } },
-    { name: "Pon Thirunathan (Ramya)", image: "team/instructors/ramya.png", role: "Certified Yoga Instructor", social_media: { instagram: "" } },
-    { name: "Githanjali Stalin", image: "team/instructors/githanjali.png", role: "Certified Zumba Instructor", social_media: { instagram: "https://www.instagram.com/groovithaa?igsh=YW84bHJvOXg5eXQw&utm_source=qr/" } },
-    { name: "Sruthi Thippireddy", image: "team/instructors/sruthi.png", role: "Certified BollyX Instructor", social_media: { instagram: "" } },
-    // { name: "Cindy Cheung", image: "team/instructors/cindy.png", role: "Joining Soon", social_media: { instagram: "" } },
-    { name: "Maria Stewart", image: "team/instructors/maria.png", role: "Joining Soon", social_media: { instagram: "" } },
+    { name: "Elizabeth Higgins (Lizzy)", image: "assets/team/instructors/lizzy.png", role: "Professor and Coordinator of Dance at Howard Community College", social_media: { instagram: "" } },
+    { name: "Carleen Bowie", image: "assets/team/instructors/carleen.png", role: "Certified Pilates Instructor", social_media: { instagram: "" } },
+    { name: "Pon Thirunathan (Ramya)", image: "assets/team/instructors/ramya.png", role: "Certified Yoga Instructor", social_media: { instagram: "" } },
+    { name: "Githanjali Stalin", image: "assets/team/instructors/githanjali.png", role: "Certified Zumba Instructor", social_media: { instagram: "https://www.instagram.com/groovithaa?igsh=YW84bHJvOXg5eXQw&utm_source=qr/" } },
+    { name: "Sruthi Thippireddy", image: "assets/team/instructors/sruthi.png", role: "Certified BollyX Instructor", social_media: { instagram: "" } },
+    // { name: "Cindy Cheung", image: "assets/team/instructors/cindy.png", role: "Joining Soon", social_media: { instagram: "" } },
+    { name: "Maria Stewart", image: "assets/team/instructors/maria.png", role: "Joining Soon", social_media: { instagram: "" } },
     
   ];
 
@@ -28,7 +28,7 @@ export class TeamService {
       school: "Mt. Hebron High School",
       grade: "12",
       duration: "2025-Current",
-      image: "team/member.png",
+      image: "assets/team/member.png",
       role: "Outreach Coordinator"
     },  
     {
@@ -36,7 +36,7 @@ export class TeamService {
       school: "Marriotts Ridge High School",
       grade: "12",
       duration: "2025-Current",
-      image: "team/tanya.png",
+      image: "assets/team/tanya.png",
       role: "Social Media Coordinator"
 
     },
@@ -45,7 +45,7 @@ export class TeamService {
       school: "Mt. Hebron High School",
       grade: "9",
       duration: "2025-Current",
-      image: "team/member.png",
+      image: "assets/team/member.png",
       role: "Event Coordinator"
     },
     {
@@ -53,7 +53,7 @@ export class TeamService {
       school: "Marriotts Ridge High School",
       grade: "11",
       duration: "2025-Current",
-      image: "team/member.png",
+      image: "assets/team/member.png",
       role: "Youth Programs Coordinator"
     },
     {
@@ -61,7 +61,7 @@ export class TeamService {
       school: "Marriotts Ridge High School",
       grade: "10",
       duration: "2025-Current",
-      image: "team/member.png",
+      image: "assets/team/member.png",
       role: "Asst. Outreach Coordinator"
     },
     {
@@ -69,7 +69,7 @@ export class TeamService {
       school: "Mt. Hebron High School",
       grade: "9",
       duration: "2026-Current",
-      image: "team/member.png",
+      image: "assets/team/member.png",
       role: "Asst. Social Media Coordinator"
     },
   ];
