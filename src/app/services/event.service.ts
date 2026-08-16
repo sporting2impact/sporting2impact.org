@@ -17,6 +17,24 @@ export class EventService {
 
   private events: EventItem[] = [
         {
+            "id": 47,
+            "title": "Free Pilates Session By Carlen",
+            "subtitle": "",
+            "date": "2026-08-22T10:00",
+            "location": "Ellicott/Patapsco Room, Miller Branch Library, Ellicott City, Maryland",
+            "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-pilates-session-aug",
+            "type": "pilates"
+        },
+        {
+            "id": 46,
+            "title": "Wellness Walk",
+            "subtitle": "Trolley Line # 9 Trail",
+            "date": "2026-08-16T08:00",
+            "location": "Old Ellicott City (Parking Lot A), Maryland",
+            "registrationLink": "",
+            "type": "walking"
+        },
+        {
             "id": 45,
             "title": "Free Yoga Session",
             "subtitle": "",
