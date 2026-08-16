@@ -1,12 +1,12 @@
 <div class="app-container">
   <nav class="top-nav">
-    <div class="logo" routerLink="/home">
+    <div class="logo" routerLink="/">
       <img src="Sporting2Impact.png" alt="Sporting2Impact" class="logo-img">
       Sporting2Impact
     </div>
 
     <ul class="nav-links">
-      <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
       <li><a routerLink="/team" routerLinkActive="active">Team</a></li>
       <li><a routerLink="/events" routerLinkActive="active">Events</a></li>
       <li><a routerLink="/joinus" routerLinkActive="active">Join Us</a></li>

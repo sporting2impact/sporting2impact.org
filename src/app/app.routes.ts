@@ -7,10 +7,10 @@ import { Team } from './team/team';
 import { App } from './app';
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: Home },
+  { path: '', component: Home },
+  { path: 'home', redirectTo: '', pathMatch: 'full' },
   { path: 'team', component: Team },
   { path: 'events', component: Events },
   { path: 'joinus', component: Joinus },
-  { path: '**', redirectTo: 'home' }
+  { path: '**', redirectTo: '' }
 ];
