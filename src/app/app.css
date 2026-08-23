@@ -1,33 +1,64 @@
+/* Mobile-first: base rules below target small screens; the min-width
+   query further down layers on the desktop row layout. */
 .top-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.75rem 1.5rem;
+  padding: 0.6rem 1rem;
   background-color: #1f2933;
   color: #fff;
   position: sticky;
-  top:0;
+  top: 0;
   z-index: 1000;
 }
 
 .logo {
   font-weight: 800;
   font-size: 1.2rem;
-  cursor: pointer; 
+  cursor: pointer;
+  min-width: 0;
+  overflow: hidden;
 }
 
+.logo-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+/* On mobile this is a dropdown panel hidden until toggled open;
+   the desktop query below turns it back into an inline row. */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
+  gap: 0;
   margin: 0;
-  padding: 0;
+  padding: 0.5rem 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #1f2933;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+}
+
+.nav-links.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .nav-links a {
+  display: block;
   color: #e5e7eb;
   text-decoration: none;
-  padding: 0.25rem 0.5rem;
+  padding: 0.85rem 1.25rem;
 }
 
 .nav-links a.active,
@@ -36,21 +67,29 @@
   border-bottom: 2px solid #3b82f6;
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
 /* Donate button in the top-nav */
 .donate-btn {
   background: linear-gradient(90deg, #ff7a59, #ff3b30);
   color: #fff;
-  padding: 0.45rem 0.9rem;
+  padding: 0.35rem 0.6rem;
+  font-size: 0.9rem;
   border-radius: 999px;
   font-weight: 900;
   text-decoration: none;
   box-shadow: 0 6px 18px rgba(255,59,48,0.16);
   transition: transform 0.12s ease, box-shadow 0.12s ease;
-  margin-left: 1rem;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   z-index: 1001;
+  white-space: nowrap;
 }
 
 .donate-btn:hover {
@@ -58,11 +97,62 @@
   box-shadow: 0 10px 30px rgba(255,59,48,0.18);
 }
 
-@media (max-width: 768px) {
+/* Hamburger toggle — mobile only */
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  z-index: 1002;
+}
+
+.menu-toggle .bar {
+  width: 22px;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.menu-toggle.open .bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.menu-toggle.open .bar:nth-child(2) { opacity: 0; }
+.menu-toggle.open .bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Desktop / tablet: collapse the dropdown back into an inline row and
+   hide the hamburger. */
+@media (min-width: 769px) {
+  .top-nav {
+    padding: 0.75rem 1.5rem;
+  }
+
+  .nav-links {
+    position: static;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 0;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    background-color: transparent;
+  }
+
+  .nav-links a {
+    padding: 0.25rem 0.5rem;
+  }
+
   .donate-btn {
-    padding: 0.35rem 0.6rem;
-    font-size: 0.9rem;
-    margin-left: 0.5rem;
+    padding: 0.45rem 0.9rem;
+    font-size: 1rem;
+    margin-left: 1rem;
+  }
+
+  .menu-toggle {
+    display: none;
   }
 }
 
@@ -104,12 +194,23 @@
   gap: 0.5rem;
   cursor: pointer;
   font-weight: bold;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
 }
 
 .logo-img {
-  height: 50px; /* adjust as needed */
+  height: 36px;
   width: auto;
+  flex-shrink: 0;
+}
+
+@media (min-width: 769px) {
+  .logo {
+    font-size: 1.4rem;
+  }
+
+  .logo-img {
+    height: 50px;
+  }
 }
 
 /* Make the entire app fill the screen vertically */

@@ -225,14 +225,18 @@
 /* -------------------------------------------------------
    PAST EVENTS TABLE
 ------------------------------------------------------- */
+.past-events-table-wrap {
+  overflow-x: auto;
+  margin-top: 1rem;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+}
+
 .past-events-table {
   width: 100%;
+  min-width: 480px;
   border-collapse: collapse;
-  margin-top: 1rem;
   background: white;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid #d1d5db;
 }
 
 .past-events-table th {
@@ -283,6 +287,36 @@
   line-height: 1.6;
 }
 
+
+/* -------------------------------------------------------
+   MOBILE ADJUSTMENTS
+------------------------------------------------------- */
+@media (max-width: 600px) {
+  .events-page-container {
+    padding: 0.5rem;
+  }
+
+  .upcoming-section,
+  .past-section {
+    padding: 1.25rem;
+    border-width: 6px;
+    margin: 1.5rem 0;
+  }
+
+  .events-hero {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .events-hero h1 {
+    font-size: 2rem;
+  }
+
+  .past-events-table th,
+  .past-events-table td {
+    padding: 0.6rem;
+    font-size: 0.85rem;
+  }
+}
 
 /* -------------------------------------------------------
    ANIMATIONS
