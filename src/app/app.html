@@ -1,17 +1,33 @@
 <div class="app-container">
   <nav class="top-nav">
-    <div class="logo" routerLink="/">
+    <div class="logo" routerLink="/" (click)="closeMenu()">
       <img src="Sporting2Impact.png" alt="Sporting2Impact" class="logo-img">
-      Sporting2Impact
+      <span class="logo-text">Sporting2Impact</span>
     </div>
 
-    <ul class="nav-links">
-      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
-      <li><a routerLink="/team" routerLinkActive="active">Team</a></li>
-      <li><a routerLink="/events" routerLinkActive="active">Events</a></li>
-      <li><a routerLink="/joinus" routerLinkActive="active">Join Us</a></li>
+    <ul class="nav-links" id="primary-nav" [class.open]="menuOpen()">
+      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Home</a></li>
+      <li><a routerLink="/team" routerLinkActive="active" (click)="closeMenu()">Team</a></li>
+      <li><a routerLink="/events" routerLinkActive="active" (click)="closeMenu()">Events</a></li>
+      <li><a routerLink="/joinus" routerLinkActive="active" (click)="closeMenu()">Join Us</a></li>
     </ul>
-    <a class="donate-btn" href="https://www.zeffy.com/en-US/donation-form/donate-to-keep-community-healthy" target="_blank" rel="noopener noreferrer" aria-label="Donate to Sporting2Impact">Donate Now</a>
+
+    <div class="nav-actions">
+      <a class="donate-btn" href="https://www.zeffy.com/en-US/donation-form/donate-to-keep-community-healthy" target="_blank" rel="noopener noreferrer" aria-label="Donate to Sporting2Impact">Donate Now</a>
+
+      <button
+        type="button"
+        class="menu-toggle"
+        [class.open]="menuOpen()"
+        (click)="toggleMenu()"
+        [attr.aria-expanded]="menuOpen()"
+        aria-controls="primary-nav"
+        aria-label="Toggle navigation menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
   </nav>
 
   <main class="main-content">
