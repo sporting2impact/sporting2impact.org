@@ -76,9 +76,9 @@
       <tbody>
         <tr *ngFor="let event of getPastEventsByYear(); let i = index"
             [class.alt]="i % 2 === 1">
-          <td>{{ event.title }}</td>
-          <td>{{ event.date | date:'MMM dd, yyyy' }}</td>
-          <td>{{ event.location }}</td>
+          <td data-label="Event">{{ event.title }}</td>
+          <td data-label="Date">{{ event.date | date:'MMM dd, yyyy' }}</td>
+          <td data-label="Location">{{ event.location }}</td>
         </tr>
       </tbody>
     </table>

@@ -311,10 +311,57 @@
     font-size: 2rem;
   }
 
-  .past-events-table th,
+  /* Below 600px, a 3-column table can't display all its content at
+     once without either clipping it or requiring a non-obvious swipe
+     to scroll. Stack each row into a labeled card instead. */
+  .past-events-table-wrap {
+    overflow-x: visible;
+  }
+
+  .past-events-table {
+    min-width: 0;
+  }
+
+  .past-events-table thead {
+    display: none;
+  }
+
+  .past-events-table,
+  .past-events-table tbody,
+  .past-events-table tr,
   .past-events-table td {
-    padding: 0.6rem;
-    font-size: 0.85rem;
+    display: block;
+    width: 100%;
+  }
+
+  .past-events-table tr {
+    padding: 0.75rem 0.9rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .past-events-table tr:last-child {
+    border-bottom: none;
+  }
+
+  .past-events-table td {
+    padding: 0.15rem 0;
+    font-size: 0.9rem;
+  }
+
+  .past-events-table td[data-label]::before {
+    content: attr(data-label) ": ";
+    font-weight: 700;
+    color: #1f2937;
+  }
+
+  .past-events-table td[data-label="Event"] {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1f2937;
+  }
+
+  .past-events-table td[data-label="Event"]::before {
+    content: "";
   }
 }
 
