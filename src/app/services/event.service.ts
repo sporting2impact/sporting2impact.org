@@ -17,6 +17,15 @@ export class EventService {
 
   private events: EventItem[] = [
         {
+            "id": 48,
+            "title": "Wellness Walk",
+            "subtitle": "Grist Mill Trail",
+            "date": "2026-08-23T17:00",
+            "location": "Ellicott City, Maryland",
+            "registrationLink": "",
+            "type": "walking"
+        },
+        {
             "id": 47,
             "title": "Free Pilates Session By Carlen",
             "subtitle": "",
