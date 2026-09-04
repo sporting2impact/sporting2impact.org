@@ -23,35 +23,35 @@ export class TeamService {
   ];
 
   boardOfDirectors = [
-    {
-      name: "Akshat",
-      school: "Mt. Hebron High School",
-      grade: "12",
-      duration: "2025-Current",
-      image: "assets/team/member.png",
-      role: "Outreach Coordinator"
-    },  
-    {
-      name: "Tanya",
-      school: "Marriotts Ridge High School",
-      grade: "12",
-      duration: "2025-Current",
-      image: "assets/team/tanya.png",
-      role: "Social Media Coordinator"
+    // {
+    //   name: "Akshat",
+    //   school: "Mt. Hebron High School",
+    //   grade: "12",
+    //   duration: "2025-Current",
+    //   image: "assets/team/member.png",
+    //   role: "Outreach Coordinator"
+    // },  
+    // {
+    //   name: "Tanya",
+    //   school: "Marriotts Ridge High School",
+    //   grade: "12",
+    //   duration: "2025-Current",
+    //   image: "assets/team/tanya.png",
+    //   role: "Social Media Coordinator"
 
-    },
+    // },
     {
       name: "Suchay",
       school: "Mt. Hebron High School",
-      grade: "9",
+      grade: "10",
       duration: "2025-Current",
       image: "assets/team/member.png",
-      role: "Event Coordinator"
+      role: "Outreach Coordinator"
     },
     {
       name: "Mouniksai Kodali",
       school: "Marriotts Ridge High School",
-      grade: "11",
+      grade: "12",
       duration: "2025-Current",
       image: "assets/team/member.png",
       role: "Youth Programs Coordinator"
@@ -59,18 +59,18 @@ export class TeamService {
     {
       name: "Kaushik Malladi",
       school: "Marriotts Ridge High School",
-      grade: "10",
+      grade: "11",
       duration: "2025-Current",
       image: "assets/team/member.png",
-      role: "Asst. Outreach Coordinator"
+      role: "Event Coordinator"
     },
     {
       name: "Dhruvi Settipalle",
       school: "Mt. Hebron High School",
-      grade: "9",
+      grade: "10",
       duration: "2026-Current",
       image: "assets/team/member.png",
-      role: "Asst. Social Media Coordinator"
+      role: "Social Media Coordinator"
     },
   ];
 

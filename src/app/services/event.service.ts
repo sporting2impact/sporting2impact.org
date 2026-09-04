@@ -17,6 +17,15 @@ export class EventService {
 
   private events: EventItem[] = [
         {
+            "id": 49,
+            "title": "Zumba Session at BGE",
+            "subtitle": "BGE",
+            "date": "2026-09-03T13:30",
+            "location": "BGE, Lord Baltimore Office, Maryland",
+            "registrationLink": "",
+            "type": "Zumba"
+        },
+        {
             "id": 48,
             "title": "Wellness Walk",
             "subtitle": "Grist Mill Trail",
