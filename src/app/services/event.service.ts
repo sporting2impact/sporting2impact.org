@@ -17,6 +17,15 @@ export class EventService {
 
   private events: EventItem[] = [
         {
+            "id": 50,
+            "title": "Wellness Walk",
+            "subtitle": "Centennial Park Lake Trail",
+            "date": "2026-10-04T16:00",
+            "location": "Centennial Park, Ellicott City, Maryland",
+            "registrationLink": "",
+            "type": "walking"
+        },
+        {
             "id": 49,
             "title": "Zumba Session at BGE",
             "subtitle": "BGE",
