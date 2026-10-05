@@ -14,7 +14,7 @@
   <ul class="events-list">
     <li *ngFor="let event of upcomingEvents"
         class="event-card"
-        [style.background-image]="'url(/assets/events/' + event.type + '.png)'">
+        [style.background-image]="eventImagePath(event.type) ? 'url(' + eventImagePath(event.type) + ')' : null">
 <!-- 
       <div class="date-badge">
         <span class="month">{{ event.date | date:'MMM' }}</span>

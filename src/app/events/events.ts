@@ -1,7 +1,14 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { NgFor, NgIf, DatePipe, TitleCasePipe } from '@angular/common';
-import { EventService } from '../services/event.service';
-import { EventItem } from '../services/event.service';
+import {
+  EVENT_DURATION_MINUTES,
+  EVENT_TIME_ZONE,
+  EventItem,
+  EventService,
+  eventImagePath,
+} from '../services/event.service';
+import { SeoService } from '../services/seo.service';
+import { eventsStructuredData } from './event-structured-data';
 
 @Component({
   selector: 'app-events',
@@ -11,7 +18,7 @@ import { EventItem } from '../services/event.service';
   standalone: true,
   providers: [DatePipe],
 })
-export class Events {
+export class Events implements OnInit, OnDestroy {
   events: EventItem[] = [];
 
   upcomingEvents: EventItem[] = [];
@@ -19,7 +26,9 @@ export class Events {
   pastYears: number[] = [];
   selectedYear: number | null = null;
 
-  constructor(private eventService: EventService) {}
+  protected readonly eventImagePath = eventImagePath;
+
+  constructor(private eventService: EventService, private seo: SeoService) {}
 
   ngOnInit() {
     this.events = this.eventService.getEvents();
@@ -28,6 +37,7 @@ export class Events {
 
     // Split into upcoming and past
     this.upcomingEvents = this.eventService.getUpcomingEvents();
+    this.seo.setJsonLd(EVENTS_JSON_LD_ID, eventsStructuredData(this.upcomingEvents));
 
     this.pastEvents = this.events.filter(
       e => new Date(e.date) < now
@@ -40,6 +50,10 @@ export class Events {
 
     // Default selected year
     this.selectedYear = this.pastYears[0] ?? null;
+  }
+
+  ngOnDestroy() {
+    this.seo.setJsonLd(EVENTS_JSON_LD_ID, null);
   }
 
   getPastEventsCount(year: number) {
@@ -139,5 +153,4 @@ export class Events {
   }
 }
 
-const EVENT_TIME_ZONE = 'America/New_York';
-const EVENT_DURATION_MINUTES = 60;
+const EVENTS_JSON_LD_ID = 'events-structured-data';

@@ -11,6 +11,30 @@ export interface EventItem {
   attendees: number | null;  // actual turnout (registrations + walk-ins), filled in after the event
 }
 
+// Event dates are entered as Maryland local time, e.g. "2026-10-04T16:00".
+export const EVENT_TIME_ZONE = 'America/New_York';
+export const EVENT_DURATION_MINUTES = 60;
+
+// Image files in public/assets/events/ are lowercase, and the live server is
+// case-sensitive, so map each event type to its file explicitly.
+const EVENT_IMAGES: Record<string, string> = {
+  bollyx: 'bollyx',
+  chess: 'chess',
+  dance: 'dance',
+  health: 'health',
+  pilates: 'pilates',
+  walk: 'walking',
+  walking: 'walking',
+  yoga: 'yoga',
+  zumba: 'zumba',
+};
+
+/** Path of the event type's card image, or null if there isn't one. */
+export function eventImagePath(type: string): string | null {
+  const file = EVENT_IMAGES[type.trim().toLowerCase()];
+  return file ? `/assets/events/${file}.png` : null;
+}
+
 @Injectable({
   providedIn: 'root'
 })
