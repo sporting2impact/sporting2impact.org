@@ -17,6 +17,9 @@ import { eventsStructuredData } from './event-structured-data';
   styleUrl: './events.css',
   standalone: true,
   providers: [DatePipe],
+  // Upcoming events depend on today's date, so render fresh in the browser instead of
+  // reusing the build-time HTML (which could list events that have since passed).
+  host: { ngSkipHydration: 'true' },
 })
 export class Events implements OnInit, OnDestroy {
   events: EventItem[] = [];
