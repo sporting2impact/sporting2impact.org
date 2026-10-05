@@ -8,6 +8,7 @@ export interface EventItem {
   registrationLink: string;
   location: string;
   type: string;
+  attendees: number | null;  // actual turnout (registrations + walk-ins), filled in after the event
 }
 
 @Injectable({
@@ -16,6 +17,7 @@ export interface EventItem {
 export class EventService {
 
   private events: EventItem[] = [
+       
         {
             "id": 50,
             "title": "Wellness Walk",
@@ -23,16 +25,18 @@ export class EventService {
             "date": "2026-10-04T16:00",
             "location": "Centennial Park, Ellicott City, Maryland",
             "registrationLink": "",
-            "type": "walking"
+            "type": "walking",
+            "attendees": 16
         },
         {
             "id": 49,
-            "title": "Zumba Session at BGE",
+            "title": "Zumba Session at BGE (Corporate Session)",
             "subtitle": "BGE",
             "date": "2026-09-03T13:30",
             "location": "BGE, Lord Baltimore Office, Maryland",
             "registrationLink": "",
-            "type": "Zumba"
+            "type": "Zumba",
+            "attendees": null
         },
         {
             "id": 48,
@@ -41,7 +45,8 @@ export class EventService {
             "date": "2026-08-23T17:00",
             "location": "Ellicott City, Maryland",
             "registrationLink": "",
-            "type": "walking"
+            "type": "walking",
+            "attendees": 21
         },
         {
             "id": 47,
@@ -50,7 +55,8 @@ export class EventService {
             "date": "2026-08-22T10:00",
             "location": "Ellicott/Patapsco Room, Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-pilates-session-aug",
-            "type": "pilates"
+            "type": "pilates",
+            "attendees": 6
         },
         {
             "id": 46,
@@ -59,7 +65,8 @@ export class EventService {
             "date": "2026-08-16T08:00",
             "location": "Old Ellicott City (Parking Lot A), Maryland",
             "registrationLink": "",
-            "type": "walking"
+            "type": "walking",
+            "attendees": 19
         },
         {
             "id": 45,
@@ -68,7 +75,8 @@ export class EventService {
             "date": "2026-07-25T14:00",
             "location": "Avalon Room, Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-yoga-session-july",
-            "type": "yoga"
+            "type": "yoga",
+            "attendees": 6
         },
         {
             "id": 44,
@@ -77,7 +85,8 @@ export class EventService {
             "date": "2026-07-20T15:00",
             "location": "Online",
             "registrationLink": "https://www.zeffy.com/en-US/ticketing/summer-chess-camp-2-beginners",
-            "type": "chess"
+            "type": "chess",
+            "attendees": 10
         },
         {
             "id": 43,
@@ -86,7 +95,8 @@ export class EventService {
             "date": "2026-07-19T14:00",
             "location": "Avalon Room, Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-pilates-session-july",
-            "type": "pilates"
+            "type": "pilates",
+            "attendees": 9
         },
         {
             "id": 42,
@@ -95,7 +105,8 @@ export class EventService {
             "date": "2026-07-13T15:00",
             "location": "Online",
             "registrationLink": "https://www.zeffy.com/en-US/ticketing/summer-chess-camp",
-            "type": "chess"
+            "type": "chess",
+            "attendees": 10
         },
         {
             "id": 41,
@@ -104,7 +115,8 @@ export class EventService {
             "date": "2026-07-11T14:00",
             "location": "Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-zumba-session-july-11th",
-            "type": "zumba"
+            "type": "zumba",
+            "attendees": 14
         },
         {
             "id": 40,
@@ -113,7 +125,8 @@ export class EventService {
             "date": "2026-07-05T14:00",
             "location": "Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-zumba-session-july",
-            "type": "zumba"
+            "type": "zumba",
+            "attendees": 12
         },
         {
             "id": 39,
@@ -122,7 +135,8 @@ export class EventService {
             "date": "2026-06-27T10:00",
             "location": "Ellicott Room, Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "",
-            "type": "chess"
+            "type": "chess",
+            "attendees": 14
         },    
         {
             "id": 38,
@@ -131,7 +145,8 @@ export class EventService {
             "date": "2026-06-21T14:00",
             "location": "Ellicott Room, Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "",
-            "type": "health"
+            "type": "health",
+            "attendees": 60
         },
         {
             "id": 37,
@@ -140,7 +155,8 @@ export class EventService {
             "date": "2026-06-20T14:00",
             "location": "Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-bollyx-session-june",
-            "type": "bollyx"
+            "type": "bollyx",
+            "attendees": 16
         },
         {
             "id": 36,
@@ -149,7 +165,8 @@ export class EventService {
             "date": "2026-06-14T14:00",
             "location": "Avalon Room, Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-pilates-session-june",
-            "type": "pilates"
+            "type": "pilates",
+            "attendees": 10
         },
         {
             "id": 35,
@@ -158,7 +175,8 @@ export class EventService {
             "date": "2026-06-13T08:00",
             "location": "Old Ellicott City (Parking Lot A), Maryland",
             "registrationLink": "",
-            "type": "walking"
+            "type": "walking",
+            "attendees": 28
         },
         {
             "id": 34,
@@ -167,7 +185,8 @@ export class EventService {
             "date": "2026-06-07T14:00",
             "location": "Ellicott Room, Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "",
-            "type": "chess"
+            "type": "chess",
+            "attendees": 26
         },
         {
             "id": 33,
@@ -176,7 +195,8 @@ export class EventService {
             "date": "2026-06-07T08:00",
             "location": "Ellicott City, Maryland",
             "registrationLink": "https://forms.gle/v3rJV1PVdUoPEJnf6",
-            "type": "walking"
+            "type": "walking",
+            "attendees": 26
         },
         {
             "id": 32,
@@ -185,7 +205,8 @@ export class EventService {
             "date": "2026-06-06T14:00",
             "location": "Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-zumba-session-june",
-            "type": "zumba"
+            "type": "zumba",
+            "attendees": 20
         },
         {
             "id": 31,
@@ -194,7 +215,8 @@ export class EventService {
             "date": "2026-05-31T17:00",
             "location": "Centennial Park, Ellicott City, Maryland",
             "registrationLink": "https://forms.gle/e8dHNvHb1T5QkHqv7",
-            "type": "walking"
+            "type": "walking",
+            "attendees": 27
         },
         {
             "id": 30,
@@ -203,7 +225,8 @@ export class EventService {
             "date": "2026-05-30T14:00",
             "location": "Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-yoga-session-may",
-            "type": "yoga"
+            "type": "yoga",
+            "attendees": 11
         },
         {
             "id": 29,
@@ -212,7 +235,8 @@ export class EventService {
             "date": "2026-05-24T17:00",
             "location": "Centennial Park, Ellicott City, Maryland",
             "registrationLink": "https://forms.gle/e8dHNvHb1T5QkHqv7",
-            "type": "walking"
+            "type": "walking",
+            "attendees": 21
         },
         {
             "id": 28,
@@ -221,7 +245,8 @@ export class EventService {
             "date": "2026-05-23T14:00",
             "location": "Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-bollyx-session-may",
-            "type": "bollyx"
+            "type": "bollyx",
+            "attendees": 19
         },
         {
             "id": 27,
@@ -230,7 +255,8 @@ export class EventService {
             "date": "2026-05-17T08:00",
             "location": "Ellicott City, Maryland",
             "registrationLink": "https://forms.gle/v3rJV1PVdUoPEJnf6",
-            "type": "walking"
+            "type": "walking",
+            "attendees": 19
         },
         {
             "id": 26,
@@ -239,7 +265,8 @@ export class EventService {
             "date": "2026-05-10T08:00",
             "location": "Old Ellicott City (Parking Lot A), Maryland",
             "registrationLink": "",
-            "type": "walking"
+            "type": "walking",
+            "attendees": 23
         },
         {
             "id": 25,
@@ -248,7 +275,8 @@ export class EventService {
             "date": "2026-05-09T14:00",
             "location": "Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-pilates-session-may-2",
-            "type": "pilates"
+            "type": "pilates",
+            "attendees": 12
         },
         {
             "id": 24,
@@ -257,7 +285,8 @@ export class EventService {
             "date": "2026-05-03T14:00",
             "location": "Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-zumba-session-may-2",
-            "type": "zumba"
+            "type": "zumba",
+            "attendees": 20
         },
         {
             "id": 23,
@@ -266,7 +295,8 @@ export class EventService {
             "date": "2026-04-28T17:00",
             "location": "Driveway, 4308 ROLLING BROOK WAY,Ellicott City, MD 21043",
             "registrationLink": "",
-            "type": "Food Drive"
+            "type": "Food Drive",
+            "attendees": null
         },
         {
             "id": 22,
@@ -275,7 +305,8 @@ export class EventService {
             "date": "2026-04-25T14:00",
             "location": "Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-zumba-session-apr",
-            "type": "zumba"
+            "type": "zumba",
+            "attendees": 17
         },
         {
             "id": 21,
@@ -284,7 +315,8 @@ export class EventService {
             "date": "2026-04-25T10:00",
             "location": "Miller Branch Library, Ellicott Room, Ellicott City, Maryland",
             "registrationLink": "",
-            "type": "chess"
+            "type": "chess",
+            "attendees": 30
         },
         {
             "id": 20,
@@ -293,7 +325,8 @@ export class EventService {
             "date": "2026-04-24T17:00",
             "location": "Driveway, 4308 ROLLING BROOK WAY,Ellicott City, MD 21043",
             "registrationLink": "",
-            "type": "Food Drive"
+            "type": "Food Drive",
+            "attendees": null
         },
         {
             "id": 19,
@@ -302,7 +335,8 @@ export class EventService {
             "date": "2026-04-19T14:15",
             "location": "Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-pilates-session-april",
-            "type": "pilates"
+            "type": "pilates",
+            "attendees": 11
         },
         {
             "id": 18,
@@ -311,7 +345,8 @@ export class EventService {
             "date": "2026-04-18T10:00",
             "location": "Miller Branch Library, Avalon Room, Ellicott City, Maryland",
             "registrationLink": "",
-            "type": "chess"
+            "type": "chess",
+            "attendees": 30
         },
         {
             "id": 17,
@@ -320,7 +355,8 @@ export class EventService {
             "date": "2026-04-12T14:00",
             "location": "Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-yoga-session-18th-apr-saturday",
-            "type": "yoga"
+            "type": "yoga",
+            "attendees": 15
         },
         {
             "id": 17,
@@ -329,7 +365,8 @@ export class EventService {
             "date": "2026-03-07T10:00",
             "location": "Urbana Library, Frederick, Maryland",
             "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-pilates-session--03072026",
-            "type": "pilates"
+            "type": "pilates",
+            "attendees": 9
         },
         {
             "id": 16,
@@ -338,7 +375,8 @@ export class EventService {
             "date": "2026-03-08T14:00",
             "location": "Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-yoga-session--03082026",
-            "type": "yoga"
+            "type": "yoga",
+            "attendees": 16
         },
 
         {
@@ -348,7 +386,8 @@ export class EventService {
             "date": "2026-03-15T14:00",
             "location": "Miller Branch Library, Ellicott Room, Ellicott City, Maryland",
             "registrationLink": "",
-            "type": "chess"
+            "type": "chess",
+            "attendees": 28
         },
         {
             "id": 14,
@@ -357,7 +396,8 @@ export class EventService {
             "date": "2026-03-22T14:15",
             "location": "Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-pilates-session--03222026",
-            "type": "pilates"
+            "type": "pilates",
+            "attendees": 20
         },
         {
             "id": 13,
@@ -366,7 +406,8 @@ export class EventService {
             "date": "2026-03-29T14:00",
             "location": "Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-zumba-session-29th-mar-sunday",
-            "type": "zumba"
+            "type": "zumba",
+            "attendees": 25
         },
         {
             "id": 12,
@@ -375,7 +416,8 @@ export class EventService {
             "date": "2026-02-15T14:15",
             "location": "Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-pilates-session",
-            "type": "pilates"
+            "type": "pilates",
+            "attendees": 16
         },
         {
             "id": 11,
@@ -384,7 +426,8 @@ export class EventService {
             "date": "2026-01-17T14:15",
             "location": "Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-pilates-session",
-            "type": "pilates"
+            "type": "pilates",
+            "attendees": 15
         },
         {
             "id": 10,
@@ -393,7 +436,8 @@ export class EventService {
             "date": "2026-01-10T14:00",
             "location": "Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-yoga-session",
-            "type": "yoga"
+            "type": "yoga",
+            "attendees": 12
         },
         {
             "id": 9,
@@ -402,7 +446,8 @@ export class EventService {
             "date": "2025-12-20T14:00",
             "location": "Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "",
-            "type": "Pilates"
+            "type": "Pilates",
+            "attendees": null
         },
         {
             "id": 8,
@@ -411,7 +456,8 @@ export class EventService {
             "date": "2025-11-02T14:15",
             "location": "Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "",
-            "type": "Pilates"
+            "type": "Pilates",
+            "attendees": null
         },
         {
             "id": 7,
@@ -420,7 +466,8 @@ export class EventService {
             "date": "2025-10-19T15:00",
             "location": "Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "",
-            "type": "Pilates"
+            "type": "Pilates",
+            "attendees": null
         },
         {
             "id": 6,
@@ -429,7 +476,8 @@ export class EventService {
             "date": "2025-08-30T10:30",
             "location": "Miller Branch Library, Ellicott City, Maryland",
             "registrationLink": "",
-            "type": "Pilates"
+            "type": "Pilates",
+            "attendees": null
         },
         {
             "id": 5,
@@ -438,7 +486,8 @@ export class EventService {
             "date": "2025-09-07T08:00",
             "location": "Grist Mill Trail, Ellicott City, Maryland",
             "registrationLink": "",
-            "type": "Walk"
+            "type": "Walk",
+            "attendees": null
         },
         {
             "id": 4,
@@ -447,7 +496,8 @@ export class EventService {
             "date": "2025-08-16T07:30",
             "location": "Trail, Ellicott City, Maryland",
             "registrationLink": "",
-            "type": "Walk"
+            "type": "Walk",
+            "attendees": null
         },
         {
             "id": 3,
@@ -456,7 +506,8 @@ export class EventService {
             "date": "2025-08-09T05:00",
             "location": "Centennial Park West, Ellicott City, Maryland",
             "registrationLink": "",
-            "type": "Walk"
+            "type": "Walk",
+            "attendees": null
         },
         {
             "id": 2,
@@ -465,7 +516,8 @@ export class EventService {
             "date": "2025-08-02T08:00",
             "location": "Patapsco Valley Quarry Trail, Ellicott City, Maryland",
             "registrationLink": "",
-            "type": "Walk"
+            "type": "Walk",
+            "attendees": null
         },
         {
             "id": 1,
@@ -474,7 +526,8 @@ export class EventService {
             "date": "2025-07-26T07:00",
             "location": "Patapsco State Park, Ellicott City, Maryland",
             "registrationLink": "",
-            "type": "Walk"
+            "type": "Walk",
+            "attendees": null
         }
 ];
 

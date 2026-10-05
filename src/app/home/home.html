@@ -20,13 +20,26 @@
     
   </section>
   
-<!-- Upcoming Events Sidebar --> 
- <div class="events-sidebar">
-    <h2>Upcoming Events</h2>
-    <div *ngFor="let event of upcomingEvents" class="event-card" (click)="navigateToEvents()"> 
-        <h3>{{ event.title }}</h3> 
-        <p>Date: {{ event.date | date:'MMM dd, yyyy hh:mm a' }}</p> 
-        <p>{{ event.location }}</p> 
-    </div> <!-- If no events --> 
-    <p *ngIf="upcomingEvents.length === 0">No upcoming events.</p> </div>
+<!-- Upcoming Events Sidebar -->
+  <aside class="events-sidebar" aria-labelledby="upcoming-events-heading">
+    <h2 id="upcoming-events-heading">Upcoming Events</h2>
+
+    <a *ngFor="let event of upcomingEvents" class="event-card" routerLink="/events">
+      <h3>{{ event.title }}</h3>
+      <p *ngIf="event.subtitle" class="event-subtitle">{{ event.subtitle }}</p>
+      <p><time [attr.datetime]="event.date">{{ event.date | date:'EEE, MMM d · h:mm a' }}</time></p>
+      <p>{{ event.location }}</p>
+    </a>
+
+    <div *ngIf="upcomingEvents.length === 0" class="no-events">
+      <p>No events scheduled in the next 4 weeks — new ones are added regularly.</p>
+      <p>
+        Follow us on
+        <a href="https://www.instagram.com/sporting2impact" target="_blank" rel="noopener noreferrer">Instagram</a>
+        for announcements.
+      </p>
+    </div>
+
+    <a routerLink="/events" class="all-events-link">View all events &amp; past highlights →</a>
+  </aside>
 </div>
