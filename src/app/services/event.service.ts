@@ -20,7 +20,7 @@ export class EventService {
             "id": 51,
             "title": "Wellness Walk",
             "subtitle": "Centennial Park Lake Trail",
-            "date": "2026-10-11T14:30",
+            "date": "2026-10-10T14:30",
             "location": "Centennial Park, Ellicott City, Maryland",
             "registrationLink": "",
             "type": "walking"
