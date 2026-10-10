@@ -49,7 +49,8 @@ export class EventService {
             "date": "2026-10-10T14:30",
             "location": "Centennial Park, Ellicott City, Maryland",
             "registrationLink": "",
-            "type": "walking"
+            "type": "walking",
+            "attendees": null
         },
         {
             "id": 50,
