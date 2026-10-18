@@ -82,6 +82,9 @@
 
 /* --- Event Cards (Base Style) --- */
 .event-card {
+  display: block;
+  color: inherit;
+  text-decoration: none;
   border-radius: 12px;
   padding: 1.25rem;
   cursor: pointer;
@@ -94,27 +97,27 @@
 }
 
 /* --- Color Variants (rotating) --- */
-.event-card:nth-child(1) {
+.event-card:nth-of-type(1) {
   border-left-color: #3b82f6;
   background: linear-gradient(135deg, #fff 0%, #eff6ff 100%);
 }
 
-.event-card:nth-child(2) {
+.event-card:nth-of-type(2) {
   border-left-color: #10b981;
   background: linear-gradient(135deg, #fff 0%, #ecfdf5 100%);
 }
 
-.event-card:nth-child(3) {
+.event-card:nth-of-type(3) {
   border-left-color: #f59e0b;
   background: linear-gradient(135deg, #fff 0%, #fffbeb 100%);
 }
 
-.event-card:nth-child(4) {
+.event-card:nth-of-type(4) {
   border-left-color: #ef4444;
   background: linear-gradient(135deg, #fff 0%, #fef2f2 100%);
 }
 
-.event-card:nth-child(5) {
+.event-card:nth-of-type(5) {
   border-left-color: #8b5cf6;
   background: linear-gradient(135deg, #fff 0%, #f5f3ff 100%);
 }
@@ -125,10 +128,50 @@
   transform: translateY(-4px);
 }
 
-/* Make cursor a hand everywhere inside the card */
-.event-card,
-.event-card * {
-  cursor: pointer;
+.event-card:focus-visible,
+.all-events-link:focus-visible {
+  outline: 3px solid #3b82f6;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .event-card,
+  .event-card:hover {
+    transition: none;
+    transform: none;
+  }
+}
+
+.event-card .event-subtitle {
+  margin-top: -0.25rem;
+  color: #374151;
+  font-weight: 600;
+}
+
+/* --- Empty state + footer link --- */
+.no-events p {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.9rem;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.no-events a {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.all-events-link {
+  display: inline-block;
+  margin-top: 0.75rem;
+  color: #2563eb;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.all-events-link:hover {
+  text-decoration: underline;
 }
 
 /* --- Typography --- */

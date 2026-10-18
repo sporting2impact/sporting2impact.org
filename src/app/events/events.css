@@ -104,7 +104,87 @@
 .event-footer {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
   margin-top: 0.6rem;
+}
+
+/* Walk-in events: informational label, not a button */
+.walkin-label {
+  padding: 0.45rem 0.8rem;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 999px;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Add to calendar */
+.calendar-wrap {
+  position: relative;
+}
+
+.calendar-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.calendar-btn:hover,
+.calendar-btn[aria-expanded="true"] {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.calendar-btn:focus-visible,
+.calendar-menu a:focus-visible,
+.calendar-menu button:focus-visible {
+  outline: 2px solid #93c5fd;
+  outline-offset: 2px;
+}
+
+/* Opens upward: the card clips overflow below */
+.calendar-menu {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 6px);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  min-width: 190px;
+  padding: 0.3rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.calendar-menu a,
+.calendar-menu button {
+  padding: 0.5rem 0.7rem;
+  background: none;
+  border: none;
+  border-radius: 6px;
+  color: #1f2937;
+  font: inherit;
+  font-size: 0.9rem;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.calendar-menu a:hover,
+.calendar-menu button:hover {
+  background: #eff6ff;
+  color: #1d4ed8;
 }
 
 /* Register button */
