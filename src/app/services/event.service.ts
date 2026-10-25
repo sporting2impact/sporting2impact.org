@@ -41,7 +41,16 @@ export function eventImagePath(type: string): string | null {
 export class EventService {
 
   private events: EventItem[] = [
-       
+       {
+            "id": 53,
+            "title": "Wellness Walk",
+            "subtitle": "Grist Mill Trail",
+            "date": "2026-10-25T14:00",
+            "location": "Ellicott City, Maryland",
+            "registrationLink": "",
+            "type": "walking",
+            "attendees": null
+        },
         {
             "id": 52,
             "title": "Wellness Walk",
@@ -50,7 +59,7 @@ export class EventService {
             "location": "Centennial Park, Ellicott City, Maryland",
             "registrationLink": "",
             "type": "walking",
-            "attendees": null
+            "attendees": 18
         },
         {
             "id": 51,
