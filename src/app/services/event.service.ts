@@ -9,6 +9,7 @@ export interface EventItem {
   location: string;
   type: string;
   attendees: number | null;  // actual turnout (registrations + walk-ins), filled in after the event
+  privateFor?: string;  // set for closed sessions, e.g. "Sparksoft employees"; hides the walk-in label and keeps the event out of Google event listings
 }
 
 // Event dates are entered as Maryland local time, e.g. "2026-10-04T16:00".
@@ -42,6 +43,17 @@ export class EventService {
 
   private events: EventItem[] = [
        {
+            "id": 54,
+            "title": "Free Zumba Session",
+            "subtitle": "Sparksoft Corporation (Corporate Session)",
+            "date": "2026-12-02T14:00",
+            "location": "Sparksoft Corporation Office, Columbia, Maryland",
+            "registrationLink": "",
+            "type": "Zumba",
+            "attendees": null,
+            "privateFor": "Sparksoft employees"
+        },
+        {
             "id": 53,
             "title": "Wellness Walk",
             "subtitle": "Grist Mill Trail",

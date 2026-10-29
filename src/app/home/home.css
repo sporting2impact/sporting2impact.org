@@ -142,6 +142,12 @@
   }
 }
 
+.event-card .event-private {
+  color: #b45309;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
 .event-card .event-subtitle {
   margin-top: -0.25rem;
   color: #374151;
