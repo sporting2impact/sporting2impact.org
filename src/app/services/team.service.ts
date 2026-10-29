@@ -17,7 +17,7 @@ export class TeamService {
     { name: "Pon Thirunathan (Ramya)", image: "assets/team/instructors/ramya.png", role: "Certified Yoga Instructor", social_media: { instagram: "" } },
     { name: "Githanjali Stalin", image: "assets/team/instructors/githanjali.png", role: "Certified Zumba Instructor", social_media: { instagram: "https://www.instagram.com/groovithaa?igsh=YW84bHJvOXg5eXQw&utm_source=qr/" } },
     { name: "Sruthi Thippireddy", image: "assets/team/instructors/sruthi.png", role: "Certified BollyX Instructor", social_media: { instagram: "" } },
-    // { name: "Cindy Cheung", image: "assets/team/instructors/cindy.png", role: "Joining Soon", social_media: { instagram: "" } },
+    { name: "Cindy Cheung", image: "assets/team/instructors/cindy.png", role: "Certified Zumba Instructor", social_media: { instagram: "" } },
     { name: "Maria Stewart", image: "assets/team/instructors/maria.png", role: "Joining Soon", social_media: { instagram: "" } },
     
   ];
