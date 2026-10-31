@@ -8,7 +8,7 @@ const SITE_NAME = 'Sporting2Impact';
 const DEFAULT_IMAGE = `${SITE_URL}/Sporting2Impact.png`;
 const DEFAULT_DESCRIPTION =
   'Sporting2Impact is a Maryland 501(c)(3) nonprofit bringing people together through ' +
-  'inclusive fitness, wellness, and sports events in Howard County.';
+  'inclusive fitness, wellness, and sports events across Maryland.';
 
 /**
  * Keeps the page's description, canonical URL and social-sharing (Open Graph /

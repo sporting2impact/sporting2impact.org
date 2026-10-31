@@ -10,11 +10,11 @@ export const routes: Routes = [
   {
     path: '',
     component: Home,
-    title: 'Sporting2Impact | Community Fitness & Wellness Events in Ellicott City, MD',
+    title: 'Sporting2Impact | Community Fitness & Wellness Events in Maryland',
     data: {
       description:
         'Sporting2Impact is a Maryland 501(c)(3) nonprofit bringing people together through ' +
-        'inclusive wellness walks, yoga, Pilates, Zumba, and sports events in Howard County.',
+        'inclusive wellness walks, yoga, Pilates, Zumba, and sports events across Maryland.',
     },
   },
   { path: 'home', redirectTo: '', pathMatch: 'full' },
@@ -35,7 +35,7 @@ export const routes: Routes = [
     data: {
       description:
         'Upcoming and past Sporting2Impact community events: wellness walks, yoga, Pilates, ' +
-        'Zumba, chess, and more across Ellicott City and Howard County, Maryland.',
+        'Zumba, chess, and more across Maryland.',
     },
   },
   {
