@@ -7,7 +7,7 @@ export const SITE_URL = 'https://sporting2impact.org';
 const SITE_NAME = 'Sporting2Impact';
 const DEFAULT_IMAGE = `${SITE_URL}/Sporting2Impact.png`;
 const DEFAULT_DESCRIPTION =
-  'Sporting2Impact is a Maryland 501(c)(3) nonprofit bringing people together through ' +
+  'Sporting2Impact is a 501(c)(3) nonprofit bringing people together through ' +
   'inclusive fitness, wellness, and sports events across Maryland.';
 
 /**

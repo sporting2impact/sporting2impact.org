@@ -13,7 +13,7 @@ export const routes: Routes = [
     title: 'Sporting2Impact | Community Fitness & Wellness Events in Maryland',
     data: {
       description:
-        'Sporting2Impact is a Maryland 501(c)(3) nonprofit bringing people together through ' +
+        'Sporting2Impact is a 501(c)(3) nonprofit bringing people together through ' +
         'inclusive wellness walks, yoga, Pilates, Zumba, and sports events across Maryland.',
     },
   },
