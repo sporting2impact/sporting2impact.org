@@ -13,14 +13,13 @@ export function eventsStructuredData(events: EventItem[]) {
     '@graph': events.map(event => {
       const online = event.location.trim().toLowerCase() === 'online';
       const image = eventImagePath(event.type);
-      const start = localDate(event.date);
-      const end = new Date(start.getTime() + EVENT_DURATION_MINUTES * 60_000);
+      const { start, end } = eventIsoTimes(event);
 
       return {
         '@type': 'Event',
         name: event.subtitle ? `${event.title} – ${event.subtitle}` : event.title,
-        startDate: toZonedIso(start),
-        endDate: toZonedIso(end),
+        startDate: start,
+        endDate: end,
         eventStatus: 'https://schema.org/EventScheduled',
         eventAttendanceMode: online
           ? 'https://schema.org/OnlineEventAttendanceMode'
@@ -35,6 +34,13 @@ export function eventsStructuredData(events: EventItem[]) {
       };
     }),
   };
+}
+
+/** Start and end as ISO 8601 with the Maryland UTC offset, e.g. "2026-10-04T16:00:00-04:00". */
+export function eventIsoTimes(event: EventItem) {
+  const start = localDate(event.date);
+  const end = new Date(start.getTime() + EVENT_DURATION_MINUTES * 60_000);
+  return { start: toZonedIso(start), end: toZonedIso(end) };
 }
 
 // Wall-clock fields of "2026-10-04T16:00", held in a Date's UTC slots.
