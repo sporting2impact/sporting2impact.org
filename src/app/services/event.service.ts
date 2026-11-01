@@ -533,16 +533,6 @@ export class EventService {
             "attendees": null
         },
         {
-            "id": 5,
-            "title": "Free Pilates Session",
-            "subtitle": "",
-            "date": "2025-08-30T10:30",
-            "location": "Miller Branch Library, Ellicott City, Maryland",
-            "registrationLink": "",
-            "type": "Pilates",
-            "attendees": null
-        },
-        {
             "id": 6,
             "title": "Physical Health Awareness Walk",
             "subtitle": "",
@@ -550,6 +540,16 @@ export class EventService {
             "location": "Grist Mill Trail, Ellicott City, Maryland",
             "registrationLink": "",
             "type": "Walk",
+            "attendees": null
+        },
+        {
+            "id": 5,
+            "title": "Free Pilates Session",
+            "subtitle": "",
+            "date": "2025-08-30T10:30",
+            "location": "Miller Branch Library, Ellicott City, Maryland",
+            "registrationLink": "",
+            "type": "Pilates",
             "attendees": null
         },
         {
