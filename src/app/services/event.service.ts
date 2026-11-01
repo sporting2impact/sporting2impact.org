@@ -42,17 +42,27 @@ export class EventService {
 
   private events: EventItem[] = [
        {
-            "id": 53,
+            "id": 55,
+            "title": "Halloween Walk",
+            "subtitle": "Centennial Park Lake Trail",
+            "date": "2026-11-01T14:00",
+            "location": "Centennial Park, Ellicott City, Maryland",
+            "registrationLink": "",
+            "type": "walking",
+            "attendees": null
+        },
+        {
+            "id": 54,
             "title": "Wellness Walk",
             "subtitle": "Grist Mill Trail",
             "date": "2026-10-25T14:00",
             "location": "Ellicott City, Maryland",
             "registrationLink": "",
             "type": "walking",
-            "attendees": null
+            "attendees": 20
         },
         {
-            "id": 52,
+            "id": 53,
             "title": "Wellness Walk",
             "subtitle": "Centennial Park Lake Trail",
             "date": "2026-10-18T16:00",
@@ -62,7 +72,7 @@ export class EventService {
             "attendees": 18
         },
         {
-            "id": 51,
+            "id": 52,
             "title": "Wellness Walk",
             "subtitle": "Centennial Park Lake Trail",
             "date": "2026-10-10T14:30",
@@ -72,7 +82,7 @@ export class EventService {
             "attendees": 21
         },
         {
-            "id": 50,
+            "id": 51,
             "title": "Wellness Walk",
             "subtitle": "Centennial Park Lake Trail",
             "date": "2026-10-04T16:00",
@@ -82,7 +92,7 @@ export class EventService {
             "attendees": 16
         },
         {
-            "id": 49,
+            "id": 50,
             "title": "Zumba Session at BGE (Corporate Session)",
             "subtitle": "BGE",
             "date": "2026-09-03T13:30",
@@ -92,7 +102,7 @@ export class EventService {
             "attendees": null
         },
         {
-            "id": 48,
+            "id": 49,
             "title": "Wellness Walk",
             "subtitle": "Grist Mill Trail",
             "date": "2026-08-23T17:00",
@@ -102,7 +112,7 @@ export class EventService {
             "attendees": 21
         },
         {
-            "id": 47,
+            "id": 48,
             "title": "Free Pilates Session By Carlen",
             "subtitle": "",
             "date": "2026-08-22T10:00",
@@ -112,7 +122,7 @@ export class EventService {
             "attendees": 6
         },
         {
-            "id": 46,
+            "id": 47,
             "title": "Wellness Walk",
             "subtitle": "Trolley Line # 9 Trail",
             "date": "2026-08-16T08:00",
@@ -122,7 +132,7 @@ export class EventService {
             "attendees": 19
         },
         {
-            "id": 45,
+            "id": 46,
             "title": "Free Yoga Session",
             "subtitle": "",
             "date": "2026-07-25T14:00",
@@ -132,7 +142,7 @@ export class EventService {
             "attendees": 6
         },
         {
-            "id": 44,
+            "id": 45,
             "title": "Summer Chess Camp 2 by Suchay",
             "subtitle": "",
             "date": "2026-07-20T15:00",
@@ -142,7 +152,7 @@ export class EventService {
             "attendees": 10
         },
         {
-            "id": 43,
+            "id": 44,
             "title": "Free Pilates Session By Carlen",
             "subtitle": "",
             "date": "2026-07-19T14:00",
@@ -152,7 +162,7 @@ export class EventService {
             "attendees": 9
         },
         {
-            "id": 42,
+            "id": 43,
             "title": "Summer Chess Camp by Suchay",
             "subtitle": "",
             "date": "2026-07-13T15:00",
@@ -162,7 +172,7 @@ export class EventService {
             "attendees": 10
         },
         {
-            "id": 41,
+            "id": 42,
             "title": "Free Zumba Session",
             "subtitle": "",
             "date": "2026-07-11T14:00",
@@ -172,7 +182,7 @@ export class EventService {
             "attendees": 14
         },
         {
-            "id": 40,
+            "id": 41,
             "title": "Free Zumba Session",
             "subtitle": "",
             "date": "2026-07-05T14:00",
@@ -182,7 +192,7 @@ export class EventService {
             "attendees": 12
         },
         {
-            "id": 39,
+            "id": 40,
             "title": "Learn Basics of Chess with Suchay",
             "subtitle": "",
             "date": "2026-06-27T10:00",
@@ -192,7 +202,7 @@ export class EventService {
             "attendees": 14
         },    
         {
-            "id": 38,
+            "id": 39,
             "title": "Weight & Wellness Management",
             "subtitle": "Dr. Muhammad Asif Aziz, MD, MPH, DABOM",
             "date": "2026-06-21T14:00",
@@ -202,7 +212,7 @@ export class EventService {
             "attendees": 60
         },
         {
-            "id": 37,
+            "id": 38,
             "title": "Free BollyX Session",
             "subtitle": "",
             "date": "2026-06-20T14:00",
@@ -212,7 +222,7 @@ export class EventService {
             "attendees": 16
         },
         {
-            "id": 36,
+            "id": 37,
             "title": "Free Pilates Session",
             "subtitle": "",
             "date": "2026-06-14T14:00",
@@ -222,7 +232,7 @@ export class EventService {
             "attendees": 10
         },
         {
-            "id": 35,
+            "id": 36,
             "title": "Wellness Walk",
             "subtitle": "Trolley Line # 9 Trail",
             "date": "2026-06-13T08:00",
@@ -232,7 +242,7 @@ export class EventService {
             "attendees": 28
         },
         {
-            "id": 34,
+            "id": 35,
             "title": "Learn Basics of Chess with Suchay",
             "subtitle": "",
             "date": "2026-06-07T14:00",
@@ -242,7 +252,7 @@ export class EventService {
             "attendees": 26
         },
         {
-            "id": 33,
+            "id": 34,
             "title": "Wellness Walk",
             "subtitle": "Grist Mill Trail",
             "date": "2026-06-07T08:00",
@@ -252,7 +262,7 @@ export class EventService {
             "attendees": 26
         },
         {
-            "id": 32,
+            "id": 33,
             "title": "Free Zumba Session",
             "subtitle": "",
             "date": "2026-06-06T14:00",
@@ -262,7 +272,7 @@ export class EventService {
             "attendees": 20
         },
         {
-            "id": 31,
+            "id": 32,
             "title": "Mental Health Awareness Walk",
             "subtitle": "Centennial Park Lake Trail",
             "date": "2026-05-31T17:00",
@@ -272,7 +282,7 @@ export class EventService {
             "attendees": 27
         },
         {
-            "id": 30,
+            "id": 31,
             "title": "Free Yoga Session",
             "subtitle": "",
             "date": "2026-05-30T14:00",
@@ -282,7 +292,7 @@ export class EventService {
             "attendees": 11
         },
         {
-            "id": 29,
+            "id": 30,
             "title": "Wellness Walk",
             "subtitle": "Centennial Park Lake Trail",
             "date": "2026-05-24T17:00",
@@ -292,7 +302,7 @@ export class EventService {
             "attendees": 21
         },
         {
-            "id": 28,
+            "id": 29,
             "title": "Free BollyX Session",
             "subtitle": "",
             "date": "2026-05-23T14:00",
@@ -302,7 +312,7 @@ export class EventService {
             "attendees": 19
         },
         {
-            "id": 27,
+            "id": 28,
             "title": "Wellness Walk",
             "subtitle": "Grist Mill Trail",
             "date": "2026-05-17T08:00",
@@ -312,7 +322,7 @@ export class EventService {
             "attendees": 19
         },
         {
-            "id": 26,
+            "id": 27,
             "title": "Wellness Walk",
             "subtitle": "Trolley Line # 9 Trail",
             "date": "2026-05-10T08:00",
@@ -322,7 +332,7 @@ export class EventService {
             "attendees": 23
         },
         {
-            "id": 25,
+            "id": 26,
             "title": "Free Pilates Session",
             "subtitle": "",
             "date": "2026-05-09T14:00",
@@ -332,7 +342,7 @@ export class EventService {
             "attendees": 12
         },
         {
-            "id": 24,
+            "id": 25,
             "title": "Free Zumba Session",
             "subtitle": "",
             "date": "2026-05-03T14:00",
@@ -342,7 +352,7 @@ export class EventService {
             "attendees": 20
         },
         {
-            "id": 23,
+            "id": 24,
             "title": "Food Drive",
             "subtitle": "",
             "date": "2026-04-28T17:00",
@@ -352,7 +362,7 @@ export class EventService {
             "attendees": null
         },
         {
-            "id": 22,
+            "id": 23,
             "title": "Free Zumba Session",
             "subtitle": "",
             "date": "2026-04-25T14:00",
@@ -362,7 +372,7 @@ export class EventService {
             "attendees": 17
         },
         {
-            "id": 21,
+            "id": 22,
             "title": "Chess Meetup",
             "subtitle": "",
             "date": "2026-04-25T10:00",
@@ -372,7 +382,7 @@ export class EventService {
             "attendees": 30
         },
         {
-            "id": 20,
+            "id": 21,
             "title": "Food Drive",
             "subtitle": "",
             "date": "2026-04-24T17:00",
@@ -382,7 +392,7 @@ export class EventService {
             "attendees": null
         },
         {
-            "id": 19,
+            "id": 20,
             "title": "Free Pilates Session",
             "subtitle": "",
             "date": "2026-04-19T14:15",
@@ -392,7 +402,7 @@ export class EventService {
             "attendees": 11
         },
         {
-            "id": 18,
+            "id": 19,
             "title": "Learn Basics of Chess with Suchay",
             "subtitle": "",
             "date": "2026-04-18T10:00",
@@ -402,7 +412,7 @@ export class EventService {
             "attendees": 30
         },
         {
-            "id": 17,
+            "id": 18,
             "title": "Free Yoga Session",
             "subtitle": "",
             "date": "2026-04-12T14:00",
@@ -412,7 +422,7 @@ export class EventService {
             "attendees": 15
         },
         {
-            "id": 17,
+            "id": 13,
             "title": "Free Pilates Session",
             "subtitle": "",
             "date": "2026-03-07T10:00",
@@ -422,7 +432,7 @@ export class EventService {
             "attendees": 9
         },
         {
-            "id": 16,
+            "id": 14,
             "title": "Free Yoga Session",
             "subtitle": "",
             "date": "2026-03-08T14:00",
@@ -443,7 +453,7 @@ export class EventService {
             "attendees": 28
         },
         {
-            "id": 14,
+            "id": 16,
             "title": "Free Pilates Session",
             "subtitle": "",
             "date": "2026-03-22T14:15",
@@ -453,7 +463,7 @@ export class EventService {
             "attendees": 20
         },
         {
-            "id": 13,
+            "id": 17,
             "title": "Free Zumba Session",
             "subtitle": "",
             "date": "2026-03-29T14:00",
@@ -524,22 +534,22 @@ export class EventService {
         },
         {
             "id": 6,
-            "title": "Free Pilates Session",
-            "subtitle": "",
-            "date": "2025-08-30T10:30",
-            "location": "Miller Branch Library, Ellicott City, Maryland",
-            "registrationLink": "",
-            "type": "Pilates",
-            "attendees": null
-        },
-        {
-            "id": 5,
             "title": "Physical Health Awareness Walk",
             "subtitle": "",
             "date": "2025-09-07T08:00",
             "location": "Grist Mill Trail, Ellicott City, Maryland",
             "registrationLink": "",
             "type": "Walk",
+            "attendees": null
+        },
+        {
+            "id": 5,
+            "title": "Free Pilates Session",
+            "subtitle": "",
+            "date": "2025-08-30T10:30",
+            "location": "Miller Branch Library, Ellicott City, Maryland",
+            "registrationLink": "",
+            "type": "Pilates",
             "attendees": null
         },
         {
