@@ -422,7 +422,7 @@ export class EventService {
             "attendees": 15
         },
         {
-            "id": 17,
+            "id": 56,
             "title": "Free Pilates Session",
             "subtitle": "",
             "date": "2026-03-07T10:00",
