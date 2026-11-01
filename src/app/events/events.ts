@@ -40,7 +40,7 @@ export class Events implements OnInit, OnDestroy {
 
     // Split into upcoming and past
     this.upcomingEvents = this.eventService.getUpcomingEvents();
-    this.seo.setJsonLd(EVENTS_JSON_LD_ID, eventsStructuredData(this.upcomingEvents));
+    this.seo.setJsonLd(EVENTS_JSON_LD_ID, eventsStructuredData(this.upcomingEvents.filter(e => !e.privateFor)));
 
     this.pastEvents = this.events.filter(
       e => new Date(e.date) < now

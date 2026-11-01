@@ -55,7 +55,11 @@
             </div>
           </div>
 
-          <span *ngIf="!event.registrationLink" class="walkin-label">
+          <span *ngIf="event.privateFor" class="walkin-label">
+            Private session for {{ event.privateFor }}
+          </span>
+
+          <span *ngIf="!event.registrationLink && !event.privateFor" class="walkin-label">
             Walk-ins welcome · No registration needed
           </span>
           <a *ngIf="event.registrationLink" 

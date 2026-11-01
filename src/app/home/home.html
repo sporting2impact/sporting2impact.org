@@ -29,6 +29,7 @@
       <p *ngIf="event.subtitle" class="event-subtitle">{{ event.subtitle }}</p>
       <p><time [attr.datetime]="event.date">{{ event.date | date:'EEE, MMM d · h:mm a' }}</time></p>
       <p>{{ event.location }}</p>
+      <p *ngIf="event.privateFor" class="event-private">Private session for {{ event.privateFor }}</p>
     </a>
 
     <div *ngIf="upcomingEvents.length === 0" class="no-events">
