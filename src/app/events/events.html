@@ -49,8 +49,10 @@
                  (click)="$event.stopPropagation()">
               <a role="menuitem" [href]="googleCalendarUrl(event)" target="_blank"
                  rel="noopener noreferrer" (click)="closeCalendar()">Google Calendar</a>
+              <a role="menuitem" [href]="outlookCalendarUrl(event)" target="_blank"
+                 rel="noopener noreferrer" (click)="closeCalendar()">Outlook.com</a>
               <button role="menuitem" type="button" (click)="downloadIcs(event)">
-                Apple / Outlook (.ics)
+                Apple Calendar &amp; others
               </button>
             </div>
           </div>

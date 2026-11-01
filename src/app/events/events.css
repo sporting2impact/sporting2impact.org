@@ -102,6 +102,7 @@
 
 /* Footer */
 .event-footer {
+  position: relative; /* anchors .calendar-menu */
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -121,10 +122,6 @@
 }
 
 /* Add to calendar */
-.calendar-wrap {
-  position: relative;
-}
-
 .calendar-btn {
   display: inline-flex;
   align-items: center;
@@ -152,10 +149,12 @@
   outline-offset: 2px;
 }
 
-/* Opens upward: the card clips overflow below */
+/* Opens upward from the footer's left edge. The card clips anything outside it, and the
+   calendar button's position varies with the buttons beside it, so anchor to the footer,
+   which always spans the card's content area. */
 .calendar-menu {
   position: absolute;
-  right: 0;
+  left: 0;
   bottom: calc(100% + 6px);
   z-index: 3;
   display: flex;

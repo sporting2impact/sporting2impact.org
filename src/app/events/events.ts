@@ -8,7 +8,7 @@ import {
   eventImagePath,
 } from '../services/event.service';
 import { SeoService } from '../services/seo.service';
-import { eventsStructuredData } from './event-structured-data';
+import { eventIsoTimes, eventsStructuredData } from './event-structured-data';
 
 @Component({
   selector: 'app-events',
@@ -102,6 +102,20 @@ export class Events implements OnInit, OnDestroy {
       details: this.calendarDetails(event),
     });
     return `https://calendar.google.com/calendar/render?${params}`;
+  }
+
+  outlookCalendarUrl(event: EventItem) {
+    const { start, end } = eventIsoTimes(event);
+    const params = new URLSearchParams({
+      path: '/calendar/action/compose',
+      rru: 'addevent',
+      subject: this.calendarTitle(event),
+      startdt: start,
+      enddt: end,
+      location: event.location,
+      body: this.calendarDetails(event),
+    });
+    return `https://outlook.live.com/calendar/0/deeplink/compose?${params}`;
   }
 
   downloadIcs(event: EventItem) {
