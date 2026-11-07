@@ -43,6 +43,16 @@ export class EventService {
 
   private events: EventItem[] = [
        {
+            "id": 57,
+            "title": "Wellness Walk",
+            "subtitle": "Trolley Line # 9 Trail",
+            "date": "2026-11-07T15:00",
+            "location": "Old Ellicott City (Parking Lot A), Maryland",
+            "registrationLink": "",
+            "type": "walking",
+            "attendees": null
+        },
+        {
             "id": 56,
             "title": "Free Zumba Session",
             "subtitle": "The Hub",
@@ -50,10 +60,10 @@ export class EventService {
             "location": "The Hub, Catonsville, Maryland",
             "registrationLink": "",
             "type": "Zumba",
-            "attendees": null
+            "attendees": 10
         },
         {
-            "id": 57,
+            "id": 58,
             "title": "Free Zumba Session",
             "subtitle": "Sparksoft Corporation (Corporate Session)",
             "date": "2026-12-02T14:00",
