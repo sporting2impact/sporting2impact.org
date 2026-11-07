@@ -45,6 +45,16 @@ export class EventService {
        {
             "id": 56,
             "title": "Free Zumba Session",
+            "subtitle": "The Hub",
+            "date": "2026-11-07T12:00",
+            "location": "The Hub, Catonsville, Maryland",
+            "registrationLink": "",
+            "type": "Zumba",
+            "attendees": null
+        },
+        {
+            "id": 57,
+            "title": "Free Zumba Session",
             "subtitle": "Sparksoft Corporation (Corporate Session)",
             "date": "2026-12-02T14:00",
             "location": "Sparksoft Corporation Office, Columbia, Maryland",
