@@ -5,6 +5,9 @@ import { Home } from './home/home';
 import { Team } from './team/team';
 import { News } from './news/news';
 
+// Set by the Angular build: false in production, so dev-only code is removed entirely.
+declare const ngDevMode: unknown;
+
 // `title` sets the browser tab / search result title; `data.description` feeds
 // the meta description and social-sharing previews (see SeoService).
 export const routes: Routes = [
@@ -59,5 +62,13 @@ export const routes: Routes = [
         'or sponsor Sporting2Impact, a Maryland 501(c)(3) nonprofit.',
     },
   },
+  // Local preview of every seasonal banner; dev server only, never in production builds.
+  ...(typeof ngDevMode === 'undefined' || ngDevMode
+    ? [{
+        path: 'banner-preview',
+        title: 'Banner preview',
+        loadComponent: () => import('./banner-preview/banner-preview').then(m => m.BannerPreview),
+      }]
+    : []),
   { path: '**', redirectTo: '' },
 ];

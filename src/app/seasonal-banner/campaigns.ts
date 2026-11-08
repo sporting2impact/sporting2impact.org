@@ -13,7 +13,8 @@ export type BannerTheme = 'autumn' | 'giving' | 'patriotic' | 'remembrance' | 'c
 export interface BannerContent {
   theme: BannerTheme;
   icon: string;  // '' for solemn days
-  // {events} is replaced with the number of community events held so far.
+  // {events} is replaced with the number of community events held so far;
+  // **text** is shown in bold.
   message: string;
   link?: { label: string; url: string };  // "/page" or "https://..."
 }
@@ -40,7 +41,7 @@ export const CAMPAIGNS: Campaign[] = [
     icon: '🍂',
     message:
       'Happy Thanksgiving from Sporting2Impact! Thank you to everyone who has walked, danced ' +
-      'and played with us: {events} community events and counting.',
+      'and played with us: **{events} community events** and counting.',
   },
   {
     id: 'givingtuesday-2026',
@@ -49,7 +50,7 @@ export const CAMPAIGNS: Campaign[] = [
     theme: 'giving',
     icon: '💙',
     message:
-      'This GivingTuesday, December 1, help us raise $2,000 to keep community fitness ' +
+      'This GivingTuesday, December 1, help us raise **$2,000** to keep community fitness ' +
       'accessible to everyone across Maryland.',
     link: { label: 'Donate now', url: DONATE_URL },
   },
@@ -96,7 +97,7 @@ export const YEARLY_BANNERS: YearlyBanner[] = [
     theme: 'autumn', icon: '🍂',
     message:
       'Happy Thanksgiving from Sporting2Impact! Thank you to everyone who has walked, danced ' +
-      'and played with us: {events} community events and counting.',
+      'and played with us: **{events} community events** and counting.',
   },
   {
     id: 'givingtuesday', date: y => givingTuesday(y), daysBefore: 4,  // from the day after Thanksgiving
@@ -199,6 +200,22 @@ export function activeBanner(now = new Date()): (BannerContent & { id: string })
     }
   }
   return best?.banner ?? null;
+}
+
+/** Every banner, one-off campaigns first, for the local preview page. */
+export function allBanners(): (BannerContent & { id: string })[] {
+  return [...CAMPAIGNS, ...YEARLY_BANNERS];
+}
+
+export function findBanner(id: string) {
+  return allBanners().find(b => b.id === id) ?? null;
+}
+
+/** First and last day a banner shows in a given year (one-off campaigns ignore the year). */
+export function bannerDates(banner: Campaign | YearlyBanner, year: number) {
+  if ('start' in banner) return { start: banner.start, end: banner.end };
+  const date = banner.date(year);
+  return { start: addDays(date, -banner.daysBefore), end: addDays(date, banner.daysAfter ?? 0) };
 }
 
 // --- Date helpers (all dates are plain "YYYY-MM-DD" calendar days) ---

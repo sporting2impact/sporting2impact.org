@@ -1,6 +1,6 @@
 <aside *ngIf="banner" class="seasonal-banner" [class]="'theme-' + banner.theme" aria-label="Announcement">
-  <span *ngIf="banner.icon" aria-hidden="true">{{ banner.icon }}</span>
-  <span>{{ message }}</span>
+  <span *ngIf="banner.icon" class="banner-icon" aria-hidden="true">{{ banner.icon }}</span>
+  <span class="banner-message"><ng-container *ngFor="let part of parts"><strong *ngIf="part.bold">{{ part.text }}</strong><ng-container *ngIf="!part.bold">{{ part.text }}</ng-container></ng-container></span>
   <ng-container *ngIf="banner.link as link">
     <a *ngIf="isInternal(link.url)" class="banner-link" [routerLink]="link.url">{{ link.label }} →</a>
     <a *ngIf="!isInternal(link.url)" class="banner-link" [href]="link.url"
