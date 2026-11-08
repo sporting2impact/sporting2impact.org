@@ -264,6 +264,7 @@
    PAST EVENTS SECTION
 ------------------------------------------------------- */
 .past-section {
+  scroll-margin-top: 90px; /* keep /events#past-events clear of the sticky nav */
   background: #e4bc6c;
   padding: 2.5rem;
   border-radius: 18px;

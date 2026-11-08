@@ -9,10 +9,12 @@
         community events<ng-container *ngIf="stats.firstEventDate">
           since {{ stats.firstEventDate | date:'MMMM y' }}</ng-container>
       </span>
+      <a class="stat-link" routerLink="/events" fragment="past-events">See past events →</a>
     </li>
     <li>
       <span class="stat-number">{{ stats.participantsRecorded }}</span>
       <span class="stat-label">participants recorded across {{ stats.eventsWithAttendance }} events</span>
+      <a class="stat-link" routerLink="/events" fragment="past-events">See attendance by event →</a>
     </li>
     <li>
       <span class="stat-number">{{ stats.activityTypes }}</span>
