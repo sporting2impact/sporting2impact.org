@@ -1,0 +1,6 @@
+<aside *ngIf="campaign" class="seasonal-banner" [class]="'theme-' + campaign.theme" aria-label="Announcement">
+  <span aria-hidden="true">{{ campaign.icon }}</span>
+  <span>{{ message }}</span>
+  <a *ngIf="campaign.link" class="banner-link" [href]="campaign.link.url"
+     target="_blank" rel="noopener noreferrer">{{ campaign.link.label }} →</a>
+</aside>
