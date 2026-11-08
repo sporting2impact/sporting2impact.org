@@ -1,0 +1,137 @@
+.news-page {
+  padding: 1.5rem 1rem 2.5rem;
+}
+
+.news-page h1 {
+  margin: 0 0 1.5rem;
+  color: #0c4a6e;
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+/* --- Impact numbers --- */
+.impact-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 0 0 2rem;
+  padding: 0;
+  list-style: none;
+}
+
+.impact-stats li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1.25rem 1rem;
+  background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%);
+  border: 1px solid #e0f2fe;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.stat-number {
+  color: #2563eb;
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.stat-label {
+  color: #374151;
+  font-size: 0.9rem;
+}
+
+.stat-link {
+  margin-top: 0.35rem;
+  color: #2563eb;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.stat-link:hover {
+  text-decoration: underline;
+}
+
+.stat-link:focus-visible {
+  outline: 3px solid #3b82f6;
+  outline-offset: 3px;
+}
+
+/* --- Posts --- */
+.news-post {
+  margin-bottom: 1.25rem;
+  padding: 1.5rem;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-left: 5px solid #3b82f6;
+  border-radius: 12px;
+  scroll-margin-top: 90px; /* keep /news#post links clear of the sticky nav */
+}
+
+.news-image {
+  width: 100%;
+  max-height: 360px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.news-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0 0 0.5rem;
+  color: #6b7280;
+  font-size: 0.85rem;
+}
+
+.news-tag {
+  padding: 0.15rem 0.6rem;
+  background: #eff6ff;
+  color: #1d4ed8;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.news-post h2 {
+  margin: 0 0 0.75rem;
+  color: #1f2937;
+  font-size: 1.3rem;
+}
+
+.news-post p,
+.news-list {
+  max-width: 75ch; /* keep long paragraphs easy to read */
+  color: #374151;
+  line-height: 1.6;
+}
+
+.news-link {
+  display: inline-block;
+  margin-top: 0.25rem;
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.news-link:hover {
+  text-decoration: underline;
+}
+
+.news-link:focus-visible {
+  outline: 3px solid #3b82f6;
+  outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .impact-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .news-post {
+    padding: 1.1rem;
+  }
+}

@@ -188,6 +188,15 @@
   z-index: 1;
 }
 
+/* One content width for every page: centered, up to 1200px on wide screens.
+   Routed pages are custom elements (inline by default), so make them blocks. */
+.main-content > :not(router-outlet) {
+  display: block;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .logo {
   display: flex;
   align-items: center;

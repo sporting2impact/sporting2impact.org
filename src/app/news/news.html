@@ -1,0 +1,48 @@
+<section class="news-page">
+  <h1 class="section-title">News &amp; Highlights</h1>
+
+  <!-- Impact numbers, calculated from the event list -->
+  <ul class="impact-stats" aria-label="Our impact so far">
+    <li>
+      <span class="stat-number">{{ stats.eventsHeld }}</span>
+      <span class="stat-label">
+        community events<ng-container *ngIf="stats.firstEventDate">
+          since {{ stats.firstEventDate | date:'MMMM y' }}</ng-container>
+      </span>
+      <a class="stat-link" routerLink="/events" fragment="past-events">See past events →</a>
+    </li>
+    <li>
+      <span class="stat-number">{{ stats.participantsRecorded }}</span>
+      <span class="stat-label">participants recorded across {{ stats.eventsWithAttendance }} events</span>
+      <a class="stat-link" routerLink="/events" fragment="past-events">See attendance by event →</a>
+    </li>
+    <li>
+      <span class="stat-number">{{ stats.activityTypes }}</span>
+      <span class="stat-label">kinds of activities, from walks and Zumba to chess</span>
+    </li>
+  </ul>
+
+  <article *ngFor="let post of posts" class="news-post" [id]="post.slug">
+    <img *ngIf="post.image" class="news-image" [src]="post.image.src" [alt]="post.image.alt">
+
+    <p class="news-meta">
+      <span class="news-tag">{{ post.tag }}</span>
+      <time [attr.datetime]="post.date">{{ post.date | date:'MMMM d, y':'UTC' }}</time>
+    </p>
+    <h2>{{ post.title }}</h2>
+
+    <ng-container *ngFor="let block of post.body">
+      <ul *ngIf="isList(block); else paragraph" class="news-list">
+        <li *ngFor="let item of block.list"><strong>{{ item.term }}:</strong> {{ item.text }}</li>
+      </ul>
+      <ng-template #paragraph><p>{{ block }}</p></ng-template>
+    </ng-container>
+
+    <ng-container *ngIf="post.link as link">
+      <a *ngIf="isInternal(link.url)" class="news-link" [routerLink]="link.url">{{ link.label }} →</a>
+      <a *ngIf="!isInternal(link.url)" class="news-link" [href]="link.url"
+         [attr.target]="link.url.startsWith('https://') ? '_blank' : null"
+         [attr.rel]="link.url.startsWith('https://') ? 'noopener noreferrer' : null">{{ link.label }} →</a>
+    </ng-container>
+  </article>
+</section>

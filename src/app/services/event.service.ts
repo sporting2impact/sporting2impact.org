@@ -43,6 +43,27 @@ export class EventService {
 
   private events: EventItem[] = [
        {
+            "id": 59,
+            "title": "Free Zumba Session",
+            "subtitle": "Sparksoft Corporation (Corporate Session)",
+            "date": "2026-12-02T14:00",
+            "location": "Sparksoft Corporation Office, Columbia, Maryland",
+            "registrationLink": "",
+            "type": "Zumba",
+            "attendees": null,
+            "privateFor": "Sparksoft employees"
+        },
+        {
+            "id": 58,
+            "title": "Free Zumba Session",
+            "subtitle": "",
+            "date": "2026-11-14T14:00",
+            "location": "The Hub, Catonsville, Maryland",
+            "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-zumba-session-nov--14",
+            "type": "Zumba",
+            "attendees": null
+        },
+        {
             "id": 57,
             "title": "Wellness Walk",
             "subtitle": "Trolley Line # 9 Trail",
@@ -50,7 +71,7 @@ export class EventService {
             "location": "Old Ellicott City (Parking Lot A), Maryland",
             "registrationLink": "",
             "type": "walking",
-            "attendees": null
+            "attendees": 18
         },
         {
             "id": 56,
@@ -63,17 +84,6 @@ export class EventService {
             "attendees": 10
         },
         {
-            "id": 58,
-            "title": "Free Zumba Session",
-            "subtitle": "Sparksoft Corporation (Corporate Session)",
-            "date": "2026-12-02T14:00",
-            "location": "Sparksoft Corporation Office, Columbia, Maryland",
-            "registrationLink": "",
-            "type": "Zumba",
-            "attendees": null,
-            "privateFor": "Sparksoft employees"
-        },
-        {
             "id": 55,
             "title": "Halloween Walk",
             "subtitle": "Centennial Park Lake Trail",
@@ -81,7 +91,7 @@ export class EventService {
             "location": "Centennial Park, Ellicott City, Maryland",
             "registrationLink": "",
             "type": "walking",
-            "attendees": null
+            "attendees": 17
         },
         {
             "id": 54,
@@ -629,6 +639,27 @@ export class EventService {
     
   getEvents() {
     return this.events;
+  }
+
+  /**
+   * Totals for the News page. Attendance counts each person at each event,
+   * so it is "participants recorded", not unique people served.
+   */
+  getImpactStats(now = new Date()) {
+    const held = this.events.filter(e => new Date(e.date) <= now);
+    const counted = held.filter(e => e.attendees !== null);
+    // "Walk"/"walking", "Zumba"/"zumba" etc. are the same activity.
+    const activity = (type: string) => {
+      const t = type.trim().toLowerCase();
+      return t === 'walk' ? 'walking' : t;
+    };
+    return {
+      eventsHeld: held.length,
+      firstEventDate: held.map(e => e.date).sort()[0] ?? null,
+      participantsRecorded: counted.reduce((sum, e) => sum + (e.attendees ?? 0), 0),
+      eventsWithAttendance: counted.length,
+      activityTypes: new Set(held.map(e => activity(e.type))).size,
+    };
   }
 
  getUpcomingEvents() {
