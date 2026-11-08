@@ -3,6 +3,7 @@ import { Joinus } from './joinus/joinus';
 import { Events } from './events/events';
 import { Home } from './home/home';
 import { Team } from './team/team';
+import { News } from './news/news';
 
 // `title` sets the browser tab / search result title; `data.description` feeds
 // the meta description and social-sharing previews (see SeoService).
@@ -36,6 +37,16 @@ export const routes: Routes = [
       description:
         'Upcoming and past Sporting2Impact community events: wellness walks, yoga, Pilates, ' +
         'Zumba, chess, and more across Maryland.',
+    },
+  },
+  {
+    path: 'news',
+    component: News,
+    title: 'News & Highlights | Sporting2Impact',
+    data: {
+      description:
+        'News, event highlights and new programs from Sporting2Impact, a 501(c)(3) nonprofit ' +
+        'bringing community fitness and sports events to people across Maryland.',
     },
   },
   {

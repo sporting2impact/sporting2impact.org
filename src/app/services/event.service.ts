@@ -641,6 +641,27 @@ export class EventService {
     return this.events;
   }
 
+  /**
+   * Totals for the News page. Attendance counts each person at each event,
+   * so it is "participants recorded", not unique people served.
+   */
+  getImpactStats(now = new Date()) {
+    const held = this.events.filter(e => new Date(e.date) <= now);
+    const counted = held.filter(e => e.attendees !== null);
+    // "Walk"/"walking", "Zumba"/"zumba" etc. are the same activity.
+    const activity = (type: string) => {
+      const t = type.trim().toLowerCase();
+      return t === 'walk' ? 'walking' : t;
+    };
+    return {
+      eventsHeld: held.length,
+      firstEventDate: held.map(e => e.date).sort()[0] ?? null,
+      participantsRecorded: counted.reduce((sum, e) => sum + (e.attendees ?? 0), 0),
+      eventsWithAttendance: counted.length,
+      activityTypes: new Set(held.map(e => activity(e.type))).size,
+    };
+  }
+
  getUpcomingEvents() {
   // Current time in EST
   const now = new Date();
