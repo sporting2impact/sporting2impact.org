@@ -21,6 +21,44 @@
   color: #ffffff;
 }
 
+.theme-patriotic {
+  background: #1e3a8a;
+  color: #ffffff;
+  border-bottom: 3px solid #dc2626;
+}
+
+/* Memorial Day, Veterans Day, MLK Day: calm and respectful */
+.theme-remembrance {
+  background: #e5e7eb;
+  color: #1f2937;
+  border-bottom: 1px solid #9ca3af;
+}
+
+.theme-celebrate {
+  background: #ede9fe;
+  color: #4c1d95;
+  border-bottom: 1px solid #c4b5fd;
+}
+
+.theme-health {
+  background: #dcfce7;
+  color: #14532d;
+  border-bottom: 1px solid #86efac;
+}
+
+/* On light banners the link is a dark button with white text */
+.theme-autumn .banner-link { background: #78350f; color: #ffffff; }
+.theme-remembrance .banner-link { background: #1f2937; color: #ffffff; }
+.theme-celebrate .banner-link { background: #4c1d95; color: #ffffff; }
+.theme-health .banner-link { background: #14532d; color: #ffffff; }
+
+.theme-autumn .banner-link:hover,
+.theme-remembrance .banner-link:hover,
+.theme-celebrate .banner-link:hover,
+.theme-health .banner-link:hover {
+  opacity: 0.85;
+}
+
 .banner-link {
   padding: 0.25rem 0.75rem;
   border-radius: 999px;
@@ -31,7 +69,8 @@
   white-space: nowrap;
 }
 
-.banner-link:hover {
+.theme-giving .banner-link:hover,
+.theme-patriotic .banner-link:hover {
   background: #dbeafe;
 }
 

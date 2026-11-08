@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { NgIf } from '@angular/common';
+import { RouterLink } from '@angular/router';
 import { EventService } from '../services/event.service';
-import { Campaign, activeCampaign } from './campaigns';
+import { BannerContent, activeBanner } from './campaigns';
 
 @Component({
   selector: 'app-seasonal-banner',
-  imports: [NgIf],
+  imports: [NgIf, RouterLink],
   templateUrl: './seasonal-banner.html',
   styleUrl: './seasonal-banner.css',
   // Which banner shows depends on today's date, so decide in the browser
@@ -13,16 +14,20 @@ import { Campaign, activeCampaign } from './campaigns';
   host: { ngSkipHydration: 'true' },
 })
 export class SeasonalBanner implements OnInit {
-  campaign: Campaign | null = null;
+  banner: BannerContent | null = null;
   message = '';
 
   constructor(private eventService: EventService) {}
 
   ngOnInit() {
-    this.campaign = activeCampaign();
-    if (this.campaign) {
+    this.banner = activeBanner();
+    if (this.banner) {
       const events = this.eventService.getImpactStats().eventsHeld;
-      this.message = this.campaign.message.replace('{events}', String(events));
+      this.message = this.banner.message.replace('{events}', String(events));
     }
+  }
+
+  isInternal(url: string) {
+    return url.startsWith('/');
   }
 }

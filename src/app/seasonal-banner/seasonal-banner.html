@@ -1,6 +1,9 @@
-<aside *ngIf="campaign" class="seasonal-banner" [class]="'theme-' + campaign.theme" aria-label="Announcement">
-  <span aria-hidden="true">{{ campaign.icon }}</span>
+<aside *ngIf="banner" class="seasonal-banner" [class]="'theme-' + banner.theme" aria-label="Announcement">
+  <span *ngIf="banner.icon" aria-hidden="true">{{ banner.icon }}</span>
   <span>{{ message }}</span>
-  <a *ngIf="campaign.link" class="banner-link" [href]="campaign.link.url"
-     target="_blank" rel="noopener noreferrer">{{ campaign.link.label }} →</a>
+  <ng-container *ngIf="banner.link as link">
+    <a *ngIf="isInternal(link.url)" class="banner-link" [routerLink]="link.url">{{ link.label }} →</a>
+    <a *ngIf="!isInternal(link.url)" class="banner-link" [href]="link.url"
+       target="_blank" rel="noopener noreferrer">{{ link.label }} →</a>
+  </ng-container>
 </aside>
