@@ -17,7 +17,16 @@
       Sporting2Impact is dedicated to promoting wellness, fitness, sports, and community engagement.
       Beyond physical health, we use these events as a platform to raise awareness for local causes—turning workouts into opportunities for social connection and collective impact. We believe that when movement is accessible to all, communities grow stronger together.
     </p>
-    
+
+    <div *ngIf="latestNews.length" class="latest-news">
+      <h2>LATEST NEWS</h2>
+      <a *ngFor="let post of latestNews" class="news-card" routerLink="/news" [fragment]="post.slug">
+        <span class="news-meta">{{ post.tag }} · {{ post.date | date:'MMM d, y':'UTC' }}</span>
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.summary }}</p>
+      </a>
+      <a routerLink="/news" class="all-events-link">All news &amp; highlights →</a>
+    </div>
   </section>
   
 <!-- Upcoming Events Sidebar -->

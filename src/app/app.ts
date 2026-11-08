@@ -1,11 +1,12 @@
 import { Component, inject, signal } from '@angular/core';
 import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 import { Footer } from './footer/footer';
+import { SeasonalBanner } from './seasonal-banner/seasonal-banner';
 import { SeoService } from './services/seo.service';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink, RouterLinkActive, Footer],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, Footer, SeasonalBanner],
   templateUrl: './app.html',
   styleUrl: './app.css',
   standalone: true

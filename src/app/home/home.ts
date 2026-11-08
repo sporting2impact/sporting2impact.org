@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NgFor, NgIf, DatePipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { EventService, EventItem } from '../services/event.service';
+import { NewsPost, NewsService } from '../services/news.service';
 import { Sponsors } from '../sponsors/sponsors';
 
 @Component({
@@ -16,10 +17,12 @@ import { Sponsors } from '../sponsors/sponsors';
 })
 export class Home {
   upcomingEvents: EventItem[] = [];
+  latestNews: NewsPost[] = [];
 
-  constructor(private eventService: EventService) {}
+  constructor(private eventService: EventService, private newsService: NewsService) {}
 
   ngOnInit() {
     this.upcomingEvents = this.eventService.getUpcomingEvents();
+    this.latestNews = this.newsService.getLatest(3);
   }
 }
