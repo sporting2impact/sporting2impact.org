@@ -12,7 +12,7 @@ export type BannerTheme = 'autumn' | 'giving' | 'patriotic' | 'remembrance' | 'c
 
 export interface BannerContent {
   theme: BannerTheme;
-  icon: string;  // '' for solemn days
+  icon: string;  // '' for no icon
   // {events} is replaced with the number of community events held so far;
   // **text** is shown in bold.
   message: string;
@@ -74,7 +74,7 @@ export const YEARLY_BANNERS: YearlyBanner[] = [
   },
   {
     id: 'memorial-day', date: y => nthWeekday(y, 5, MON, -1), daysBefore: 2,
-    theme: 'remembrance', icon: '',
+    theme: 'remembrance', icon: '🎖️',
     message: 'This Memorial Day, we remember those who gave their lives in service to our country.',
   },
   {
@@ -89,7 +89,7 @@ export const YEARLY_BANNERS: YearlyBanner[] = [
   },
   {
     id: 'veterans-day', date: y => fixed(y, 11, 11), daysBefore: 3,
-    theme: 'remembrance', icon: '',
+    theme: 'remembrance', icon: '🎖️',
     message: 'This Veterans Day, we honor and thank all who have served.',
   },
   {
