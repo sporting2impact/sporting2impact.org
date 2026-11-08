@@ -47,6 +47,47 @@
 }
 
 /* Bottom line */
+/* "Supported by" sponsor row */
+.footer-sponsors {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem 1.25rem;
+  margin-top: 0.75rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid #374151;
+}
+
+.footer-sponsors-label {
+  color: #9ca3af;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.footer-sponsor {
+  display: inline-flex;
+  align-items: center;
+  color: #f3f4f6;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.footer-sponsor img {
+  height: 40px;
+  width: auto;
+}
+
+a.footer-sponsor:hover img {
+  opacity: 0.85;
+}
+
+a.footer-sponsor:focus-visible {
+  outline: 2px solid #fde68a;
+  outline-offset: 3px;
+}
+
 .footer-bottom {
   text-align: center;
   margin-top: 0.5rem;  /* reduced */

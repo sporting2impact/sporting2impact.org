@@ -57,6 +57,23 @@
 
   </div>
 
+  <!-- Compact sponsor thank-you on every page (list: services/sponsor.service.ts) -->
+  <div *ngIf="sponsors.length" class="footer-sponsors">
+    <span class="footer-sponsors-label">Supported by</span>
+    <ng-container *ngFor="let sponsor of sponsors">
+      <a *ngIf="sponsor.url; else plain" class="footer-sponsor" [href]="sponsor.url" target="_blank" rel="noopener noreferrer">
+        <img *ngIf="sponsor.logo" [src]="sponsor.logo.src" [alt]="sponsor.logo.alt">
+        <span *ngIf="!sponsor.logo">{{ sponsor.name }}</span>
+      </a>
+      <ng-template #plain>
+        <span class="footer-sponsor">
+          <img *ngIf="sponsor.logo" [src]="sponsor.logo.src" [alt]="sponsor.logo.alt">
+          <span *ngIf="!sponsor.logo">{{ sponsor.name }}</span>
+        </span>
+      </ng-template>
+    </ng-container>
+  </div>
+
   <div class="footer-bottom">
     © {{ year }} Sporting2Impact. All rights reserved.
   </div>
