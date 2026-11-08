@@ -43,7 +43,7 @@ export class NewsService {
         'As with all our programs, the goal is to make sports and fitness accessible to everyone across Maryland. ' +
           "Interested in joining, coaching or volunteering? Email us and we'll keep you posted as sessions are scheduled.",
       ],
-      link: { label: 'Email us', url: 'mailto:info@sporting2impact.org?subject=New%20programs' },
+      link: { label: 'Email us', url: 'mailto:events@sporting2impact.org?subject=New%20programs' },
     },
     {
       id: 2,
