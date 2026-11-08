@@ -57,7 +57,7 @@ export class EventService {
             "id": 58,
             "title": "Free Zumba Session",
             "subtitle": "",
-            "date": "2026-11-14T12:00",
+            "date": "2026-11-14T14:00",
             "location": "The Hub, Catonsville, Maryland",
             "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-zumba-session-nov--14",
             "type": "Zumba",

@@ -56,7 +56,7 @@ export class NewsService {
         'November 7 was a double day of movement. At noon, 10 participants danced through a free Zumba session ' +
           'at The Hub in Catonsville. That afternoon, 18 walkers joined our Wellness Walk on the Trolley Line #9 ' +
           'Trail in Old Ellicott City.',
-        'Missed it? Our next free Zumba session at The Hub is Saturday, November 14 at 12:00 PM.',
+        'Missed it? Our next free Zumba session at The Hub is Saturday, November 14 at 2:00 PM.',
       ],
       link: { label: 'Register for Nov 14 Zumba', url: 'https://www.zeffy.com/en-US/ticketing/free-zumba-session-nov--14' },
     },
