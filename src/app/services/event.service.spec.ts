@@ -15,6 +15,15 @@ describe('EventService', () => {
     expect(outOfOrder).toEqual([]);
   });
 
+  it('writes every date as "YYYY-MM-DDTHH:MM"', () => {
+    // A typo such as "2026-11-014T12:00" makes the event silently vanish from the site.
+    const badDates = TestBed.inject(EventService)
+      .getEvents()
+      .filter(e => !/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}$/.test(e.date) || isNaN(Date.parse(e.date)))
+      .map(e => ({ id: e.id, title: e.title, date: e.date }));
+    expect(badDates).toEqual([]);
+  });
+
   it('only uses full https:// addresses as registration links', () => {
     // Attendance counts belong in "attendees"; a number here would show a
     // broken Register button.

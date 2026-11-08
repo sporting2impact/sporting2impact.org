@@ -43,6 +43,27 @@ export class EventService {
 
   private events: EventItem[] = [
        {
+            "id": 59,
+            "title": "Free Zumba Session",
+            "subtitle": "Sparksoft Corporation (Corporate Session)",
+            "date": "2026-12-02T14:00",
+            "location": "Sparksoft Corporation Office, Columbia, Maryland",
+            "registrationLink": "",
+            "type": "Zumba",
+            "attendees": null,
+            "privateFor": "Sparksoft employees"
+        },
+        {
+            "id": 58,
+            "title": "Free Zumba Session",
+            "subtitle": "",
+            "date": "2026-11-14T12:00",
+            "location": "The Hub, Catonsville, Maryland",
+            "registrationLink": "https://www.zeffy.com/en-US/ticketing/free-zumba-session-nov--14",
+            "type": "Zumba",
+            "attendees": null
+        },
+        {
             "id": 57,
             "title": "Wellness Walk",
             "subtitle": "Trolley Line # 9 Trail",
@@ -61,17 +82,6 @@ export class EventService {
             "registrationLink": "",
             "type": "Zumba",
             "attendees": 10
-        },
-        {
-            "id": 58,
-            "title": "Free Zumba Session",
-            "subtitle": "Sparksoft Corporation (Corporate Session)",
-            "date": "2026-12-02T14:00",
-            "location": "Sparksoft Corporation Office, Columbia, Maryland",
-            "registrationLink": "",
-            "type": "Zumba",
-            "attendees": null,
-            "privateFor": "Sparksoft employees"
         },
         {
             "id": 55,
