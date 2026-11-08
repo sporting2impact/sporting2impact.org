@@ -202,22 +202,6 @@ export function activeBanner(now = new Date()): (BannerContent & { id: string })
   return best?.banner ?? null;
 }
 
-/** Every banner, one-off campaigns first, for the local preview page. */
-export function allBanners(): (BannerContent & { id: string })[] {
-  return [...CAMPAIGNS, ...YEARLY_BANNERS];
-}
-
-export function findBanner(id: string) {
-  return allBanners().find(b => b.id === id) ?? null;
-}
-
-/** First and last day a banner shows in a given year (one-off campaigns ignore the year). */
-export function bannerDates(banner: Campaign | YearlyBanner, year: number) {
-  if ('start' in banner) return { start: banner.start, end: banner.end };
-  const date = banner.date(year);
-  return { start: addDays(date, -banner.daysBefore), end: addDays(date, banner.daysAfter ?? 0) };
-}
-
 // --- Date helpers (all dates are plain "YYYY-MM-DD" calendar days) ---
 
 const MON = 1, WED = 3, THU = 4, FRI = 5;
