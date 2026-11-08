@@ -79,7 +79,7 @@ export const YEARLY_BANNERS: YearlyBanner[] = [
   },
   {
     id: 'independence-day', date: y => fixed(y, 7, 4), daysBefore: 3,
-    theme: 'patriotic', icon: '🇺🇸',
+    theme: 'patriotic', icon: '🎆',
     message: 'Happy 4th of July from Sporting2Impact! Stay active, hydrated and safe.',
   },
   {
