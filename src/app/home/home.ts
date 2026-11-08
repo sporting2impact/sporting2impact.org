@@ -3,11 +3,12 @@ import { NgFor, NgIf, DatePipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { EventService, EventItem } from '../services/event.service';
 import { NewsPost, NewsService } from '../services/news.service';
+import { Sponsors } from '../sponsors/sponsors';
 
 @Component({
   standalone: true,
   selector: 'app-home',
-  imports: [NgFor, NgIf, DatePipe, RouterLink],
+  imports: [NgFor, NgIf, DatePipe, RouterLink, Sponsors],
   templateUrl: './home.html',
   styleUrl: './home.css',
   // Upcoming events depend on today's date, so render fresh in the browser instead of

@@ -1,0 +1,42 @@
+<section *ngIf="sponsors.length" class="sponsors" aria-labelledby="sponsors-heading">
+  <h2 id="sponsors-heading">{{ heading }}</h2>
+  <p *ngIf="intro" class="sponsors-intro">{{ intro }}</p>
+
+  <!-- Few sponsors: a still, centered row -->
+  <ul *ngIf="!scrolling" class="sponsor-row">
+    <li *ngFor="let sponsor of sponsors">
+      <ng-container *ngTemplateOutlet="card; context: { $implicit: sponsor }"></ng-container>
+    </li>
+  </ul>
+
+  <!-- Many sponsors: an endless scrolling strip (pauses on hover/focus) -->
+  <div *ngIf="scrolling" class="sponsor-marquee">
+    <ul class="sponsor-track" [style.animation-duration.s]="loopSeconds">
+      <li *ngFor="let sponsor of sponsors">
+        <ng-container *ngTemplateOutlet="card; context: { $implicit: sponsor }"></ng-container>
+      </li>
+      <!-- Second copy so the loop is seamless; hidden from screen readers -->
+      <li *ngFor="let sponsor of sponsors" aria-hidden="true">
+        <ng-container *ngTemplateOutlet="card; context: { $implicit: sponsor, hidden: true }"></ng-container>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<ng-template #card let-sponsor let-hidden="hidden">
+  <a *ngIf="sponsor.url; else plain" class="sponsor-card" [href]="sponsor.url"
+     target="_blank" rel="noopener noreferrer" [attr.tabindex]="hidden ? -1 : null">
+    <ng-container *ngTemplateOutlet="cardBody; context: { $implicit: sponsor }"></ng-container>
+  </a>
+  <ng-template #plain>
+    <div class="sponsor-card">
+      <ng-container *ngTemplateOutlet="cardBody; context: { $implicit: sponsor }"></ng-container>
+    </div>
+  </ng-template>
+</ng-template>
+
+<ng-template #cardBody let-sponsor>
+  <img *ngIf="sponsor.logo" class="sponsor-logo" [src]="sponsor.logo.src" [alt]="sponsor.logo.alt">
+  <span *ngIf="!sponsor.logo" class="sponsor-name">{{ sponsor.name }}</span>
+  <span class="sponsor-description">{{ sponsor.description }}</span>
+</ng-template>
