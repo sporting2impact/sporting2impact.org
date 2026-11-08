@@ -8,7 +8,7 @@
 
 export const DONATE_URL = 'https://www.zeffy.com/en-US/donation-form/donate-to-keep-community-healthy';
 
-export type BannerTheme = 'autumn' | 'giving' | 'patriotic' | 'remembrance' | 'celebrate' | 'health';
+export type BannerTheme = 'autumn' | 'giving' | 'patriotic' | 'remembrance' | 'celebrate' | 'health' | 'heart';
 
 export interface BannerContent {
   theme: BannerTheme;
@@ -109,7 +109,7 @@ export const YEARLY_BANNERS: YearlyBanner[] = [
   // --- Fitness and health observances ---
   {
     id: 'wear-red-day', date: y => nthWeekday(y, 2, FRI, 1), daysBefore: 1,  // American Heart Month
-    theme: 'health', icon: '❤️',
+    theme: 'heart', icon: '❤️',
     message: 'February is American Heart Month. Wear red and keep your heart moving with us.',
     link: EVENTS,
   },
@@ -159,7 +159,7 @@ export const YEARLY_BANNERS: YearlyBanner[] = [
   },
   {
     id: 'world-heart-day', date: y => fixed(y, 9, 29), daysBefore: 1,
-    theme: 'health', icon: '❤️',
+    theme: 'heart', icon: '❤️',
     message: 'Happy World Heart Day! Staying active is one of the best things you can do for your heart.',
   },
   {

@@ -21,9 +21,19 @@
   text-align: center;
 }
 
+/* White circle behind the icon so any emoji shows on any banner color */
 .banner-icon {
-  font-size: 1.35rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #ffffff;
+  font-size: 1.15rem;
   line-height: 1;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
 }
 
 .banner-message strong {
@@ -34,6 +44,7 @@
 .theme-giving { --banner-color: #1d4ed8; }      /* royal blue */
 .theme-celebrate { --banner-color: #6d28d9; }   /* purple */
 .theme-health { --banner-color: #166534; }      /* green */
+.theme-heart { --banner-color: #b91c1c; }       /* red: American Heart Month, World Heart Day */
 
 .theme-patriotic {
   --banner-color: #1e3a8a;                       /* navy */
