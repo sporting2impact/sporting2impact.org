@@ -14,4 +14,14 @@ describe('EventService', () => {
       .filter(e => e.id !== e.expected);
     expect(outOfOrder).toEqual([]);
   });
+
+  it('only uses full https:// addresses as registration links', () => {
+    // Attendance counts belong in "attendees"; a number here would show a
+    // broken Register button.
+    const badLinks = TestBed.inject(EventService)
+      .getEvents()
+      .filter(e => e.registrationLink && !e.registrationLink.startsWith('https://'))
+      .map(e => ({ id: e.id, title: e.title, registrationLink: e.registrationLink }));
+    expect(badLinks).toEqual([]);
+  });
 });

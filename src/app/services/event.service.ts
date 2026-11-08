@@ -50,7 +50,7 @@ export class EventService {
             "location": "Old Ellicott City (Parking Lot A), Maryland",
             "registrationLink": "",
             "type": "walking",
-            "attendees": null
+            "attendees": 18
         },
         {
             "id": 56,
@@ -81,7 +81,7 @@ export class EventService {
             "location": "Centennial Park, Ellicott City, Maryland",
             "registrationLink": "",
             "type": "walking",
-            "attendees": null
+            "attendees": 17
         },
         {
             "id": 54,

@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class TeamService {
 
   founders = [
-    { name: "Siva Ch", image: "assets/team/founder.png", role: "President & Treasurer" },
+    { name: "Siva Chagarlamudi", image: "assets/team/founder.png", role: "President & Treasurer" },
     { name: "Sridhar", image: "assets/team/founder.png", role: "Vice President" },
     { name: "Vamsi", image: "assets/team/founder.png", role: "Secretary" },
   ];
