@@ -63,8 +63,8 @@ a.sponsor-card:focus-visible {
 }
 
 .sponsor-logo {
-  max-width: 180px;
-  max-height: 64px;
+  max-width: 200px;
+  max-height: 96px;
   object-fit: contain;
 }
 

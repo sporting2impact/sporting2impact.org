@@ -21,8 +21,9 @@ export class SponsorService {
       name: 'The Hub',
       description: 'Catonsville: venue partner for our Fitness dance sessions',
       url: 'https://hubktv.peblla.com/',
-      // "the Hub" line of their official logo (gold, transparent background),
-      // cropped from hubktv.peblla.com because they asked to be named just "The Hub"
+      // "the HUB" logo with sushi and microphone, from a photo of their sign
+      // ("Sushi, Bar & Karaoke" line left out, as they asked to be named just
+      // "The Hub"); cleaned up, gold on a transparent background
       logo: { src: '/assets/sponsors/the-hub.png', alt: 'The Hub' },
     },
   ];
