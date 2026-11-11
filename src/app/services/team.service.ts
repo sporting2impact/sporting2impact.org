@@ -23,27 +23,27 @@ export class TeamService {
   ];
 
   boardOfDirectors = [
-    // {
-    //   name: "Akshat",
-    //   school: "Mt. Hebron High School",
-    //   grade: "12",
-    //   duration: "2025-Current",
-    //   image: "assets/team/member.png",
-    //   role: "Outreach Coordinator"
-    // },  
-    // {
-    //   name: "Tanya",
-    //   school: "Marriotts Ridge High School",
-    //   grade: "12",
-    //   duration: "2025-Current",
-    //   image: "assets/team/tanya.png",
-    //   role: "Social Media Coordinator"
+    {
+      name: "Akshat",
+      school: "OSU, Max M. Fisher College of Business",
+      grade: "Freshman",
+      duration: "2025-Current",
+      image: "assets/team/member.png",
+      role: "Fundraising & Development"
+    },  
+    {
+      name: "Tanya",
+      school: "UMD",
+      grade: "Freshman",
+      duration: "2025-Current",
+      image: "assets/team/tanya.png",
+      role: "Research & Analysis"
 
-    // },
+    },
     {
       name: "Suchay",
       school: "Mt. Hebron High School",
-      grade: "10",
+      grade: "Sophomore",
       duration: "2025-Current",
       image: "assets/team/member.png",
       role: "Outreach Coordinator"
@@ -51,7 +51,7 @@ export class TeamService {
     {
       name: "Mouniksai Kodali",
       school: "Marriotts Ridge High School",
-      grade: "12",
+      grade: "Senior",
       duration: "2025-Current",
       image: "assets/team/member.png",
       role: "Youth Programs Coordinator"
@@ -59,7 +59,7 @@ export class TeamService {
     {
       name: "Kaushik Malladi",
       school: "Marriotts Ridge High School",
-      grade: "11",
+      grade: "Junior",
       duration: "2025-Current",
       image: "assets/team/member.png",
       role: "Event Coordinator"
@@ -67,7 +67,7 @@ export class TeamService {
     {
       name: "Dhruvi Settipalle",
       school: "Mt. Hebron High School",
-      grade: "10",
+      grade: "Sophomore",
       duration: "2026-Current",
       image: "assets/team/member.png",
       role: "Social Media Coordinator"
