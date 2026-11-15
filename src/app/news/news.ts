@@ -56,7 +56,7 @@ function newsStructuredData(posts: NewsPost[]) {
       description: post.summary,
       datePublished: post.date,
       url: `${SITE_URL}/news#${post.slug}`,
-      ...(post.image && { image: [`${SITE_URL}${post.image.src}`] }),
+      ...(post.images?.length && { image: post.images.map(i => `${SITE_URL}${i.src}`) }),
       author: organization,
       publisher: organization,
     })),
