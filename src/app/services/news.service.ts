@@ -14,7 +14,7 @@ export interface NewsPost {
   summary: string;  // one or two sentences, shown on the home page
   body: NewsBlock[];
   link?: { label: string; url: string };  // "/events", "https://...", or "mailto:..."
-  image?: { src: string; alt: string };  // only photos everyone in them agreed to
+  images?: { src: string; alt: string }[];  // only photos everyone in them agreed to
 }
 
 @Injectable({
@@ -24,6 +24,23 @@ export class NewsService {
 
   // Newest first. Before posting about a named person or partner, get their OK.
   private posts: NewsPost[] = [
+    {
+      id: 4,
+      slug: 'nov-14-zumba-the-hub',
+      date: '2026-11-15',
+      tag: 'Event Highlight',
+      title: '11 dancers bring the energy to Zumba at The Hub',
+      summary: '11 participants joined our free Zumba session at The Hub in Catonsville on November 14.',
+      body: [
+        'On Saturday, November 14, 11 participants danced through a free Zumba session at The Hub in Catonsville. ' +
+          'Thank you to everyone who came out, and to The Hub for hosting us!',
+        'Our Zumba sessions are free and open to all ages and fitness levels. Watch our events page for the next one.',
+      ],
+      link: { label: 'See upcoming events', url: '/events' },
+      images: [
+        { src: '/assets/news/2026-11-14-zumba-the-hub.jpg', alt: 'Zumba participants posing together in front of the neon-lit wall at The Hub in Catonsville' },
+      ],
+    },
     {
       id: 3,
       slug: 'new-programs-mixed-fitness-throwball-soccer',

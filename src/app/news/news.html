@@ -23,7 +23,9 @@
   </ul>
 
   <article *ngFor="let post of posts" class="news-post" [id]="post.slug">
-    <img *ngIf="post.image" class="news-image" [src]="post.image.src" [alt]="post.image.alt">
+    <div *ngIf="post.images?.length" class="news-images" [class.single]="post.images!.length === 1">
+      <img *ngFor="let image of post.images" class="news-image" [src]="image.src" [alt]="image.alt" loading="lazy">
+    </div>
 
     <p class="news-meta">
       <span class="news-tag">{{ post.tag }}</span>
