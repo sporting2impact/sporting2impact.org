@@ -1,6 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 
 import { EventService } from './event.service';
+import { eventIsoTimes } from '../events/event-structured-data';
 
 describe('EventService', () => {
   it('numbers events 1, 2, 3... from the oldest date to the newest', () => {
@@ -32,5 +33,12 @@ describe('EventService', () => {
       .filter(e => e.registrationLink && !e.registrationLink.startsWith('https://'))
       .map(e => ({ id: e.id, title: e.title, registrationLink: e.registrationLink }));
     expect(badLinks).toEqual([]);
+  });
+
+  it("uses each event's length for its end time (one hour unless set)", () => {
+    const events = TestBed.inject(EventService).getEvents();
+    const byTitle = (title: string) => events.find(e => e.title === title)!;
+    expect(eventIsoTimes(byTitle('Junior Badminton Tournament')).end).toBe('2026-12-05T19:30:00-05:00');
+    expect(eventIsoTimes(events.find(e => e.id === 59)!).end).toBe('2026-12-02T15:00:00-05:00');
   });
 });

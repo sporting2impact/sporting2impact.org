@@ -10,6 +10,12 @@ export interface EventItem {
   type: string;
   attendees: number | null;  // actual turnout (registrations + walk-ins), filled in after the event
   privateFor?: string;  // set for closed sessions, e.g. "Sparksoft employees"; hides the walk-in label and keeps the event out of Google event listings
+  durationMinutes?: number;  // for events longer than an hour (e.g. tournaments); used for "Add to calendar" and Google listings
+}
+
+/** How long an event runs, in minutes (default one hour). */
+export function eventDurationMinutes(event: EventItem): number {
+  return event.durationMinutes ?? EVENT_DURATION_MINUTES;
 }
 
 // Event dates are entered as Maryland local time, e.g. "2026-10-04T16:00".
@@ -19,21 +25,22 @@ export const EVENT_DURATION_MINUTES = 60;
 // Image files in public/assets/events/ are lowercase, and the live server is
 // case-sensitive, so map each event type to its file explicitly.
 const EVENT_IMAGES: Record<string, string> = {
-  bollyx: 'bollyx',
-  chess: 'chess',
-  dance: 'dance',
-  health: 'health',
-  pilates: 'pilates',
-  walk: 'walking',
-  walking: 'walking',
-  yoga: 'yoga',
-  zumba: 'zumba',
+  badminton: 'badminton.jpg',
+  bollyx: 'bollyx.png',
+  chess: 'chess.png',
+  dance: 'dance.png',
+  health: 'health.png',
+  pilates: 'pilates.png',
+  walk: 'walking.png',
+  walking: 'walking.png',
+  yoga: 'yoga.png',
+  zumba: 'zumba.png',
 };
 
 /** Path of the event type's card image, or null if there isn't one. */
 export function eventImagePath(type: string): string | null {
   const file = EVENT_IMAGES[type.trim().toLowerCase()];
-  return file ? `/assets/events/${file}.png` : null;
+  return file ? `/assets/events/${file}` : null;
 }
 
 @Injectable({
@@ -43,6 +50,28 @@ export class EventService {
 
   private events: EventItem[] = [
        {
+            "id": 61,
+            "title": "Adult Badminton Tournament",
+            "subtitle": "With Loch Raven Badminton Club",
+            "date": "2026-12-06T08:30",
+            "location": "NERCC, 7501 Oakleigh Rd, Parkville, MD 21234",
+            "registrationLink": "https://form.jotform.com/263195784308164",
+            "durationMinutes": 660,
+            "type": "Badminton",
+            "attendees": null
+        },
+        {
+            "id": 60,
+            "title": "Junior Badminton Tournament",
+            "subtitle": "With Loch Raven Badminton Club",
+            "date": "2026-12-05T08:30",
+            "location": "NERCC, 7501 Oakleigh Rd, Parkville, MD 21234",
+            "registrationLink": "https://form.jotform.com/263135599431159",
+            "durationMinutes": 660,
+            "type": "Badminton",
+            "attendees": null
+        },
+        {
             "id": 59,
             "title": "Free Zumba Session",
             "subtitle": "Sparksoft Corporation (Corporate Session)",
