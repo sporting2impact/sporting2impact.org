@@ -1,0 +1,87 @@
+.about-page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 2.5rem;
+}
+
+.about-page h1 {
+  margin: 0 0 1.5rem;
+  color: #0c4a6e;
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.about-page h2 {
+  margin: 2rem 0 1rem;
+  padding-bottom: 0.6rem;
+  color: #1e40af;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-bottom: 3px solid #3b82f6;
+}
+
+.about-page p {
+  margin: 0 0 1.25rem;
+  color: #374151;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.about-facts {
+  margin: 2rem 0 1.5rem;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%);
+  border: 1px solid #e0f2fe;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.about-facts p {
+  margin: 0;
+}
+
+.about-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.about-btn {
+  padding: 0.65rem 1.25rem;
+  color: #1d4ed8;
+  font-weight: 700;
+  text-decoration: none;
+  border: 2px solid #3b82f6;
+  border-radius: 999px;
+}
+
+.about-btn:hover {
+  background: #eff6ff;
+}
+
+.about-btn--accent {
+  color: #fff;
+  background: #2563eb;
+  border-color: #2563eb;
+}
+
+.about-btn--accent:hover {
+  background: #1d4ed8;
+}
+
+.about-btn:focus-visible {
+  outline: 3px solid #3b82f6;
+  outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .about-page h1 {
+    font-size: 1.6rem;
+  }
+
+  .about-page h2 {
+    font-size: 1.25rem;
+  }
+}

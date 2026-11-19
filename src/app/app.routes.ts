@@ -4,6 +4,7 @@ import { Events } from './events/events';
 import { Home } from './home/home';
 import { Team } from './team/team';
 import { News } from './news/news';
+import { About } from './about/about';
 
 // `title` sets the browser tab / search result title; `data.description` feeds
 // the meta description and social-sharing previews (see SeoService).
@@ -19,6 +20,16 @@ export const routes: Routes = [
     },
   },
   { path: 'home', redirectTo: '', pathMatch: 'full' },
+  {
+    path: 'about',
+    component: About,
+    title: 'About Us | Sporting2Impact',
+    data: {
+      description:
+        'Who we are and what we do: Sporting2Impact is a Maryland 501(c)(3) nonprofit making ' +
+        'sports and fitness accessible, inclusive and community-driven.',
+    },
+  },
   {
     path: 'team',
     component: Team,

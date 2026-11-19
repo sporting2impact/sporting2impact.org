@@ -1,23 +1,65 @@
+<!-- Hero: one-line mission + photo carousel -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>Sporting2Impact</h1>
+    <p class="hero-tagline">
+      Free, inclusive fitness and sports events that bring Maryland communities together.
+    </p>
+    <div class="hero-actions">
+      <a routerLink="/events" class="hero-btn">See upcoming events</a>
+      <a class="hero-btn hero-btn--donate"
+         href="https://www.zeffy.com/en-US/donation-form/donate-to-keep-community-healthy"
+         target="_blank" rel="noopener noreferrer">Donate</a>
+    </div>
+    <a routerLink="/about" class="hero-more">Learn more about us →</a>
+  </div>
+
+  <div class="carousel" role="region" aria-roledescription="carousel" aria-label="Photos from our events">
+    <div class="carousel-viewport">
+      <figure *ngFor="let slide of slides; let i = index" class="slide" [class.active]="i === current()"
+              role="group" aria-roledescription="slide" [attr.aria-label]="(i + 1) + ' of ' + slides.length"
+              [attr.aria-hidden]="i !== current()">
+        <img [src]="slide.src" [alt]="slide.alt" [attr.loading]="i === 0 ? null : 'lazy'">
+        <figcaption>{{ slide.caption }}</figcaption>
+      </figure>
+
+      <button type="button" class="carousel-btn prev" (click)="prev()" aria-label="Previous photo">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+      </button>
+      <button type="button" class="carousel-btn next" (click)="next()" aria-label="Next photo">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+
+    <div class="carousel-dots">
+      <button *ngFor="let slide of slides; let i = index" type="button" class="dot"
+              [class.active]="i === current()" (click)="goTo(i)"
+              [attr.aria-label]="'Show photo ' + (i + 1) + ': ' + slide.caption"
+              [attr.aria-current]="i === current() ? 'true' : null"></button>
+    </div>
+  </div>
+</section>
+
+<!-- Impact numbers, calculated from the event list -->
+<ul class="impact-stats" aria-label="Our impact so far">
+  <li>
+    <span class="stat-number">{{ stats.eventsHeld }}</span>
+    <span class="stat-label">community events<ng-container *ngIf="stats.firstEventDate"> since {{ stats.firstEventDate | date:'MMMM y' }}</ng-container></span>
+  </li>
+  <li>
+    <span class="stat-number">{{ stats.participantsRecorded }}</span>
+    <span class="stat-label">participants recorded</span>
+  </li>
+  <li>
+    <span class="stat-number">{{ stats.activityTypes }}</span>
+    <span class="stat-label">kinds of activities</span>
+  </li>
+</ul>
+
 <div class="home-layout">
 
-  <!-- Left column: home content -->
+  <!-- Left column: latest news -->
   <section class="home-content">
-    <h1>Welcome to Sporting2Impact</h1>
-    <h2>WHO WE ARE</h2>
-
-    <p>
-      Sporting2Impact is a Maryland-based <b>501(c)(3) Nonprofit</b> on a mission to make sports accessible, inclusive, and transformative for everyone in our community. Founded on the belief that athletics have the power to inspire, unite, and uplift, we organize fun, engaging sporting events that not only promote health and teamwork but also raise awareness for those in need.
-      At Sporting2Impact, we believe that sports are more than just games—they’re a catalyst for positive change. Join us as we play with purpose, strengthen our community, and make every match, race, and goal count!
-    </p>
-    <h2>WHAT WE DO</h2>
-    <p>
-      At Sporting2Impact, we bring people together through the power of movement by organizing inclusive, community-driven exercise events. From weekend hikes to Pilates, Yoga sessions, we design activities that welcome participants of all ages, abilities, and backgrounds. Our programs aim to attract people that want to become more active and energetic while being an active member of their community.
-    </p>
-    <p>
-      Sporting2Impact is dedicated to promoting wellness, fitness, sports, and community engagement.
-      Beyond physical health, we use these events as a platform to raise awareness for local causes—turning workouts into opportunities for social connection and collective impact. We believe that when movement is accessible to all, communities grow stronger together.
-    </p>
-
     <div *ngIf="latestNews.length" class="latest-news">
       <h2>LATEST NEWS</h2>
       <a *ngFor="let post of latestNews" class="news-card" routerLink="/news" [fragment]="post.slug">
@@ -28,7 +70,7 @@
       <a routerLink="/news" class="all-events-link">All news &amp; highlights →</a>
     </div>
   </section>
-  
+
 <!-- Upcoming Events Sidebar -->
   <aside class="events-sidebar" aria-labelledby="upcoming-events-heading">
     <h2 id="upcoming-events-heading">Upcoming Events</h2>
