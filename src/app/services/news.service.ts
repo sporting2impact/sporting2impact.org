@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-export type NewsTag = 'Event Highlight' | 'New Program' | 'Team' | 'Partnership';
+export type NewsTag = 'Upcoming Event' | 'Event Highlight' | 'New Program' | 'Team' | 'Partnership';
 
 /** A paragraph, or a list of "Term: description" items. */
 export type NewsBlock = string | { list: { term: string; text: string }[] };
@@ -14,7 +14,7 @@ export interface NewsPost {
   summary: string;  // one or two sentences, shown on the home page
   body: NewsBlock[];
   link?: { label: string; url: string };  // "/events", "https://...", or "mailto:..."
-  images?: { src: string; alt: string }[];  // only photos everyone in them agreed to
+  images?: { src: string; alt: string; logo?: boolean }[];  // only photos everyone in them agreed to; logo: true shows a logo/banner at a modest size
 }
 
 @Injectable({
@@ -24,6 +24,51 @@ export class NewsService {
 
   // Newest first. Before posting about a named person or partner, get their OK.
   private posts: NewsPost[] = [
+    {
+      id: 6,
+      slug: 'junior-badminton-tournament-dec-5',
+      date: '2026-11-18',
+      tag: 'Upcoming Event',
+      title: 'Junior Badminton Tournament on December 5, with Loch Raven Badminton Club',
+      summary: 'Sporting2Impact and Loch Raven Badminton Club are hosting a Junior Badminton Tournament on Saturday, December 5 in Parkville.',
+      body: [
+        'Calling all junior badminton players! Sporting2Impact has teamed up with Loch Raven Badminton Club (LRBC) ' +
+          'to host a Junior Badminton Tournament on Saturday, December 5, starting at 8:30 AM. ' +
+          'Badminton is the newest addition to our activities, and this weekend of tournaments is our first!',
+        { list: [
+          { term: 'When', text: 'Saturday, December 5, 8:30 AM to 7:30 PM' },
+          { term: 'Where', text: 'NERCC, 7501 Oakleigh Rd, Parkville, MD 21234' },
+          { term: 'Register by', text: 'Tuesday, December 1 at 11:59 PM' },
+        ] },
+        'Sign up using the link below.',
+      ],
+      link: { label: 'Register for the Junior Tournament', url: 'https://form.jotform.com/263135599431159' },
+      images: [
+        { src: '/assets/news/badminton-lrbc-sporting2impact.jpg', alt: 'Loch Raven Badminton Club and Sporting2Impact logos side by side', logo: true },
+      ],
+    },
+    {
+      id: 5,
+      slug: 'adult-badminton-tournament-dec-6',
+      date: '2026-11-18',
+      tag: 'Upcoming Event',
+      title: 'Adult Friendly Badminton Tournament on December 6, with Loch Raven Badminton Club',
+      summary: 'Grab a racket! Our Adult Friendly Badminton Tournament with Loch Raven Badminton Club is on Sunday, December 6 in Parkville.',
+      body: [
+        'The day after the juniors take the court, it\'s the adults\' turn! Sporting2Impact and Loch Raven Badminton Club (LRBC) ' +
+          'are hosting an Adult Friendly Badminton Tournament on Sunday, December 6, starting at 8:30 AM.',
+        { list: [
+          { term: 'When', text: 'Sunday, December 6, 8:30 AM to 7:30 PM' },
+          { term: 'Where', text: 'NERCC, 7501 Oakleigh Rd, Parkville, MD 21234' },
+          { term: 'Register by', text: 'Tuesday, December 1 at 11:59 PM' },
+        ] },
+        'Sign up using the link below.',
+      ],
+      link: { label: 'Register for the Adult Tournament', url: 'https://form.jotform.com/263195784308164' },
+      images: [
+        { src: '/assets/news/badminton-lrbc-sporting2impact.jpg', alt: 'Loch Raven Badminton Club and Sporting2Impact logos side by side', logo: true },
+      ],
+    },
     {
       id: 4,
       slug: 'nov-14-zumba-the-hub',

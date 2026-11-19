@@ -15,7 +15,7 @@ export const routes: Routes = [
     data: {
       description:
         'Sporting2Impact is a 501(c)(3) nonprofit bringing people together through ' +
-        'inclusive wellness walks, yoga, Pilates, Zumba, and sports events across Maryland.',
+        'inclusive wellness walks, yoga, Pilates, Zumba, badminton, and sports events across Maryland.',
     },
   },
   { path: 'home', redirectTo: '', pathMatch: 'full' },
@@ -36,7 +36,7 @@ export const routes: Routes = [
     data: {
       description:
         'Upcoming and past Sporting2Impact community events: wellness walks, yoga, Pilates, ' +
-        'Zumba, chess, and more across Maryland.',
+        'Zumba, chess, badminton tournaments, and more across Maryland.',
     },
   },
   {

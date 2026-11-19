@@ -1,7 +1,7 @@
 import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { NgFor, NgIf, DatePipe, TitleCasePipe } from '@angular/common';
 import {
-  EVENT_DURATION_MINUTES,
+  eventDurationMinutes,
   EVENT_TIME_ZONE,
   EventItem,
   EventService,
@@ -164,7 +164,7 @@ export class Events implements OnInit, OnDestroy {
   private calendarTimes(event: EventItem) {
     const [y, mo, d, h, mi] = event.date.split(/[-T:]/).map(Number);
     const start = new Date(Date.UTC(y, mo - 1, d, h, mi));
-    const end = new Date(start.getTime() + EVENT_DURATION_MINUTES * 60_000);
+    const end = new Date(start.getTime() + eventDurationMinutes(event) * 60_000);
     const format = (dt: Date) => dt.toISOString().replace(/[-:]/g, '').split('.')[0];
     return { start: format(start), end: format(end) };
   }

@@ -1,4 +1,4 @@
-import { EVENT_DURATION_MINUTES, EVENT_TIME_ZONE, EventItem, eventImagePath } from '../services/event.service';
+import { EVENT_TIME_ZONE, EventItem, eventDurationMinutes, eventImagePath } from '../services/event.service';
 import { SITE_URL } from '../services/seo.service';
 
 /**
@@ -39,7 +39,7 @@ export function eventsStructuredData(events: EventItem[]) {
 /** Start and end as ISO 8601 with the Maryland UTC offset, e.g. "2026-10-04T16:00:00-04:00". */
 export function eventIsoTimes(event: EventItem) {
   const start = localDate(event.date);
-  const end = new Date(start.getTime() + EVENT_DURATION_MINUTES * 60_000);
+  const end = new Date(start.getTime() + eventDurationMinutes(event) * 60_000);
   return { start: toZonedIso(start), end: toZonedIso(end) };
 }
 
