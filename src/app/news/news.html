@@ -35,10 +35,11 @@
     <h2>{{ post.title }}</h2>
 
     <ng-container *ngFor="let block of post.body">
-      <ul *ngIf="isList(block); else paragraph" class="news-list">
+      <ul *ngIf="isList(block)" class="news-list">
         <li *ngFor="let item of block.list"><strong>{{ item.term }}:</strong> {{ item.text }}</li>
       </ul>
-      <ng-template #paragraph><p>{{ block }}</p></ng-template>
+      <p *ngIf="isLead(block)"><strong>{{ block.lead }}</strong> {{ block.text }}</p>
+      <p *ngIf="!isList(block) && !isLead(block)">{{ block }}</p>
     </ng-container>
 
     <ng-container *ngIf="post.link as link">

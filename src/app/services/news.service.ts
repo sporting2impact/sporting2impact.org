@@ -1,9 +1,12 @@
 import { Injectable } from '@angular/core';
 
-export type NewsTag = 'Upcoming Event' | 'Event Highlight' | 'New Program' | 'Team' | 'Partnership';
+export type NewsTag = 'Upcoming Event' | 'Event Highlight' | 'New Program' | 'Team' | 'Partnership' | 'Thank You';
 
-/** A paragraph, or a list of "Term: description" items. */
-export type NewsBlock = string | { list: { term: string; text: string }[] };
+/** A paragraph, a paragraph with a bold opening phrase, or a list of "Term: description" items. */
+export type NewsBlock =
+  | string
+  | { lead: string; text: string }
+  | { list: { term: string; text: string }[] };
 
 export interface NewsPost {
   id: number;  // next number after the highest; newest post has the highest id
@@ -24,6 +27,31 @@ export class NewsService {
 
   // Newest first. Before posting about a named person or partner, get their OK.
   private posts: NewsPost[] = [
+    {
+      id: 7,
+      slug: 'thanksgiving-thank-you-2026',
+      date: '2026-11-26',
+      tag: 'Thank You',
+      title: 'Happy Thanksgiving: thank you to our volunteer instructors and donors',
+      summary: 'This Thanksgiving, we\'re grateful for our volunteer instructors, our Youth Advisor Board, and the donors and partners who support our community.',
+      body: [
+        'This Thanksgiving, we\'re grateful for the people who make Sporting2Impact possible.',
+        { lead: 'To our instructors:', text: 'every yoga, Pilates, Zumba and BollyX session we offer is led by volunteers ' +
+          'who generously give their time, energy and expertise, so that fitness stays open to everyone in our community. ' +
+          'Thank you for showing up, week after week, and for making our community healthier and happier.' },
+        { lead: 'To our Youth Advisor Board:', text: 'thank you for the energy, ideas and hard work you bring, from ' +
+          'outreach and social media to planning and running our events. You help shape what Sporting2Impact becomes.' },
+        { lead: 'To our donors:', text: 'thank you for believing in what we do. Every donation, large or small, helps us ' +
+          'keep bringing people together through movement across Maryland.' },
+        { lead: 'To our partners and community:', text: 'thank you to The Hub in Catonsville, Loch Raven Badminton Club, ' +
+          'and everyone who has joined us at an event, for being part of this community. We couldn\'t do it without you!' },
+        'Happy Thanksgiving from all of us at Sporting2Impact. 💙',
+      ],
+      link: { label: 'Meet our instructors', url: '/team' },
+      images: [
+        { src: '/assets/news/2026-thanksgiving.jpg', alt: 'Happy Thanksgiving! Thank you to our volunteer instructors, donors, partners and community. Sporting2Impact logo with autumn leaves.' },
+      ],
+    },
     {
       id: 6,
       slug: 'junior-badminton-tournament-dec-5',
