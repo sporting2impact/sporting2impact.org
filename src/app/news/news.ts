@@ -34,8 +34,12 @@ export class News implements OnInit, OnDestroy {
     this.seo.setJsonLd(NEWS_JSON_LD_ID, null);
   }
 
-  isList(block: NewsBlock): block is Exclude<NewsBlock, string> {
-    return typeof block !== 'string';
+  isList(block: NewsBlock): block is { list: { term: string; text: string }[] } {
+    return typeof block !== 'string' && 'list' in block;
+  }
+
+  isLead(block: NewsBlock): block is { lead: string; text: string } {
+    return typeof block !== 'string' && 'lead' in block;
   }
 
   isInternal(url: string) {

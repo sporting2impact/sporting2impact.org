@@ -134,6 +134,12 @@
   line-height: 1.6;
 }
 
+/* Space between paragraphs and lists (Tailwind's reset removes the browser default). */
+.news-post p,
+.news-list {
+  margin: 0 0 0.85rem;
+}
+
 .news-link {
   display: inline-block;
   margin-top: 0.25rem;
