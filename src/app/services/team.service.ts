@@ -13,7 +13,7 @@ export class TeamService {
 
   instructors = [
     { name: "Elizabeth Higgins (Lizzy)", image: "assets/team/instructors/lizzy.jpg", role: "Professor and Coordinator of Dance at Howard Community College", social_media: { instagram: "" } },
-    { name: "Carleen Bowie", image: "assets/team/instructors/carleen.png", role: "Certified Pilates Instructor", social_media: { instagram: "" } },
+    { name: "Carlen Bowie", image: "assets/team/instructors/carlen.png", role: "Certified Pilates Instructor", social_media: { instagram: "" } },
     { name: "Pon Thirunathan (Ramya)", image: "assets/team/instructors/ramya.png", role: "Certified Yoga Instructor", social_media: { instagram: "" } },
     { name: "Githanjali Stalin", image: "assets/team/instructors/githanjali.png", role: "Certified Zumba Instructor", social_media: { instagram: "https://www.instagram.com/groovithaa?igsh=YW84bHJvOXg5eXQw&utm_source=qr/" } },
     { name: "Sruthi Thippireddy", image: "assets/team/instructors/sruthi.png", role: "Certified BollyX Instructor", social_media: { instagram: "" } },
